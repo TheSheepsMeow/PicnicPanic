@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="increesfont" sid="476038317434947" static="0" type="number">26</variable>
+        <variable constant="0" name="pawsegap" sid="966266644501869" static="0" type="number">0</variable>
+        <variable constant="0" name="hiscore" sid="926933365670741" static="0" type="number">0</variable>
+        <variable constant="0" name="enamyspeed" sid="155540389953627" static="0" type="number">0</variable>
+        <variable constant="0" name="extraho" sid="473535702472027" static="0" type="number">0</variable>
+        <variable constant="0" name="level" sid="637886827414851" static="0" type="number">1</variable>
+        <variable constant="0" name="swate" sid="174361890336722" static="0" type="number">0</variable>
+        <variable constant="0" name="timmer" sid="954401170521634" static="0" type="number">20</variable>
+        <variable constant="0" name="ho" sid="212554118969533" static="0" type="number">100</variable>
+        <variable constant="0" name="pick" sid="883875842116353" static="0" type="number">0</variable>
+        <event-block sid="589245662171807">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="154483927534123" type="System" />
+                <condition id="-8" name="Compare two values" sid="176331893103209" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;game&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="983723280661736" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+                <action id="-9" name="Set value" sid="501132356877591" type="System">
+                    <param id="0" name="Variable">level</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="917863288268223" type="System">
+                    <param id="0" name="Variable">swate</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="866382658454524" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Value">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="720117265113976">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="940271935044455" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="683163195652974" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="0" name="Acquire target" sid="952059606680387" type="enamy">
+                    <param id="0" name="Target">center</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="942523428098821">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="720328996775782" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="3" name="Unacquire target" sid="429451273258214" type="enamy" />
+            </actions>
+        </event-block>
+        <event-block sid="795274345361925">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="317628501194513" type="paddle">
+                    <param id="0" name="Object">enamy</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="782163853109018" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Is visible" sid="884641542092756" type="genral" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="242740418423514" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="735172919256433" type="System">
+                    <param id="0" name="Variable">swate</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="655759788873428">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="564177393935081" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set progress" sid="375097326497323" type="health">
+                    <param id="0" name="Value">ho</param>
+                </action>
+                <action id="0" name="Set text" sid="474971022306670" type="timmer">
+                    <param id="0" name="Text">timmer</param>
+                </action>
+                <action id="0" name="Set text" sid="447036009870872" type="points">
+                    <param id="0" name="Text">&quot;score: &quot;&amp;swate</param>
+                </action>
+                <action id="0" name="Set text" sid="841364690371074" type="level">
+                    <param id="0" name="Text">&quot;level &quot;&amp;level</param>
+                </action>
+                <action id="3" name="Set progress" sid="351414799302383" type="extrahealth">
+                    <param id="0" name="Value">extraho</param>
+                </action>
+                <action id="-9" name="Set value" sid="518505176132102" type="System">
+                    <param id="0" name="Variable">enamyspeed</param>
+                    <param id="1" name="Value">level/10</param>
+                </action>
+                <action id="0" name="Set text" sid="557521371359019" type="hischore">
+                    <param id="0" name="Text">&quot;hiscore: &quot;&amp;hiscore</param>
+                </action>
+                <action id="0" name="Set text" sid="340207500018015" type="pauseGap">
+                    <param id="0" name="Text">pawsegap</param>
+                </action>
+                <action id="3" name="Set font size" sid="356308863601883" type="pauseGap">
+                    <param id="0" name="Size (pt)">increesfont</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="335135008106235">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="786441155720268" type="System" />
+                <condition id="-14" name="Compare variable" sid="759654419903062" type="System">
+                    <param id="0" name="Variable">swate</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">hiscore</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="755646601539836" type="System">
+                    <param id="0" name="Variable">hiscore</param>
+                    <param id="1" name="Value">swate</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="624121364079338">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="580691539584140" type="System">
+                    <param id="0" name="Interval (seconds)">1-enamyspeed</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Is visible" sid="409516623135164" type="level" />
+                <condition id="-8" name="Compare two values" sid="434046977825711" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;game&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="596318613875977" type="System">
+                    <param id="0" name="Variable">pawsegap</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="491750994307095" type="System">
+                    <param id="0" name="Variable">pick</param>
+                    <param id="1" name="Value">choose(1,2,3,4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="143428641171355">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="239724007815181" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">30</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="304775344103939" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">60</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="239729181796200" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="523662052318990" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;game&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="471066020560773" type="System">
+                    <param id="0" name="Variable">pick</param>
+                    <param id="1" name="Value">choose(1,2,3,4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="750776005036121">
+            <conditions>
+                <condition disabled="1" id="-14" name="Compare variable" sid="658873791697527" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">60</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="793970720378387" type="System">
+                    <param id="0" name="Interval (seconds)">0.25</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="345571783178318" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;game&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="899105112517697" type="System">
+                    <param id="0" name="Variable">pick</param>
+                    <param id="1" name="Value">choose(1,2,3,4)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="853776914703210">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="512293250565194" type="System">
+                    <param id="0" name="Variable">pick</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="400666514507613" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="197686147166370" type="System">
+                    <param id="0" name="Object to create">enamy</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">-18</param>
+                    <param id="3" name="Y">random(-17,499)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="312338500995395">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="485990696574462" type="System">
+                    <param id="0" name="Variable">pick</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="597265221203708" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="522222716943012" type="System">
+                    <param id="0" name="Object to create">enamy</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">660</param>
+                    <param id="3" name="Y">random(-17,499)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="747394242599102">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="350911909531131" type="System">
+                    <param id="0" name="Variable">pick</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="661964675754053" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="732572520113153" type="System">
+                    <param id="0" name="Object to create">enamy</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(-18,660)</param>
+                    <param id="3" name="Y">-17</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="563959775827982">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="622319336365139" type="System">
+                    <param id="0" name="Variable">pick</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="153974926160694" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="519196530212816" type="System">
+                    <param id="0" name="Object to create">enamy</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(-18,660)</param>
+                    <param id="3" name="Y">499</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="907135350616775">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="779528916244637" type="center">
+                    <param id="0" name="Object">enamy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="522093419740278" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="952842395248751" type="enamy">
+                    <param id="0" name="Object">fruit</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="521921575398579" type="fruit">
+                    <param id="0" name="Pin to">enamy</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="579619416598251">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="145748257633168" type="center">
+                    <param id="0" name="Object">enamy</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="275759297718563" type="System">
+                    <param id="0" name="Variable">extraho</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="569475551823685" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="128760967472115" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="887536862066218">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="835253571451477" type="center">
+                    <param id="0" name="Object">enamy</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="350268102643502" type="System">
+                    <param id="0" name="Variable">extraho</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="709106158616359" type="System">
+                    <param id="0" name="Variable">extraho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="635312215741459">
+            <conditions>
+                <condition id="3" name="On touched object" sid="734599316563990" type="Touch">
+                    <param id="0" name="Object">pause</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="423992998935246" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="505879783234575" type="genral">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="820726003883964" type="continue">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="542892143878007" type="mainmenue">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="280483188422820">
+            <conditions>
+                <condition id="3" name="On touched object" sid="813102592052419" type="Touch">
+                    <param id="0" name="Object">mainmenue</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="897885111835053" type="genral" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="164365062181036" type="System">
+                    <param id="0" name="Layout">start</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="229919263208825" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="834766001375559">
+            <conditions>
+                <condition id="3" name="On touched object" sid="386036615122912" type="Touch">
+                    <param id="0" name="Object">continue</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="315281452271250" type="genral" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="744576087270152" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="945785985314645" type="genral">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="539513612703965" type="continue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="126739970246321" type="mainmenue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="898117928215285" type="System">
+                    <param id="0" name="Variable">pawsegap</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="838759255731926">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="414222698985477" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="388167269785394" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;game&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="855296438596040" type="System">
+                    <param id="0" name="Variable">pawsegap</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="970918588387602" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="252420958059695">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="632645731734067" type="enamy">
+                    <param id="0" name="Object">distroyer</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="428838351752696" type="enamy" />
+            </actions>
+        </event-block>
+        <event-block sid="841217007623625">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="576612898451176" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="758570303472796" type="System">
+                    <param id="0" name="Layout">end</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="345087480599300">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="166112750182613" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="545211744255587" type="paddle">
+                    <param id="0" name="X">Touch.X</param>
+                    <param id="1" name="Y">Touch.Y</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" sid="533945962836736" type="paddle">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="118021559991988" type="paddle">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="624925109726875">
+            <conditions>
+                <condition id="2" inverted="1" name="Is in touch" sid="564431561723726" type="Touch" />
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="389297186103669" type="paddle">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="453556644442825" type="paddle">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="531503548237422">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="683435552090575" type="fruit">
+                    <param id="0" name="Object">fruitEater</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="840008058856626" type="fruit" />
+            </actions>
+        </event-block>
+        <event-block sid="108123109310461">
+            <conditions>
+                <condition id="-18" name="On created" sid="110474052742644" type="fruit" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="731633630293860" type="fruit">
+                    <param id="0" name="Frame number">choose(0,1,2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="477701436683805">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="253265184920395" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="398079454583235" type="System">
+                    <param id="0" name="Variable">level</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="720131674298851" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Value">(level/2)*20</param>
+                </action>
+                <action id="-15" name="Set visible" sid="342135885395458" type="level">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="0" name="Restart fade" sid="297618740340689" type="level" />
+            </actions>
+            <sub-events>
+                <event-block sid="256011297354467">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="974636092658269" type="System">
+                            <param id="0" name="Variable">ho</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="221570130229769" type="System">
+                            <param id="0" name="Variable">extraho</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="583845445305572">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="712303381907515" type="System">
+                            <param id="0" name="Variable">ho</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="603410521174407" type="System">
+                            <param id="0" name="Variable">ho</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="920683671173770">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="456076492368535" type="System">
+                    <param id="0" name="Variable">extraho</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">30</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="157940082157036" type="System">
+                    <param id="0" name="Variable">extraho</param>
+                    <param id="1" name="Value">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="359548240635684">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="112475797895980" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">60</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="228940307983535" type="System">
+                    <param id="0" name="Variable">timmer</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="307313406141887">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="992616424682820" type="System">
+                    <param id="0" name="Variable">enamyspeed</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0.80</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="387983437927124" type="System">
+                    <param id="0" name="Variable">enamyspeed</param>
+                    <param id="1" name="Value">0.80</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="143657020338147">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="417455939867444" type="level" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="374811223340915" type="level">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="234761854136813">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="752185165306490" type="genral" />
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="648118431781205" type="paddle">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="951878414272004">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="873212340807635" type="System">
+                    <param id="0" name="Variable">level</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="661508233588673" type="System">
+                    <param id="0" name="Layout">end</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="398780562515447">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="367385814918832" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="276079965997156" type="System">
+                    <param id="0" name="Variable">pawsegap</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="611343387131202">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="531499747282202" type="System">
+                    <param id="0" name="Variable">pawsegap</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="580074152276878" type="enamy">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="314272923932822" type="pauseGap">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="990813303537736">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="407217591821793" type="System">
+                    <param id="0" name="Variable">pawsegap</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="583910829142275" type="enamy">
+                    <param id="0" name="Speed">100</param>
+                </action>
+                <action id="-15" name="Set visible" sid="663996195612050" type="pauseGap">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="278865682707143">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="116864919217780" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="962955663678980" type="System">
+                    <param id="0" name="Variable">pawsegap</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="904567317922151" type="System">
+                    <param id="0" name="Variable">increesfont</param>
+                    <param id="1" name="Value">increesfont+2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="907543846020935">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="144496386066597" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="107586147106927" type="System">
+                    <param id="0" name="Variable">pawsegap</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="156358473268924" type="System">
+                    <param id="0" name="Variable">increesfont</param>
+                    <param id="1" name="Value">26</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

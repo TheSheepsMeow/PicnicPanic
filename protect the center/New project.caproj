@@ -28,8 +28,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>640</width>
-        <height>480</height>
+        <width>480</width>
+        <height>320</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -57,7 +57,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="882073521342012" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.501767" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\bluePlate.png">
+                        <collision-poly>
+                            <point x="0.127208" y="0.168224" />
+                            <point x="0.498233" y="0.0046729" />
+                            <point x="0.876325" y="0.163551" />
+                            <point x="1" y="0.5" />
+                            <point x="0.869258" y="0.827103" />
+                            <point x="0.498233" y="1" />
+                            <point x="0.130742" y="0.827103" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -75,8 +86,23 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890650112399150" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890650112399150" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.491803" original-source="C:\Users\Pitchfork\Desktop\ant1.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\ant2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -118,7 +144,7 @@
         </object-type>
         <object-type name="BG" sid="713444305581124">
             <plugin id="TiledBg" />
-            <texture />
+            <texture original-source="C:\Users\Pitchfork\Desktop\tiledbg.png" />
         </object-type>
         <object-type name="health" sid="112505241367440">
             <plugin id="progressbar" />
@@ -179,6 +205,69 @@
         </object-type>
         <object-type name="hischore" sid="189092733186604">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="apple" sid="314829067280101">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574658389059956" speed="4">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\redApple1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\redApple2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="grapes" sid="361899183507485">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="348528999724191" speed="3">
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504" original-source="C:\Users\Pitchfork\Desktop\grape1.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504" original-source="C:\Users\Pitchfork\Desktop\grape2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="greenGrapes" sid="247576485736034">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421980033008694" speed="5">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.503106" original-source="C:\Users\Pitchfork\Desktop\greenGrapes1.png" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.503106" original-source="C:\Users\Pitchfork\Desktop\greenGrapes2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hotdog" sid="912566211767030">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245555693704968" speed="6">
+                    <frame duration="1" hotspotX="0.502959" hotspotY="0.505155" original-source="C:\Users\Pitchfork\Desktop\hotdog1.png" />
+                    <frame duration="1" hotspotX="0.502959" hotspotY="0.505155" original-source="C:\Users\Pitchfork\Desktop\hotdog2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="watermelon" sid="110179026375149">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="409728388720447" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\watermelon1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\watermelon2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sandwich" sid="916684089183099">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="876860141771254" speed="4">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sandwich1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sandwich2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="greenApple" sid="684422659099212">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429084835791271" speed="4">
+                    <frame duration="1" hotspotX="0.50505" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\greenApple.png" />
+                    <frame duration="1" hotspotX="0.50505" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\greenApple2.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

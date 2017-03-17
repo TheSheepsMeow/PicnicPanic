@@ -12,9 +12,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">start</layout>
         <layout active="1" order="1">game</layout>
-        <layout order="2">end</layout>
-        <event-sheet order="3">Event sheet 1</event-sheet>
-        <event-sheet order="4">Event sheet 2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -37,5 +34,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/distroyer/" />
         <folder expanded="1" path="animation-folder/fruit/" />
         <folder expanded="1" path="animation-folder/fruitEater/" />
+        <folder expanded="1" path="animation-folder/apple/" />
+        <folder expanded="1" path="animation-folder/grapes/" />
+        <folder expanded="1" path="animation-folder/greenGrapes/" />
+        <folder expanded="1" path="animation-folder/hotdog/" />
+        <folder expanded="1" path="animation-folder/watermelon/" />
+        <folder expanded="1" path="animation-folder/sandwich/" />
+        <folder expanded="1" path="animation-folder/greenApple/" />
     </folders-expanded>
 </c2uistate>

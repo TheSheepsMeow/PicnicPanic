@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="incressfont" sid="992179101512007" static="0" type="number">20</variable>
         <variable constant="0" name="hiscore" sid="926933365670741" static="0" type="number">0</variable>
         <variable constant="0" name="enamyspeed" sid="155540389953627" static="0" type="number">0</variable>
         <variable constant="0" name="extraho" sid="473535702472027" static="0" type="number">0</variable>
@@ -276,7 +277,57 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="907135350616775">
+        <event-block sid="102597489773436">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="324754828880093" type="enamy">
+                    <param id="0" name="Object">apple</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="479526780784060" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="865302183338514" type="apple">
+                    <param id="0" name="X">enamy.X</param>
+                    <param id="1" name="Y">enamy.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="239630210684784" type="apple">
+                    <param id="0" name="Pin to">enamy</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="412816807268899" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="929000981818944">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="207265738051883" type="enamy">
+                    <param id="0" name="Object">grapes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="594450475735117" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="940830346185187" type="apple">
+                    <param id="0" name="X">enamy.X</param>
+                    <param id="1" name="Y">enamy.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="528947081464723" type="apple">
+                    <param id="0" name="Pin to">enamy</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="165409915732850" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="907135350616775">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="779528916244637" type="center">
                     <param id="0" name="Object">enamy</param>

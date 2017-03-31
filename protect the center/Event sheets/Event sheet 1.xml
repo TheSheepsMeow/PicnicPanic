@@ -150,7 +150,7 @@
             <actions>
                 <action id="-9" name="Set value" sid="491750994307095" type="System">
                     <param id="0" name="Variable">pick</param>
-                    <param id="1" name="Value">choose(1,2,3,4)</param>
+                    <param id="1" name="Value">choose(1,2)</param>
                 </action>
             </actions>
         </event-block>
@@ -218,8 +218,8 @@
                 <action id="-3" name="Create object" sid="197686147166370" type="System">
                     <param id="0" name="Object to create">enamy</param>
                     <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">-18</param>
-                    <param id="3" name="Y">random(-17,499)</param>
+                    <param id="2" name="X">-45.269</param>
+                    <param id="3" name="Y">random(20.847,321.32)</param>
                 </action>
             </actions>
         </event-block>
@@ -236,44 +236,8 @@
                 <action id="-3" name="Create object" sid="522222716943012" type="System">
                     <param id="0" name="Object to create">enamy</param>
                     <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">660</param>
-                    <param id="3" name="Y">random(-17,499)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="747394242599102">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="350911909531131" type="System">
-                    <param id="0" name="Variable">pick</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">3</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="661964675754053" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="732572520113153" type="System">
-                    <param id="0" name="Object to create">enamy</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">random(-18,660)</param>
-                    <param id="3" name="Y">-17</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="563959775827982">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="622319336365139" type="System">
-                    <param id="0" name="Variable">pick</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">4</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="153974926160694" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="519196530212816" type="System">
-                    <param id="0" name="Object to create">enamy</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">random(-18,660)</param>
-                    <param id="3" name="Y">499</param>
+                    <param id="2" name="X">526.042</param>
+                    <param id="3" name="Y">random(20.847,321.32)</param>
                 </action>
             </actions>
         </event-block>
@@ -282,6 +246,7 @@
                 <condition id="0" name="On collision with another object" sid="324754828880093" type="enamy">
                     <param id="0" name="Object">apple</param>
                 </condition>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="822562228749319" type="apple" />
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="479526780784060" type="enamy">
@@ -296,9 +261,22 @@
                     <param id="0" name="Pin to">enamy</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="267698366430633" type="enamy">
+                    <param id="0" name="Object">apple</param>
+                </action>
                 <action id="-11" name="Subtract from" sid="412816807268899" type="System">
                     <param id="0" name="Variable">ho</param>
                     <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="454293176838053">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="725748086587682" type="apple" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set flipped" sid="883800604250753" type="apple">
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
@@ -307,23 +285,232 @@
                 <condition id="0" name="On collision with another object" sid="207265738051883" type="enamy">
                     <param id="0" name="Object">grapes</param>
                 </condition>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="123658135996705" type="grapes" />
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="594450475735117" type="enamy">
                     <param id="0" name="Instance variable">targit</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-3" name="Set position" sid="940830346185187" type="apple">
+                <action id="-3" name="Set position" sid="940830346185187" type="grapes">
                     <param id="0" name="X">enamy.X</param>
                     <param id="1" name="Y">enamy.Y</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="528947081464723" type="apple">
+                <action behavior="Pin" id="0" name="Pin to object" sid="528947081464723" type="grapes">
                     <param id="0" name="Pin to">enamy</param>
                     <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="746414774699038" type="enamy">
+                    <param id="0" name="Object">grapes</param>
                 </action>
                 <action id="-11" name="Subtract from" sid="165409915732850" type="System">
                     <param id="0" name="Variable">ho</param>
                     <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="295510251216123">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="383798276202149" type="grapes" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set flipped" sid="598501120909622" type="grapes">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="980117034234138">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="282494783762620" type="enamy">
+                    <param id="0" name="Object">greenApple</param>
+                </condition>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="303379943662436" type="greenApple" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="372365621977309" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="782343253343231" type="greenApple">
+                    <param id="0" name="X">enamy.X</param>
+                    <param id="1" name="Y">enamy.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="608868799080446" type="greenApple">
+                    <param id="0" name="Pin to">enamy</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="209713494925385" type="enamy">
+                    <param id="0" name="Object">greenApple</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="507749064693960" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="561763109962734">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="356748630471472" type="greenApple" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set flipped" sid="441261887031861" type="greenApple">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="671225708836605">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="885095623990428" type="enamy">
+                    <param id="0" name="Object">greenGrapes</param>
+                </condition>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="173778891152070" type="greenGrapes" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="435889811091302" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="373490917311482" type="greenGrapes">
+                    <param id="0" name="X">enamy.X</param>
+                    <param id="1" name="Y">enamy.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="709236836275941" type="greenGrapes">
+                    <param id="0" name="Pin to">enamy</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="912342396337184" type="enamy">
+                    <param id="0" name="Object">greenGrapes</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="248797417197688" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="793803198121478">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="501344267745826" type="greenGrapes" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set flipped" sid="942461494920250" type="greenGrapes">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="643531937164263">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="551773712989461" type="enamy">
+                    <param id="0" name="Object">hotdog</param>
+                </condition>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="137677593049431" type="hotdog" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="592050019698502" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="659892154145485" type="hotdog">
+                    <param id="0" name="X">enamy.X</param>
+                    <param id="1" name="Y">enamy.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="573930007901127" type="hotdog">
+                    <param id="0" name="Pin to">enamy</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="148773483477124" type="enamy">
+                    <param id="0" name="Object">hotdog</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="896566963190654" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="191939867485201">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="841805677492862" type="hotdog" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set flipped" sid="626587116036052" type="hotdog">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="632564288576996">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="732205961842266" type="enamy">
+                    <param id="0" name="Object">sandwich</param>
+                </condition>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="610836045904219" type="sandwich" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="945956475638829" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="889942827276788" type="sandwich">
+                    <param id="0" name="X">enamy.X</param>
+                    <param id="1" name="Y">enamy.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="423675776872994" type="sandwich">
+                    <param id="0" name="Pin to">enamy</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="765606600108522" type="enamy">
+                    <param id="0" name="Object">sandwich</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="735051300104331" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="292827583032962">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="208563054871426" type="sandwich" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set flipped" sid="338826993371418" type="sandwich">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="148268929697790">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="933578053256369" type="enamy">
+                    <param id="0" name="Object">watermelon</param>
+                </condition>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="259343233339800" type="watermelon" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="878839871913462" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="186544973226696" type="watermelon">
+                    <param id="0" name="X">enamy.X</param>
+                    <param id="1" name="Y">enamy.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="719153892596926" type="watermelon">
+                    <param id="0" name="Pin to">enamy</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="382511243841766" type="enamy">
+                    <param id="0" name="Object">watermelon</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="644575558187550" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="950865642684590">
+            <conditions>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="635487732064816" type="watermelon" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set flipped" sid="727286313659894" type="watermelon">
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
@@ -349,7 +536,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="579619416598251">
+        <event-block disabled="1" sid="579619416598251">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="145748257633168" type="center">
                     <param id="0" name="Object">enamy</param>
@@ -372,7 +559,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="887536862066218">
+        <event-block disabled="1" sid="887536862066218">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="835253571451477" type="center">
                     <param id="0" name="Object">enamy</param>
@@ -437,6 +624,11 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">&quot;game&quot;</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="916109719383971" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-11" name="Subtract from" sid="970918588387602" type="System">
@@ -464,6 +656,9 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-16" name="Wait" sid="608331496967017" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="758570303472796" type="System">
                     <param id="0" name="Layout">end</param>
                 </action>
@@ -493,7 +688,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="531503548237422">
+        <event-block disabled="1" sid="531503548237422">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="683435552090575" type="fruit">
                     <param id="0" name="Object">fruitEater</param>
@@ -503,7 +698,77 @@
                 <action id="-9" name="Destroy" sid="840008058856626" type="fruit" />
             </actions>
         </event-block>
-        <event-block sid="108123109310461">
+        <event-block any="1" sid="722040371630452">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="391958896773496" type="apple">
+                    <param id="0" name="Object">fruitEater</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="337603569312022" type="apple" />
+            </actions>
+        </event-block>
+        <event-block any="1" sid="710472229249520">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="199425470253786" type="grapes">
+                    <param id="0" name="Object">fruitEater</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="608492156290814" type="grapes" />
+            </actions>
+        </event-block>
+        <event-block any="1" sid="864556077453111">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="297890248617039" type="greenApple">
+                    <param id="0" name="Object">fruitEater</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="434748813534528" type="greenApple" />
+            </actions>
+        </event-block>
+        <event-block any="1" sid="181410283182680">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="371131978921089" type="greenGrapes">
+                    <param id="0" name="Object">fruitEater</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="889627742112719" type="greenGrapes" />
+            </actions>
+        </event-block>
+        <event-block any="1" sid="990354860721695">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="499024069775202" type="hotdog">
+                    <param id="0" name="Object">fruitEater</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="544883003846902" type="hotdog" />
+            </actions>
+        </event-block>
+        <event-block any="1" sid="311166183425631">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="108535633071701" type="sandwich">
+                    <param id="0" name="Object">fruitEater</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="129984488340953" type="sandwich" />
+            </actions>
+        </event-block>
+        <event-block any="1" sid="510092653599046">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="448921709382601" type="watermelon">
+                    <param id="0" name="Object">fruitEater</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="699216351161550" type="watermelon" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="108123109310461">
             <conditions>
                 <condition id="-18" name="On created" sid="110474052742644" type="fruit" />
             </conditions>
@@ -536,7 +801,7 @@
                 <action behavior="Fade" id="0" name="Restart fade" sid="297618740340689" type="level" />
             </actions>
             <sub-events>
-                <event-block sid="256011297354467">
+                <event-block disabled="1" sid="256011297354467">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="974636092658269" type="System">
                             <param id="0" name="Variable">ho</param>
@@ -551,7 +816,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="583845445305572">
+                <event-block disabled="1" sid="583845445305572">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="712303381907515" type="System">
                             <param id="0" name="Variable">ho</param>
@@ -603,7 +868,7 @@
                 <condition id="-14" name="Compare variable" sid="992616424682820" type="System">
                     <param id="0" name="Variable">enamyspeed</param>
                     <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">0.80</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>

@@ -299,6 +299,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="MainMenue" sid="409804805810642">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

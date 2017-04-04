@@ -3,7 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="0" name="incressfont" sid="992179101512007" static="0" type="number">20</variable>
+        <variable constant="0" name="pawusegap" sid="254053889507352" static="0" type="number">0</variable>
+        <variable constant="0" name="incressfont" sid="992179101512007" static="0" type="number">26</variable>
         <variable constant="0" name="hiscore" sid="926933365670741" static="0" type="number">0</variable>
         <variable constant="0" name="enamyspeed" sid="155540389953627" static="0" type="number">0</variable>
         <variable constant="0" name="extraho" sid="473535702472027" static="0" type="number">0</variable>
@@ -116,6 +117,9 @@
                 </action>
                 <action id="0" name="Set text" sid="557521371359019" type="hischore">
                     <param id="0" name="Text">&quot;hiscore: &quot;&amp;hiscore</param>
+                </action>
+                <action id="0" name="Set text" sid="487212304658660" type="countdown">
+                    <param id="0" name="Text">pawusegap</param>
                 </action>
             </actions>
         </event-block>
@@ -612,6 +616,10 @@
                 <action id="-15" name="Set visible" sid="539513612703965" type="continue">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="864600348251808" type="System">
+                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="1" name="Value">3</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="838759255731926">
@@ -895,6 +903,94 @@
             <actions>
                 <action behavior="Solid" id="0" name="Set enabled" sid="648118431781205" type="paddle">
                     <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="321270636437751">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="483698054072990" type="System">
+                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="819169249751962" type="enamy">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="676213162242604" type="countdown">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="710281616090159">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="601261400270685" type="System">
+                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="697264316922446" type="enamy">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="520301024096341" type="countdown">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="699401523314740">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="866219965705302" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="177248201450999" type="System">
+                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="986497880855834" type="System">
+                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="671951028705496">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="365264483373109" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="777791722711233" type="System">
+                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="757080236434662" type="System">
+                    <param id="0" name="Variable">incressfont</param>
+                    <param id="1" name="Value">incressfont+2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="310193612374710">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="912422132375891" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="100839252985869" type="System">
+                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="436606797812307" type="System">
+                    <param id="0" name="Variable">incressfont</param>
+                    <param id="1" name="Value">26</param>
                 </action>
             </actions>
         </event-block>

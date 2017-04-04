@@ -302,6 +302,9 @@
         <object-type name="MainMenue" sid="409804805810642">
             <plugin id="Text" />
         </object-type>
+        <object-type name="countdown" sid="777910147019228">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

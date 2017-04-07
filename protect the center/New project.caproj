@@ -10,6 +10,7 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -50,6 +51,11 @@
     <object-folder>
         <object-type name="center" sid="872315707633389">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="392552327661351">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="882073521342012" speed="5">
                     <frame duration="1" hotspotX="0.501767" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\bluePlate.png">
@@ -71,6 +77,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="targit" sid="302246728223209" type="number" />
+                <instance-variable name="ChoosFood" sid="209942227869131" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Turret" sid="282598190022563">
@@ -305,6 +312,43 @@
         <object-type name="countdown" sid="777910147019228">
             <plugin id="Text" />
         </object-type>
+        <object-type name="EndAndStartSeen" sid="852204160865208">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="targit" sid="348416821800232" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Turret" sid="142422662864692">
+                    <behavior id="Turret" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="106859286754685">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="717246711237790" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.491803" original-source="C:\Users\Pitchfork\Desktop\ant1.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\ant2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="356399961316913">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -320,6 +364,20 @@
         <global-instance type="Touch" uid="3">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="48">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
     </global-instances>

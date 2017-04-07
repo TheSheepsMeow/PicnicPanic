@@ -121,6 +121,9 @@
                 <action id="0" name="Set text" sid="487212304658660" type="countdown">
                     <param id="0" name="Text">pawusegap</param>
                 </action>
+                <action id="3" name="Set font size" sid="411376356899606" type="countdown">
+                    <param id="0" name="Size (pt)">incressfont</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="335135008106235">
@@ -149,6 +152,16 @@
                     <param id="0" name="First value">LayoutName</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">&quot;game&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="399231459043990" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;game&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="321190677552614" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -250,6 +263,11 @@
                 <condition id="0" name="On collision with another object" sid="324754828880093" type="enamy">
                     <param id="0" name="Object">apple</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="842989021630841" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
                 <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="822562228749319" type="apple" />
             </conditions>
             <actions>
@@ -288,6 +306,11 @@
             <conditions>
                 <condition id="0" name="On collision with another object" sid="207265738051883" type="enamy">
                     <param id="0" name="Object">grapes</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="436077047870718" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
                 <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="123658135996705" type="grapes" />
             </conditions>
@@ -328,6 +351,11 @@
                 <condition id="0" name="On collision with another object" sid="282494783762620" type="enamy">
                     <param id="0" name="Object">greenApple</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="547263546058654" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
                 <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="303379943662436" type="greenApple" />
             </conditions>
             <actions>
@@ -366,6 +394,11 @@
             <conditions>
                 <condition id="0" name="On collision with another object" sid="885095623990428" type="enamy">
                     <param id="0" name="Object">greenGrapes</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="529997445134747" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
                 <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="173778891152070" type="greenGrapes" />
             </conditions>
@@ -406,6 +439,11 @@
                 <condition id="0" name="On collision with another object" sid="551773712989461" type="enamy">
                     <param id="0" name="Object">hotdog</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="197468353017382" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
                 <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="137677593049431" type="hotdog" />
             </conditions>
             <actions>
@@ -445,6 +483,11 @@
                 <condition id="0" name="On collision with another object" sid="732205961842266" type="enamy">
                     <param id="0" name="Object">sandwich</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="721145593694699" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
                 <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="610836045904219" type="sandwich" />
             </conditions>
             <actions>
@@ -483,6 +526,11 @@
             <conditions>
                 <condition id="0" name="On collision with another object" sid="933578053256369" type="enamy">
                     <param id="0" name="Object">watermelon</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="338184665323367" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
                 <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="259343233339800" type="watermelon" />
             </conditions>
@@ -655,7 +703,7 @@
                 <action id="-9" name="Destroy" sid="428838351752696" type="enamy" />
             </actions>
         </event-block>
-        <event-block sid="841217007623625">
+        <event-block disabled="1" sid="841217007623625">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="576612898451176" type="System">
                     <param id="0" name="Variable">ho</param>
@@ -668,6 +716,40 @@
                     <param id="0" name="Seconds">2</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="758570303472796" type="System">
+                    <param id="0" name="Layout">end</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="217201698714366">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="193568178729390" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="441491593334168" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="714395254532888" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="996121177577600" type="EndAndStartSeen">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="371834996496801" type="System">
+                    <param id="0" name="Seconds">2.8</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="710393584366723" type="center">
+                    <param id="0" name="Pin to">EndAndStartSeen</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="192339154209009" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="784404280584457" type="System">
                     <param id="0" name="Layout">end</param>
                 </action>
             </actions>
@@ -958,6 +1040,24 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="310193612374710">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="912422132375891" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="100839252985869" type="System">
+                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="436606797812307" type="System">
+                    <param id="0" name="Variable">incressfont</param>
+                    <param id="1" name="Value">26</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="671951028705496">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="365264483373109" type="System">
@@ -972,25 +1072,7 @@
             <actions>
                 <action id="-9" name="Set value" sid="757080236434662" type="System">
                     <param id="0" name="Variable">incressfont</param>
-                    <param id="1" name="Value">incressfont+2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="310193612374710">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="912422132375891" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="100839252985869" type="System">
-                    <param id="0" name="Variable">pawusegap</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="436606797812307" type="System">
-                    <param id="0" name="Variable">incressfont</param>
-                    <param id="1" name="Value">26</param>
+                    <param id="1" name="Value">incressfont+1</param>
                 </action>
             </actions>
         </event-block>

@@ -48,11 +48,40 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
-                <condition id="-1" name="Every tick" sid="683163195652974" type="System" />
+                <condition id="-1" name="Every tick" sid="833193268423393" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="886873701334693">
+                    <conditions>
+                        <condition id="-15" name="Pick nearest/furthest" sid="413480101871935" type="food">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">enamy.X</param>
+                            <param id="2" name="Y">enamy.Y</param>
+                        </condition>
+                        <condition behavior="Pin2" id="0" inverted="1" name="Is pinned" sid="642803887346447" type="food" />
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="522760129202757" type="enamy">
+                            <param id="0" name="X">food.X</param>
+                            <param id="1" name="Y">food.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="120273027137614">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="869515407847318" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="737380640743684" type="System" />
             </conditions>
             <actions>
-                <action behavior="Turret" id="0" name="Acquire target" sid="952059606680387" type="enamy">
-                    <param id="0" name="Target">center</param>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="416444650149661" type="enamy">
+                    <param id="0" name="Angle">choose(enamy.X,enamy.Y,food.X,food.Y)</param>
                 </action>
             </actions>
         </event-block>
@@ -79,6 +108,7 @@
                     <param id="2" name="Value">0</param>
                 </condition>
                 <condition id="-9" inverted="1" name="Is visible" sid="884641542092756" type="genral" />
+                <condition behavior="Solid" id="0" name="Is enabled" sid="828604826470730" type="paddle" />
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="242740418423514" type="enamy">
@@ -149,11 +179,6 @@
                 </condition>
                 <condition id="-9" inverted="1" name="Is visible" sid="409516623135164" type="level" />
                 <condition id="-8" name="Compare two values" sid="434046977825711" type="System">
-                    <param id="0" name="First value">LayoutName</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">&quot;game&quot;</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="399231459043990" type="System">
                     <param id="0" name="First value">LayoutName</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">&quot;game&quot;</param>
@@ -258,7 +283,51 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="102597489773436">
+        <event-block sid="755020032851413">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="848560830286487" type="enamy">
+                    <param id="0" name="Object">food</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="436375308176021" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition behavior="Pin2" id="0" inverted="1" name="Is pinned" sid="543179752667306" type="food" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="388194878243266" type="enamy">
+                    <param id="0" name="Instance variable">targit</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="291236123334711" type="food">
+                    <param id="0" name="X">enamy.X</param>
+                    <param id="1" name="Y">enamy.Y</param>
+                </action>
+                <action behavior="Pin2" id="0" name="Pin to object" sid="134015284451014" type="food">
+                    <param id="0" name="Pin to">enamy</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="289917619153956" type="enamy">
+                    <param id="0" name="Object">food</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="875306465851738" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="564756108063089">
+            <conditions>
+                <condition behavior="Pin2" id="0" name="Is pinned" sid="804409445065728" type="food" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set flipped" sid="531646485204562" type="food">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="102597489773436">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="324754828880093" type="enamy">
                     <param id="0" name="Object">apple</param>
@@ -292,7 +361,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="454293176838053">
+        <event-block disabled="1" sid="454293176838053">
             <conditions>
                 <condition behavior="Pin" id="0" name="Is pinned" sid="725748086587682" type="apple" />
             </conditions>
@@ -302,7 +371,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="929000981818944">
+        <event-block disabled="1" sid="929000981818944">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="207265738051883" type="enamy">
                     <param id="0" name="Object">grapes</param>
@@ -336,7 +405,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="295510251216123">
+        <event-block disabled="1" sid="295510251216123">
             <conditions>
                 <condition behavior="Pin" id="0" name="Is pinned" sid="383798276202149" type="grapes" />
             </conditions>
@@ -346,7 +415,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="980117034234138">
+        <event-block disabled="1" sid="980117034234138">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="282494783762620" type="enamy">
                     <param id="0" name="Object">greenApple</param>
@@ -380,7 +449,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="561763109962734">
+        <event-block disabled="1" sid="561763109962734">
             <conditions>
                 <condition behavior="Pin" id="0" name="Is pinned" sid="356748630471472" type="greenApple" />
             </conditions>
@@ -390,7 +459,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="671225708836605">
+        <event-block disabled="1" sid="671225708836605">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="885095623990428" type="enamy">
                     <param id="0" name="Object">greenGrapes</param>
@@ -424,7 +493,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="793803198121478">
+        <event-block disabled="1" sid="793803198121478">
             <conditions>
                 <condition behavior="Pin" id="0" name="Is pinned" sid="501344267745826" type="greenGrapes" />
             </conditions>
@@ -434,7 +503,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="643531937164263">
+        <event-block disabled="1" sid="643531937164263">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="551773712989461" type="enamy">
                     <param id="0" name="Object">hotdog</param>
@@ -468,7 +537,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="191939867485201">
+        <event-block disabled="1" sid="191939867485201">
             <conditions>
                 <condition behavior="Pin" id="0" name="Is pinned" sid="841805677492862" type="hotdog" />
             </conditions>
@@ -478,7 +547,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="632564288576996">
+        <event-block disabled="1" sid="632564288576996">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="732205961842266" type="enamy">
                     <param id="0" name="Object">sandwich</param>
@@ -512,7 +581,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="292827583032962">
+        <event-block disabled="1" sid="292827583032962">
             <conditions>
                 <condition behavior="Pin" id="0" name="Is pinned" sid="208563054871426" type="sandwich" />
             </conditions>
@@ -522,7 +591,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="148268929697790">
+        <event-block disabled="1" sid="148268929697790">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="933578053256369" type="enamy">
                     <param id="0" name="Object">watermelon</param>
@@ -556,7 +625,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="950865642684590">
+        <event-block disabled="1" sid="950865642684590">
             <conditions>
                 <condition behavior="Pin" id="0" name="Is pinned" sid="635487732064816" type="watermelon" />
             </conditions>
@@ -645,6 +714,9 @@
                 <action id="-15" name="Set visible" sid="820726003883964" type="continue">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="116169165445400" type="MainMenue">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="834766001375559">
@@ -667,6 +739,28 @@
                 <action id="-9" name="Set value" sid="864600348251808" type="System">
                     <param id="0" name="Variable">pawusegap</param>
                     <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="703662614358338">
+            <conditions>
+                <condition id="3" name="On touched object" sid="394954679414509" type="Touch">
+                    <param id="0" name="Object">MainMenue</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="761361185782327" type="MainMenue" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="673317546910487" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="235678744877179" type="genral">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="828349499715150" type="continue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="950021023374539" type="System">
+                    <param id="0" name="Layout">start</param>
                 </action>
             </actions>
         </event-block>

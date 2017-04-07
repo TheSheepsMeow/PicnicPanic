@@ -350,7 +350,24 @@
             <plugin id="Audio" />
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="food" plugin-id="Sprite" sid="246081577088776">
+            <members>
+                <member>apple</member>
+                <member>grapes</member>
+                <member>greenApple</member>
+                <member>greenGrapes</member>
+                <member>hotdog</member>
+                <member>sandwich</member>
+                <member>watermelon</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin2" sid="615886187965599">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder>
         <layout>start.xml</layout>
         <layout>game.xml</layout>

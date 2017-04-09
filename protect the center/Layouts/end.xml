@@ -237,7 +237,7 @@
                         <text>main menue</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-27,400,0</font>
-                        <color>0,0,153</color>
+                        <color>0,0,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>

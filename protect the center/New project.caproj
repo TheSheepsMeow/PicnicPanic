@@ -463,6 +463,15 @@
         <object-type name="levelcounter" sid="621723183597423">
             <plugin id="Text" />
         </object-type>
+        <object-type name="shutupbutton" sid="957919688461423">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="557299796149731" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="food" plugin-id="Sprite" sid="246081577088776">
@@ -512,7 +521,10 @@
             </properties>
         </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="antWithFood0.m4a" />
+        <file name="antWithFood0.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

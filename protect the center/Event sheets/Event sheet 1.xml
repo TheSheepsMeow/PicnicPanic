@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="shutup" sid="972229057156212" static="0" type="number">0</variable>
         <variable constant="0" name="Swiping" sid="569216829540219" static="0" type="number">0</variable>
         <variable constant="0" name="pawusegap" sid="254053889507352" static="0" type="number">0</variable>
         <variable constant="0" name="incressfont" sid="992179101512007" static="0" type="number">26</variable>
@@ -282,6 +283,9 @@
                 <action id="0" name="Set text" sid="481175872822979" type="levelcounter">
                     <param id="0" name="Text">&quot;level &quot;&amp;level</param>
                 </action>
+                <action id="5" name="Set frame" sid="368465995764291" type="shutupbutton">
+                    <param id="0" name="Frame number">shutup</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="335135008106235">
@@ -391,6 +395,26 @@
                 <action id="-11" name="Subtract from" sid="875306465851738" type="System">
                     <param id="0" name="Variable">ho</param>
                     <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="265598674057281">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="400815139049386" type="enamy">
+                    <param id="0" name="Object">food</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="911900243278928" type="System">
+                    <param id="0" name="Variable">shutup</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="253470217719838" type="Audio">
+                    <param id="0" name="Audio file">antWithFood0</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -861,6 +885,44 @@
                     <param id="1" name="Value">incressfont+1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="485321471002545">
+            <conditions>
+                <condition id="17" name="On tap object" sid="378293171997168" type="Touch">
+                    <param id="0" name="Object">shutupbutton</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="150299364913101">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="816454662318270" type="shutupbutton">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="970398794460377" type="System">
+                            <param id="0" name="Variable">shutup</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="228727300112918">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="292292403795831" type="shutupbutton">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="476059762330754" type="System">
+                            <param id="0" name="Variable">shutup</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

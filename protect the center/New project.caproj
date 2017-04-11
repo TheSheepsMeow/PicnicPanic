@@ -217,8 +217,22 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574658389059956" speed="4">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\redApple1.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\redApple2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\redApple1.png">
+                        <collision-poly>
+                            <point x="0.265306" y="0.384615" />
+                            <point x="0.683674" y="0.403846" />
+                            <point x="0.632653" y="0.759615" />
+                            <point x="0.265306" y="0.75" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\redApple2.png">
+                        <collision-poly>
+                            <point x="0.265306" y="0.384615" />
+                            <point x="0.683674" y="0.403846" />
+                            <point x="0.632653" y="0.759615" />
+                            <point x="0.265306" y="0.75" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -231,8 +245,22 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="348528999724191" speed="3">
-                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504" original-source="C:\Users\Pitchfork\Desktop\grape1.png" />
-                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504" original-source="C:\Users\Pitchfork\Desktop\grape2.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504" original-source="C:\Users\Pitchfork\Desktop\grape1.png">
+                        <collision-poly>
+                            <point x="0.347826" y="0.328" />
+                            <point x="0.660869" y="0.376" />
+                            <point x="0.73913" y="0.68" />
+                            <point x="0.347826" y="0.616" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504" original-source="C:\Users\Pitchfork\Desktop\grape2.png">
+                        <collision-poly>
+                            <point x="0.347826" y="0.328" />
+                            <point x="0.660869" y="0.376" />
+                            <point x="0.73913" y="0.68" />
+                            <point x="0.347826" y="0.616" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -245,8 +273,22 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421980033008694" speed="5">
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.503106" original-source="C:\Users\Pitchfork\Desktop\greenGrapes1.png" />
-                    <frame duration="1" hotspotX="0.504274" hotspotY="0.503106" original-source="C:\Users\Pitchfork\Desktop\greenGrapes2.png" />
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.503106" original-source="C:\Users\Pitchfork\Desktop\greenGrapes1.png">
+                        <collision-poly>
+                            <point x="0.299145" y="0.354037" />
+                            <point x="0.752137" y="0.329193" />
+                            <point x="0.717949" y="0.677019" />
+                            <point x="0.299145" y="0.658385" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.503106" original-source="C:\Users\Pitchfork\Desktop\greenGrapes2.png">
+                        <collision-poly>
+                            <point x="0.299145" y="0.354037" />
+                            <point x="0.752137" y="0.329193" />
+                            <point x="0.717949" y="0.677019" />
+                            <point x="0.299145" y="0.658385" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -259,8 +301,22 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245555693704968" speed="6">
-                    <frame duration="1" hotspotX="0.502959" hotspotY="0.505155" original-source="C:\Users\Pitchfork\Desktop\hotdog1.png" />
-                    <frame duration="1" hotspotX="0.502959" hotspotY="0.505155" original-source="C:\Users\Pitchfork\Desktop\hotdog2.png" />
+                    <frame duration="1" hotspotX="0.502959" hotspotY="0.505155" original-source="C:\Users\Pitchfork\Desktop\hotdog1.png">
+                        <collision-poly>
+                            <point x="0.248521" y="0.298969" />
+                            <point x="0.763314" y="0.195876" />
+                            <point x="0.822485" y="0.556701" />
+                            <point x="0.272189" y="0.670103" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502959" hotspotY="0.505155" original-source="C:\Users\Pitchfork\Desktop\hotdog2.png">
+                        <collision-poly>
+                            <point x="0.248521" y="0.298969" />
+                            <point x="0.763314" y="0.195876" />
+                            <point x="0.822485" y="0.556701" />
+                            <point x="0.272189" y="0.670103" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -273,8 +329,22 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="409728388720447" speed="2">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\watermelon1.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\watermelon2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\watermelon1.png">
+                        <collision-poly>
+                            <point x="0.442857" y="0.283582" />
+                            <point x="0.65" y="0.253731" />
+                            <point x="0.821429" y="0.746269" />
+                            <point x="0.214286" y="0.679105" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\watermelon2.png">
+                        <collision-poly>
+                            <point x="0.442857" y="0.283582" />
+                            <point x="0.65" y="0.253731" />
+                            <point x="0.821429" y="0.746269" />
+                            <point x="0.214286" y="0.679105" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -287,8 +357,22 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="876860141771254" speed="4">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sandwich1.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sandwich2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sandwich1.png">
+                        <collision-poly>
+                            <point x="0.229167" y="0.141509" />
+                            <point x="0.722223" y="0.103774" />
+                            <point x="0.798612" y="0.35849" />
+                            <point x="0.270833" y="0.698113" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sandwich2.png">
+                        <collision-poly>
+                            <point x="0.229167" y="0.141509" />
+                            <point x="0.722223" y="0.103774" />
+                            <point x="0.798612" y="0.35849" />
+                            <point x="0.270833" y="0.698113" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -301,8 +385,22 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429084835791271" speed="4">
-                    <frame duration="1" hotspotX="0.50505" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\greenApple.png" />
-                    <frame duration="1" hotspotX="0.50505" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\greenApple2.png" />
+                    <frame duration="1" hotspotX="0.50505" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\greenApple.png">
+                        <collision-poly>
+                            <point x="0.373737" y="0.37963" />
+                            <point x="0.717172" y="0.361111" />
+                            <point x="0.747475" y="0.685185" />
+                            <point x="0.313131" y="0.712963" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50505" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\greenApple2.png">
+                        <collision-poly>
+                            <point x="0.373737" y="0.37963" />
+                            <point x="0.717172" y="0.361111" />
+                            <point x="0.747475" y="0.685185" />
+                            <point x="0.313131" y="0.712963" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -361,6 +459,9 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="levelcounter" sid="621723183597423">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>

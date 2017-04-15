@@ -456,7 +456,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="104008249533437" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.502283" hotspotY="0.502283" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\picnicpanic_Title.png">
+                        <collision-poly>
+                            <point x="0.123288" y="0.123288" />
+                            <point x="0.497717" y="0" />
+                            <point x="0.863014" y="0.136986" />
+                            <point x="1" y="0.497717" />
+                            <point x="0.853881" y="0.853881" />
+                            <point x="0.497717" y="1" />
+                            <point x="0.146119" y="0.853881" />
+                            <point x="0" y="0.497717" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -467,8 +478,92 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="557299796149731" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Volume_ON.png">
+                        <collision-poly>
+                            <point x="0.161765" y="0.161765" />
+                            <point x="0.5" y="0.0147059" />
+                            <point x="0.838235" y="0.161765" />
+                            <point x="0.955882" y="0.5" />
+                            <point x="0.838235" y="0.838235" />
+                            <point x="0.5" y="0.985294" />
+                            <point x="0.161765" y="0.838235" />
+                            <point x="0.0294118" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Volume_OFF.png">
+                        <collision-poly>
+                            <point x="0.161765" y="0.161765" />
+                            <point x="0.5" y="0.0147059" />
+                            <point x="0.838235" y="0.161765" />
+                            <point x="0.955882" y="0.5" />
+                            <point x="0.838235" y="0.838235" />
+                            <point x="0.5" y="0.985294" />
+                            <point x="0.161765" y="0.838235" />
+                            <point x="0.0294118" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="start" sid="717285103240624">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="661717238596946" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504673" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Play_02.png">
+                        <collision-poly>
+                            <point x="0.133803" y="0.17757" />
+                            <point x="0.5" y="0.00934579" />
+                            <point x="0.873239" y="0.168224" />
+                            <point x="0.992958" y="0.495327" />
+                            <point x="0.859155" y="0.813084" />
+                            <point x="0.5" y="0.981308" />
+                            <point x="0.140845" y="0.813084" />
+                            <point x="0.0140845" y="0.495327" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Play_Clicked.png">
+                        <collision-poly>
+                            <point x="0.133803" y="0.17757" />
+                            <point x="0.5" y="0.00934579" />
+                            <point x="0.873239" y="0.168224" />
+                            <point x="0.992958" y="0.495327" />
+                            <point x="0.859155" y="0.813084" />
+                            <point x="0.5" y="0.981308" />
+                            <point x="0.140845" y="0.813084" />
+                            <point x="0.0140845" y="0.495327" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pausebutton" sid="373799835678238">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="950970739955088" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Pause_01.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.176471" />
+                            <point x="0.5" y="0.0147059" />
+                            <point x="0.838235" y="0.161765" />
+                            <point x="0.970588" y="0.5" />
+                            <point x="0.838235" y="0.838235" />
+                            <point x="0.5" y="0.985294" />
+                            <point x="0.176471" y="0.823529" />
+                            <point x="0.0441176" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Pause_Clicked.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.176471" />
+                            <point x="0.5" y="0.0147059" />
+                            <point x="0.838235" y="0.161765" />
+                            <point x="0.970588" y="0.5" />
+                            <point x="0.838235" y="0.838235" />
+                            <point x="0.5" y="0.985294" />
+                            <point x="0.176471" y="0.823529" />
+                            <point x="0.0441176" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

@@ -567,6 +567,68 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="restert" sid="766096974763993">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="300868804708572" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Retry_02.png">
+                        <collision-poly>
+                            <point x="0.123188" y="0.163462" />
+                            <point x="0.5" y="0" />
+                            <point x="0.876812" y="0.163462" />
+                            <point x="1" y="0.5" />
+                            <point x="0.869565" y="0.826923" />
+                            <point x="0.5" y="1" />
+                            <point x="0.130435" y="0.826923" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Retry_Clicked.png">
+                        <collision-poly>
+                            <point x="0.123188" y="0.163462" />
+                            <point x="0.5" y="0" />
+                            <point x="0.876812" y="0.163462" />
+                            <point x="1" y="0.5" />
+                            <point x="0.869565" y="0.826923" />
+                            <point x="0.5" y="1" />
+                            <point x="0.130435" y="0.826923" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="home" sid="685885356519237">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="482736218463572" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504673" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Home_02.png">
+                        <collision-poly>
+                            <point x="0.133803" y="0.17757" />
+                            <point x="0.5" y="0.00934579" />
+                            <point x="0.873239" y="0.168224" />
+                            <point x="0.992958" y="0.495327" />
+                            <point x="0.859155" y="0.813084" />
+                            <point x="0.5" y="0.981308" />
+                            <point x="0.140845" y="0.813084" />
+                            <point x="0.0140845" y="0.495327" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Home_Clicked.png">
+                        <collision-poly>
+                            <point x="0.133803" y="0.17757" />
+                            <point x="0.5" y="0.00934579" />
+                            <point x="0.873239" y="0.168224" />
+                            <point x="0.992958" y="0.495327" />
+                            <point x="0.859155" y="0.813084" />
+                            <point x="0.5" y="0.981308" />
+                            <point x="0.140845" y="0.813084" />
+                            <point x="0.0140845" y="0.495327" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="food" plugin-id="Sprite" sid="246081577088776">

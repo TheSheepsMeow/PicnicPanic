@@ -1066,6 +1066,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="home" uid="59">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>222.678848267</x>
+                        <y>222.214035034</y>
+                        <z>0</z>
+                        <width>76.807998657</width>
+                        <height>57.883998871</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504672885</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="genral" uid="5">
                     <properties>
                         <text>pause</text>
@@ -1108,8 +1130,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>277.587677002</x>
-                        <y>181.369812012</y>
+                        <x>749.220275879</x>
+                        <y>110.301750183</y>
                         <z>0</z>
                         <width>146</width>
                         <height>46</height>
@@ -1135,8 +1157,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>87.467178345</x>
-                        <y>180.323471069</y>
+                        <x>-386.010009766</x>
+                        <y>104.641349792</y>
                         <z>0</z>
                         <width>214</width>
                         <height>45</height>

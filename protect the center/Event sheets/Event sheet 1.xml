@@ -44,6 +44,9 @@
                 <action id="4" name="Set maximum" sid="240740871075170" type="health">
                     <param id="0" name="Maximum">timmer</param>
                 </action>
+                <action id="5" name="Set frame" sid="517186492060262" type="home">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="720117265113976">
@@ -452,6 +455,9 @@
                 <action id="-15" name="Set visible" sid="116169165445400" type="MainMenue">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="993697080771954" type="home">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="383131293805424">
@@ -498,6 +504,9 @@
                 <action id="-15" name="Set visible" sid="460997916884104" type="MainMenue">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="-15" name="Set visible" sid="333385279549507" type="home">
+                    <param id="0" name="Visibility">1</param>
+                </action>
                 <action id="-9" name="Set value" sid="864600348251808" type="System">
                     <param id="0" name="Variable">pawusegap</param>
                     <param id="1" name="Value">3</param>
@@ -507,9 +516,9 @@
         <event-block sid="703662614358338">
             <conditions>
                 <condition id="3" name="On touched object" sid="394954679414509" type="Touch">
-                    <param id="0" name="Object">MainMenue</param>
+                    <param id="0" name="Object">home</param>
                 </condition>
-                <condition id="-9" name="Is visible" sid="761361185782327" type="MainMenue" />
+                <condition id="-9" name="Is visible" sid="761361185782327" type="home" />
             </conditions>
             <actions>
                 <action id="-13" name="Set time scale" sid="673317546910487" type="System">
@@ -520,6 +529,12 @@
                 </action>
                 <action id="-15" name="Set visible" sid="828349499715150" type="continue">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="950391899994440" type="home">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="231339502289516" type="System">
+                    <param id="0" name="Seconds">0.1</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="950021023374539" type="System">
                     <param id="0" name="Layout">start</param>

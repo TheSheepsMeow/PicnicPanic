@@ -101,7 +101,7 @@
                 <condition id="7" name="Compare touch speed" sid="501946112456767" type="Touch">
                     <param id="0" name="Touch index">0</param>
                     <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Speed">1000</param>
+                    <param id="2" name="Speed">800</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="918822783477837" type="System">
                     <param id="0" name="Variable">Swiping</param>
@@ -331,6 +331,24 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="366044576303245">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="227203257803413" type="System">
+                    <param id="0" name="Interval (seconds)">1-enamyspeed</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="437032436138584" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;start&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="797966810035097" type="System">
+                    <param id="0" name="Variable">pick</param>
+                    <param id="1" name="Value">choose(1,2)</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="853776914703210">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="512293250565194" type="System">
@@ -395,7 +413,7 @@
                 <action behavior="Bullet" id="4" name="Bounce off object" sid="289917619153956" type="enamy">
                     <param id="0" name="Object">food</param>
                 </action>
-                <action id="-11" name="Subtract from" sid="875306465851738" type="System">
+                <action disabled="1" id="-11" name="Subtract from" sid="875306465851738" type="System">
                     <param id="0" name="Variable">ho</param>
                     <param id="1" name="Value">10</param>
                 </action>
@@ -458,6 +476,9 @@
                 <action id="-15" name="Set visible" sid="993697080771954" type="home">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="473375396479541" type="restert">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="383131293805424">
@@ -505,7 +526,10 @@
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="333385279549507" type="home">
-                    <param id="0" name="Visibility">1</param>
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="881368106148262" type="restert">
+                    <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="864600348251808" type="System">
                     <param id="0" name="Variable">pawusegap</param>
@@ -657,6 +681,10 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="337603569312022" type="apple" />
+                <action id="-11" name="Subtract from" sid="927498839863434" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="710472229249520">
@@ -667,6 +695,10 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="608492156290814" type="grapes" />
+                <action id="-11" name="Subtract from" sid="401866795133271" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="864556077453111">
@@ -677,6 +709,10 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="434748813534528" type="greenApple" />
+                <action id="-11" name="Subtract from" sid="930817430059039" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="181410283182680">
@@ -687,6 +723,10 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="889627742112719" type="greenGrapes" />
+                <action id="-11" name="Subtract from" sid="396821242762534" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="990354860721695">
@@ -697,6 +737,10 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="544883003846902" type="hotdog" />
+                <action id="-11" name="Subtract from" sid="526804942593546" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="311166183425631">
@@ -707,6 +751,10 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="129984488340953" type="sandwich" />
+                <action id="-11" name="Subtract from" sid="450904420791820" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="510092653599046">
@@ -717,6 +765,10 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="699216351161550" type="watermelon" />
+                <action id="-11" name="Subtract from" sid="411450729459707" type="System">
+                    <param id="0" name="Variable">ho</param>
+                    <param id="1" name="Value">10</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="477701436683805">
@@ -1022,6 +1074,80 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="473387438059501">
+            <conditions>
+                <condition id="3" name="On touched object" sid="123915848817914" type="Touch">
+                    <param id="0" name="Object">resethi</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="299103132901375" type="resethi">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="317615536275648" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="968957072246671" type="resethi">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="826048363639675" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="242308506365016" type="resethi">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="401378502515882">
+            <conditions>
+                <condition id="3" name="On touched object" sid="499950082569302" type="Touch">
+                    <param id="0" name="Object">resethi</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="180166064221102" type="resethi">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="145522367270283" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="946811188145844" type="resethi">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="440731013877668" type="System">
+                    <param id="0" name="Variable">hiscore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="672263832591368" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="5" name="Set frame" sid="937566261828142" type="resethi">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="486807706647193">
+            <conditions>
+                <condition id="3" name="On touched object" sid="777473801347165" type="Touch">
+                    <param id="0" name="Object">restert</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="748739027031483" type="restert" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="558892499302675" type="restert">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="930164423845173" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="384952259979761" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="514974674877261" type="System" />
             </actions>
         </event-block>
     </events>

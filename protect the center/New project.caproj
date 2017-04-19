@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
-    <saved-with-version>23900</saved-with-version>
+    <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -21,6 +21,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -449,9 +450,15 @@
         </object-type>
         <object-type name="title" sid="103969685257847">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Variable1" sid="502745759545716" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="159245779680263">
                     <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="741058555315722">
+                    <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -624,6 +631,61 @@
                             <point x="0.5" y="0.981308" />
                             <point x="0.140845" y="0.813084" />
                             <point x="0.0140845" y="0.495327" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="resethi" sid="712598873931009">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="704749957826208" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\resetScore_02.png">
+                        <collision-poly>
+                            <point x="0.12766" y="0.184615" />
+                            <point x="0.5" y="0.0461538" />
+                            <point x="0.829787" y="0.246154" />
+                            <point x="1" y="0.492308" />
+                            <point x="0.829787" y="0.753846" />
+                            <point x="0.5" y="0.953846" />
+                            <point x="0.12766" y="0.815385" />
+                            <point x="0" y="0.492308" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\resetScore_Clicked.png">
+                        <collision-poly>
+                            <point x="0.138298" y="0.2" />
+                            <point x="0.5" y="0.0769231" />
+                            <point x="0.808511" y="0.276923" />
+                            <point x="1" y="0.492308" />
+                            <point x="0.829787" y="0.753846" />
+                            <point x="0.5" y="0.969231" />
+                            <point x="0.12766" y="0.815385" />
+                            <point x="0.0106383" y="0.492308" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Confirm_02.png">
+                        <collision-poly>
+                            <point x="0.138298" y="0.2" />
+                            <point x="0.5" y="0.0769231" />
+                            <point x="0.808511" y="0.276923" />
+                            <point x="1" y="0.492308" />
+                            <point x="0.829787" y="0.753846" />
+                            <point x="0.5" y="0.969231" />
+                            <point x="0.12766" y="0.815385" />
+                            <point x="0.0106383" y="0.492308" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Confirm_Clicked.png">
+                        <collision-poly>
+                            <point x="0.138298" y="0.2" />
+                            <point x="0.5" y="0.0769231" />
+                            <point x="0.808511" y="0.276923" />
+                            <point x="1" y="0.492308" />
+                            <point x="0.829787" y="0.753846" />
+                            <point x="0.5" y="0.969231" />
+                            <point x="0.12766" y="0.815385" />
+                            <point x="0.0106383" y="0.492308" />
                         </collision-poly>
                     </frame>
                 </animation>

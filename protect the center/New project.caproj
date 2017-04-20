@@ -11,6 +11,8 @@
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -45,7 +47,7 @@
         <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -639,8 +641,8 @@
         <object-type name="resethi" sid="712598873931009">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="704749957826208" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\resetScore_02.png">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315116832588033" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692">
                         <collision-poly>
                             <point x="0.12766" y="0.184615" />
                             <point x="0.5" y="0.0461538" />
@@ -652,7 +654,7 @@
                             <point x="0" y="0.492308" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\resetScore_Clicked.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\resetScore_01.png">
                         <collision-poly>
                             <point x="0.138298" y="0.2" />
                             <point x="0.5" y="0.0769231" />
@@ -664,6 +666,22 @@
                             <point x="0.0106383" y="0.492308" />
                         </collision-poly>
                     </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="push1" pingpong="0" repeatcount="0" repeatto="0" sid="253241383296117" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692">
+                        <collision-poly>
+                            <point x="0.138298" y="0.2" />
+                            <point x="0.5" y="0.0769231" />
+                            <point x="0.808511" y="0.276923" />
+                            <point x="1" y="0.492308" />
+                            <point x="0.829787" y="0.753846" />
+                            <point x="0.5" y="0.969231" />
+                            <point x="0.12766" y="0.815385" />
+                            <point x="0.0106383" y="0.492308" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="conferm" pingpong="0" repeatcount="1" repeatto="0" sid="704749957826208" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Confirm_02.png">
                         <collision-poly>
                             <point x="0.138298" y="0.2" />
@@ -676,7 +694,21 @@
                             <point x="0.0106383" y="0.492308" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Confirm_Clicked.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Confirm_01.png">
+                        <collision-poly>
+                            <point x="0.138298" y="0.2" />
+                            <point x="0.5" y="0.0769231" />
+                            <point x="0.808511" y="0.276923" />
+                            <point x="1" y="0.492308" />
+                            <point x="0.829787" y="0.753846" />
+                            <point x="0.5" y="0.969231" />
+                            <point x="0.12766" y="0.815385" />
+                            <point x="0.0106383" y="0.492308" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="resset" pingpong="0" repeatcount="0" repeatto="0" sid="342368295646342" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507692">
                         <collision-poly>
                             <point x="0.138298" y="0.2" />
                             <point x="0.5" y="0.0769231" />
@@ -690,6 +722,21 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="676403347013149">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="moregamesbutton" sid="710613922062566">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421550100055844" speed="5">
+                    <frame duration="1" hotspotX="0.501558" hotspotY="0.509804" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\MoreGames.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles" sid="512328824805512">
+            <plugin id="Particles" />
+            <texture />
         </object-type>
     </object-folder>
     <families>
@@ -739,6 +786,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="Browser" uid="63" />
     </global-instances>
     <sounds-folder>
         <file name="antWithFood0.m4a" />

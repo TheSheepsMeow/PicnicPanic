@@ -346,6 +346,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="moregamesbutton" uid="64">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>404</x>
+                        <y>307</y>
+                        <z>0</z>
+                        <width>146.717025757</width>
+                        <height>23.310180664</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501557648</hotspotX>
+                        <hotspotY>0.509803951</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -465,8 +487,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>129</x>
-                        <y>27</y>
+                        <x>155</x>
+                        <y>14</y>
                         <z>0</z>
                         <width>171</width>
                         <height>43</height>

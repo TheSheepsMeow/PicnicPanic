@@ -107,8 +107,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-272.896972656</x>
-                        <y>-21.669754028</y>
+                        <x>-253</x>
+                        <y>-146</y>
                         <z>0</z>
                         <width>42.255306244</width>
                         <height>35.799636841</height>
@@ -346,7 +346,7 @@
                 </instance>
                 <instance type="paddle" uid="2">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -383,10 +383,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-130.154846191</x>
+                        <x>-114</x>
                         <y>158</y>
                         <z>0</z>
-                        <width>51.690307617</width>
+                        <width>84</width>
                         <height>635</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -405,10 +405,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>642</x>
+                        <x>622</x>
                         <y>164.220153809</y>
                         <z>0</z>
-                        <width>69</width>
+                        <width>109</width>
                         <height>631</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -428,10 +428,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>259.739562988</x>
-                        <y>445</y>
+                        <y>434.5</y>
                         <z>0</z>
                         <width>833</width>
-                        <height>63</height>
+                        <height>84</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -450,10 +450,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>261.5</x>
-                        <y>-134</y>
+                        <y>-119.5</y>
                         <z>0</z>
                         <width>833</width>
-                        <height>44</height>
+                        <height>73</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -525,13 +525,52 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>442.344573975</x>
-                        <y>39.468856812</y>
+                        <x>443</x>
+                        <y>280</y>
                         <z>0</z>
                         <width>68</width>
                         <height>68</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Particles" uid="66">
+                    <properties>
+                        <rate>5</rate>
+                        <spray-cone>360</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>100</speed>
+                        <size>8</size>
+                        <opacity>100</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->0</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-150</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>800</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>1</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>278</x>
+                        <y>-173</y>
+                        <z>0</z>
+                        <width>40</width>
+                        <height>35</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -1054,8 +1093,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>176.029968262</x>
-                        <y>219.062088013</y>
+                        <x>188</x>
+                        <y>229</y>
                         <z>0</z>
                         <width>76.807998657</width>
                         <height>57.883998871</height>
@@ -1103,8 +1142,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>272</x>
-                        <y>221</y>
+                        <x>280</x>
+                        <y>228</y>
                         <z>0</z>
                         <width>76.808204651</width>
                         <height>57.884441376</height>

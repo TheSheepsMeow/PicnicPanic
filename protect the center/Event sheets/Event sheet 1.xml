@@ -9,7 +9,6 @@
         <variable constant="0" name="incressfont" sid="992179101512007" static="0" type="number">26</variable>
         <variable constant="0" name="hiscore" sid="926933365670741" static="0" type="number">0</variable>
         <variable constant="0" name="enamyspeed" sid="155540389953627" static="0" type="number">0</variable>
-        <variable constant="0" name="extraho" sid="473535702472027" static="0" type="number">0</variable>
         <variable constant="0" name="level" sid="637886827414851" static="0" type="number">1</variable>
         <variable constant="0" name="swate" sid="174361890336722" static="0" type="number">0</variable>
         <variable constant="0" name="timmer" sid="954401170521634" static="0" type="number">20</variable>
@@ -263,9 +262,6 @@
                 </action>
                 <action id="0" name="Set text" sid="841364690371074" type="level">
                     <param id="0" name="Text">&quot;level &quot;&amp;level</param>
-                </action>
-                <action id="3" name="Set progress" sid="351414799302383" type="extrahealth">
-                    <param id="0" name="Value">extraho</param>
                 </action>
                 <action id="-9" name="Set value" sid="518505176132102" type="System">
                     <param id="0" name="Variable">enamyspeed</param>
@@ -805,12 +801,7 @@
                             <param id="2" name="Value">100</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="221570130229769" type="System">
-                            <param id="0" name="Variable">extraho</param>
-                            <param id="1" name="Value">10</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block disabled="1" sid="583845445305572">
                     <conditions>
@@ -828,21 +819,6 @@
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="920683671173770">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="456076492368535" type="System">
-                    <param id="0" name="Variable">extraho</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">30</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="157940082157036" type="System">
-                    <param id="0" name="Variable">extraho</param>
-                    <param id="1" name="Value">30</param>
-                </action>
-            </actions>
         </event-block>
         <event-block sid="359548240635684">
             <conditions>
@@ -1090,14 +1066,16 @@
                 <action id="-16" name="Wait" sid="317615536275648" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
-                <action id="5" name="Set frame" sid="968957072246671" type="resethi">
-                    <param id="0" name="Frame number">1</param>
+                <action id="4" name="Set animation" sid="968957072246671" type="resethi">
+                    <param id="0" name="Animation">&quot;push1&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="826048363639675" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
-                <action id="5" name="Set frame" sid="242308506365016" type="resethi">
-                    <param id="0" name="Frame number">2</param>
+                <action id="4" name="Set animation" sid="242308506365016" type="resethi">
+                    <param id="0" name="Animation">&quot;conferm&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -1106,17 +1084,17 @@
                 <condition id="3" name="On touched object" sid="499950082569302" type="Touch">
                     <param id="0" name="Object">resethi</param>
                 </condition>
-                <condition id="3" name="Compare frame" sid="180166064221102" type="resethi">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Number">2</param>
+                <condition id="2" name="Is playing" sid="180166064221102" type="resethi">
+                    <param id="0" name="Animation">&quot;conferm&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-16" name="Wait" sid="145522367270283" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
-                <action id="5" name="Set frame" sid="946811188145844" type="resethi">
-                    <param id="0" name="Frame number">3</param>
+                <action id="4" name="Set animation" sid="946811188145844" type="resethi">
+                    <param id="0" name="Animation">&quot;resset&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="440731013877668" type="System">
                     <param id="0" name="Variable">hiscore</param>
@@ -1125,8 +1103,9 @@
                 <action id="-16" name="Wait" sid="672263832591368" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
-                <action id="5" name="Set frame" sid="937566261828142" type="resethi">
-                    <param id="0" name="Frame number">0</param>
+                <action id="4" name="Set animation" sid="937566261828142" type="resethi">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -1148,6 +1127,43 @@
                     <param id="0" name="Seconds">0.1</param>
                 </action>
                 <action id="-26" name="Restart layout" sid="514974674877261" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="637652999045418">
+            <conditions>
+                <condition id="3" name="On touched object" sid="812859542742490" type="Touch">
+                    <param id="0" name="Object">start</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="199960319641191" type="start">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="10" name="Request fullscreen" sid="640551138677713" type="Browser">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="795814153286278" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="124217788355449" type="System">
+                    <param id="0" name="Layout">game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="806308855107827">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="577421335714685" type="Touch">
+                    <param id="0" name="Object">BG</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="706394397657104" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="409885026176396" type="System">
+                    <param id="0" name="Object to create">Particles</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">Touch.X</param>
+                    <param id="3" name="Y">Touch.Y</param>
+                </action>
             </actions>
         </event-block>
     </events>

@@ -3,14 +3,15 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <include>LocalStorage</include>
         <variable constant="0" name="shutup" sid="972229057156212" static="0" type="number">0</variable>
         <variable constant="0" name="Swiping" sid="569216829540219" static="0" type="number">0</variable>
         <variable constant="0" name="pawusegap" sid="254053889507352" static="0" type="number">0</variable>
-        <variable constant="0" name="incressfont" sid="992179101512007" static="0" type="number">26</variable>
-        <variable constant="0" name="hiscore" sid="926933365670741" static="0" type="number">0</variable>
+        <variable constant="0" name="incressfont" sid="992179101512007" static="0" type="number">0.25</variable>
+        <variable constant="0" name="highScore" sid="926933365670741" static="0" type="number">0</variable>
         <variable constant="0" name="enamyspeed" sid="155540389953627" static="0" type="number">0</variable>
         <variable constant="0" name="level" sid="637886827414851" static="0" type="number">1</variable>
-        <variable constant="0" name="swate" sid="174361890336722" static="0" type="number">0</variable>
+        <variable constant="0" name="score" sid="174361890336722" static="0" type="number">0</variable>
         <variable constant="0" name="timmer" sid="954401170521634" static="0" type="number">20</variable>
         <variable constant="0" name="ho" sid="212554118969533" static="0" type="number">100</variable>
         <variable constant="0" name="pick" sid="883875842116353" static="0" type="number">0</variable>
@@ -33,7 +34,7 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="917863288268223" type="System">
-                    <param id="0" name="Variable">swate</param>
+                    <param id="0" name="Variable">score</param>
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="866382658454524" type="System">
@@ -122,8 +123,8 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-10" name="Add to" sid="360006380439268" type="System">
-                    <param id="0" name="Variable">swate</param>
-                    <param id="1" name="Value">10</param>
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
             <sub-events>
@@ -241,7 +242,7 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-10" name="Add to" sid="735172919256433" type="System">
-                    <param id="0" name="Variable">swate</param>
+                    <param id="0" name="Variable">score</param>
                     <param id="1" name="Value">10</param>
                 </action>
             </actions>
@@ -254,33 +255,54 @@
                 <action id="3" name="Set progress" sid="375097326497323" type="health">
                     <param id="0" name="Value">ho</param>
                 </action>
-                <action id="0" name="Set text" sid="474971022306670" type="timmer">
+                <action disabled="1" id="0" name="Set text" sid="474971022306670" type="timmer">
                     <param id="0" name="Text">timmer</param>
                 </action>
-                <action id="0" name="Set text" sid="447036009870872" type="points">
-                    <param id="0" name="Text">&quot;score: &quot;&amp;swate</param>
+                <action id="0" name="Set text" sid="541177564129363" type="textTimer">
+                    <param id="0" name="Text">timmer</param>
                 </action>
-                <action id="0" name="Set text" sid="841364690371074" type="level">
+                <action disabled="1" id="0" name="Set text" sid="447036009870872" type="points">
+                    <param id="0" name="Text">&quot;score: &quot;&amp;score</param>
+                </action>
+                <action id="0" name="Set text" sid="497259406888462" type="textScore">
+                    <param id="0" name="Text">&quot;SCORE: &quot; &amp; score</param>
+                </action>
+                <action disabled="1" id="0" name="Set text" sid="841364690371074" type="level">
                     <param id="0" name="Text">&quot;level &quot;&amp;level</param>
+                </action>
+                <action id="0" name="Set text" sid="847265837241188" type="textLevel">
+                    <param id="0" name="Text">&quot;LEVEL &quot;&amp; level</param>
                 </action>
                 <action id="-9" name="Set value" sid="518505176132102" type="System">
                     <param id="0" name="Variable">enamyspeed</param>
                     <param id="1" name="Value">level/10</param>
                 </action>
-                <action id="0" name="Set text" sid="557521371359019" type="hischore">
-                    <param id="0" name="Text">&quot;highscore: &quot;&amp;hiscore</param>
+                <action disabled="1" id="0" name="Set text" sid="557521371359019" type="hischore">
+                    <param id="0" name="Text">&quot;highscore: &quot;&amp;highScore</param>
                 </action>
-                <action id="0" name="Set text" sid="487212304658660" type="countdown">
+                <action id="0" name="Set text" sid="309166443300537" type="highScore">
+                    <param id="0" name="Text">&quot;HIGH SCORE: &quot;&amp;highScore</param>
+                </action>
+                <action disabled="1" id="0" name="Set text" sid="487212304658660" type="countdown">
                     <param id="0" name="Text">pawusegap</param>
                 </action>
-                <action id="3" name="Set font size" sid="411376356899606" type="countdown">
+                <action id="0" name="Set text" sid="834377730327012" type="textCountdown">
+                    <param id="0" name="Text">pawusegap</param>
+                </action>
+                <action disabled="1" id="3" name="Set font size" sid="411376356899606" type="countdown">
                     <param id="0" name="Size (pt)">incressfont</param>
+                </action>
+                <action id="2" name="Set scale" sid="146283033039478" type="textCountdown">
+                    <param id="0" name="Scale">incressfont</param>
                 </action>
                 <action id="3" name="Set progress" sid="244719796504708" type="health">
                     <param id="0" name="Value">timmer</param>
                 </action>
-                <action id="0" name="Set text" sid="481175872822979" type="levelcounter">
+                <action disabled="1" id="0" name="Set text" sid="481175872822979" type="levelcounter">
                     <param id="0" name="Text">&quot;level &quot;&amp;level</param>
+                </action>
+                <action id="0" name="Set text" sid="403725460167177" type="textLevelCounter">
+                    <param id="0" name="Text">&quot;LEVEL &quot;&amp;level</param>
                 </action>
                 <action id="5" name="Set frame" sid="368465995764291" type="shutupbutton">
                     <param id="0" name="Frame number">shutup</param>
@@ -291,15 +313,15 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="786441155720268" type="System" />
                 <condition id="-14" name="Compare variable" sid="759654419903062" type="System">
-                    <param id="0" name="Variable">swate</param>
+                    <param id="0" name="Variable">score</param>
                     <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">hiscore</param>
+                    <param id="2" name="Value">highScore</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="755646601539836" type="System">
-                    <param id="0" name="Variable">hiscore</param>
-                    <param id="1" name="Value">swate</param>
+                    <param id="0" name="Variable">highScore</param>
+                    <param id="1" name="Value">score</param>
                 </action>
             </actions>
         </event-block>
@@ -308,7 +330,8 @@
                 <condition id="-6" name="Every X seconds" sid="580691539584140" type="System">
                     <param id="0" name="Interval (seconds)">1-enamyspeed</param>
                 </condition>
-                <condition id="-9" inverted="1" name="Is visible" sid="409516623135164" type="level" />
+                <condition disabled="1" id="-9" inverted="1" name="Is visible" sid="409516623135164" type="level" />
+                <condition id="-9" inverted="1" name="Is visible" sid="826923230895258" type="textLevel" />
                 <condition id="-8" name="Compare two values" sid="434046977825711" type="System">
                     <param id="0" name="First value">LayoutName</param>
                     <param id="1" name="Comparison">0</param>
@@ -335,7 +358,7 @@
                 <condition id="-8" name="Compare two values" sid="437032436138584" type="System">
                     <param id="0" name="First value">LayoutName</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">&quot;start&quot;</param>
+                    <param id="2" name="Second value">&quot;title&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -427,8 +450,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Play" sid="253470217719838" type="Audio">
+                <action disabled="1" id="0" name="Play" sid="253470217719838" type="Audio">
                     <param id="0" name="Audio file">antWithFood0</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="652001016325797" type="Audio">
+                    <param id="0" name="Audio file">Ant&apos;s taking fruit</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -445,12 +474,14 @@
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="635312215741459">
             <conditions>
                 <condition id="3" name="On touched object" sid="734599316563990" type="Touch">
                     <param id="0" name="Object">pausebutton</param>
                 </condition>
-                <condition id="-9" inverted="1" name="Is visible" sid="626985436851147" type="genral" />
+                <condition disabled="1" id="-9" inverted="1" name="Is visible" sid="626985436851147" type="genral" />
+                <condition id="-9" inverted="1" name="Is visible" sid="474509121296694" type="textGeneral" />
                 <condition id="3" name="Compare frame" sid="859236116574094" type="pausebutton">
                     <param id="0" name="Comparison">0</param>
                     <param id="1" name="Number">0</param>
@@ -460,13 +491,22 @@
                 <action id="-13" name="Set time scale" sid="423992998935246" type="System">
                     <param id="0" name="Time scale">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="505879783234575" type="genral">
+                <action disabled="1" id="-15" name="Set visible" sid="505879783234575" type="genral">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="820726003883964" type="continue">
+                <action disabled="1" id="-15" name="Set visible" sid="820726003883964" type="continue">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="116169165445400" type="MainMenue">
+                <action disabled="1" id="-15" name="Set visible" sid="116169165445400" type="MainMenue">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="843562711291568" type="textGeneral">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="265559688869554" type="textMainMenu">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="517137204535787" type="textContinue">
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="993697080771954" type="home">
@@ -479,7 +519,8 @@
         </event-block>
         <event-block sid="383131293805424">
             <conditions>
-                <condition id="-9" inverted="1" name="Is visible" sid="152341833879472" type="genral" />
+                <condition disabled="1" id="-9" inverted="1" name="Is visible" sid="152341833879472" type="genral" />
+                <condition id="-9" inverted="1" name="Is visible" sid="933760227596962" type="textGeneral" />
             </conditions>
             <actions>
                 <action id="5" name="Set frame" sid="115914481423083" type="pausebutton">
@@ -489,7 +530,8 @@
         </event-block>
         <event-block sid="236612369585423">
             <conditions>
-                <condition id="-9" name="Is visible" sid="476767944390256" type="genral" />
+                <condition disabled="1" id="-9" name="Is visible" sid="476767944390256" type="genral" />
+                <condition id="-9" name="Is visible" sid="265050246082459" type="textGeneral" />
             </conditions>
             <actions>
                 <action id="5" name="Set frame" sid="221369424342027" type="pausebutton">
@@ -502,7 +544,8 @@
                 <condition id="3" name="On touched object" sid="239301741259457" type="Touch">
                     <param id="0" name="Object">pausebutton</param>
                 </condition>
-                <condition id="-9" name="Is visible" sid="315281452271250" type="genral" />
+                <condition disabled="1" id="-9" name="Is visible" sid="315281452271250" type="genral" />
+                <condition id="-9" name="Is visible" sid="430425485272086" type="textGeneral" />
                 <condition id="3" name="Compare frame" sid="880469622507391" type="pausebutton">
                     <param id="0" name="Comparison">0</param>
                     <param id="1" name="Number">1</param>
@@ -512,13 +555,22 @@
                 <action id="-13" name="Set time scale" sid="744576087270152" type="System">
                     <param id="0" name="Time scale">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="945785985314645" type="genral">
+                <action disabled="1" id="-15" name="Set visible" sid="945785985314645" type="genral">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="539513612703965" type="continue">
+                <action disabled="1" id="-15" name="Set visible" sid="539513612703965" type="continue">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="460997916884104" type="MainMenue">
+                <action disabled="1" id="-15" name="Set visible" sid="460997916884104" type="MainMenue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="734161011272769" type="textGeneral">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="910794227545318" type="textMainMenu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="598766324347869" type="textContinue">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="333385279549507" type="home">
@@ -533,6 +585,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="703662614358338">
             <conditions>
                 <condition id="3" name="On touched object" sid="394954679414509" type="Touch">
@@ -544,10 +597,16 @@
                 <action id="-13" name="Set time scale" sid="673317546910487" type="System">
                     <param id="0" name="Time scale">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="235678744877179" type="genral">
+                <action disabled="1" id="-15" name="Set visible" sid="235678744877179" type="genral">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="828349499715150" type="continue">
+                <action disabled="1" id="-15" name="Set visible" sid="828349499715150" type="continue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="434816602767884" type="textGeneral">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="730816250949419" type="textContinue">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="5" name="Set frame" sid="950391899994440" type="home">
@@ -557,10 +616,11 @@
                     <param id="0" name="Seconds">0.1</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="950021023374539" type="System">
-                    <param id="0" name="Layout">start</param>
+                    <param id="0" name="Layout">title</param>
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="838759255731926">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="414222698985477" type="System">
@@ -618,8 +678,15 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="215644973992402" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="510620118217285" type="Audio">
+                    <param id="0" name="Audio file">Game over ant march 2 (Best)</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;march&quot;</param>
+                </action>
                 <action id="-10" name="Set value" sid="441491593334168" type="enamy">
                     <param id="0" name="Instance variable">targit</param>
                     <param id="1" name="Value">1</param>
@@ -640,11 +707,15 @@
                 <action id="-16" name="Wait" sid="192339154209009" type="System">
                     <param id="0" name="Seconds">4</param>
                 </action>
+                <action id="6" name="Stop" sid="792284445368311" type="Audio">
+                    <param id="0" name="Tag">&quot;march&quot;</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="784404280584457" type="System">
                     <param id="0" name="Layout">end</param>
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="345087480599300">
             <conditions>
                 <condition id="2" name="Is in touch" sid="166112750182613" type="Touch" />
@@ -669,6 +740,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block any="1" sid="722040371630452">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="391958896773496" type="apple">
@@ -767,6 +839,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="477701436683805">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="253265184920395" type="System">
@@ -787,10 +860,20 @@
                 <action id="4" name="Set maximum" sid="524119950214385" type="health">
                     <param id="0" name="Maximum">timmer</param>
                 </action>
-                <action id="-15" name="Set visible" sid="342135885395458" type="level">
+                <action disabled="1" id="-15" name="Set visible" sid="342135885395458" type="level">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action behavior="Fade" id="0" name="Restart fade" sid="297618740340689" type="level" />
+                <action behavior="Fade" disabled="1" id="0" name="Restart fade" sid="297618740340689" type="level" />
+                <action id="-15" name="Set visible" sid="141550124448590" type="textLevel">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="0" name="Restart fade" sid="311465147773452" type="textLevel" />
+                <action id="0" name="Play" sid="969940366676734" type="Audio">
+                    <param id="0" name="Audio file">next level sound</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block disabled="1" sid="256011297354467">
@@ -850,7 +933,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="143657020338147">
+        <event-block disabled="1" sid="143657020338147">
             <conditions>
                 <condition behavior="Fade" id="0" name="On fade-out finished" sid="417455939867444" type="level" />
             </conditions>
@@ -860,9 +943,23 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="405798213117921">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="827397060111560" type="textLevel" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-15" name="Set visible" sid="524021117937828" type="level">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="345143850401100" type="textLevel">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="234761854136813">
             <conditions>
-                <condition id="-9" name="Is visible" sid="752185165306490" type="genral" />
+                <condition disabled="1" id="-9" name="Is visible" sid="752185165306490" type="genral" />
+                <condition id="-9" name="Is visible" sid="397901530989451" type="textGeneral" />
             </conditions>
             <actions>
                 <action behavior="Solid" id="0" name="Set enabled" sid="648118431781205" type="paddle">
@@ -882,7 +979,10 @@
                 <action behavior="Bullet" id="5" name="Set enabled" sid="819169249751962" type="enamy">
                     <param id="0" name="State">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="676213162242604" type="countdown">
+                <action disabled="1" id="-15" name="Set visible" sid="676213162242604" type="countdown">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="536607511554080" type="textCountdown">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
@@ -899,7 +999,10 @@
                 <action behavior="Bullet" id="5" name="Set enabled" sid="697264316922446" type="enamy">
                     <param id="0" name="State">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="520301024096341" type="countdown">
+                <action disabled="1" id="-15" name="Set visible" sid="520301024096341" type="countdown">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="286318651614038" type="textCountdown">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
@@ -936,7 +1039,7 @@
             <actions>
                 <action id="-9" name="Set value" sid="436606797812307" type="System">
                     <param id="0" name="Variable">incressfont</param>
-                    <param id="1" name="Value">26</param>
+                    <param id="1" name="Value">0.25</param>
                 </action>
             </actions>
         </event-block>
@@ -954,10 +1057,11 @@
             <actions>
                 <action id="-9" name="Set value" sid="757080236434662" type="System">
                     <param id="0" name="Variable">incressfont</param>
-                    <param id="1" name="Value">incressfont+1</param>
+                    <param id="1" name="Value">incressfont+0.2</param>
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="485321471002545">
             <conditions>
                 <condition id="17" name="On tap object" sid="378293171997168" type="Touch">
@@ -1029,6 +1133,23 @@
                 <action id="6" name="Stop" sid="679145350363701" type="Audio">
                     <param id="0" name="Tag">&quot;BG&quot;</param>
                 </action>
+                <action id="8" name="Set silent" sid="331295989474175" type="Audio">
+                    <param id="0" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="986464574443880">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="226662969801818" type="System">
+                    <param id="0" name="Variable">shutup</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Set silent" sid="103332315066326" type="Audio">
+                    <param id="0" name="Mode">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="390043080892488">
@@ -1052,6 +1173,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="473387438059501">
             <conditions>
                 <condition id="3" name="On touched object" sid="123915848817914" type="Touch">
@@ -1097,7 +1219,7 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="440731013877668" type="System">
-                    <param id="0" name="Variable">hiscore</param>
+                    <param id="0" name="Variable">highScore</param>
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="-16" name="Wait" sid="672263832591368" type="System">
@@ -1109,6 +1231,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="486807706647193">
             <conditions>
                 <condition id="3" name="On touched object" sid="777473801347165" type="Touch">
@@ -1126,7 +1249,9 @@
                 <action id="-16" name="Wait" sid="384952259979761" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
-                <action id="-26" name="Restart layout" sid="514974674877261" type="System" />
+                <action id="-2" name="Go to layout" sid="514974674877261" type="System">
+                    <param id="0" name="Layout">game</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="637652999045418">
@@ -1150,6 +1275,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment></comment>
         <event-block sid="806308855107827">
             <conditions>
                 <condition id="4" name="Is touching object" sid="577421335714685" type="Touch">
@@ -1163,6 +1289,19 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="X">Touch.X</param>
                     <param id="3" name="Y">Touch.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="926820779321593">
+            <conditions>
+                <condition id="0" name="On any touch start" sid="461734749360009" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="585437395750056" type="Audio">
+                    <param id="0" name="Audio file">Swipe</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>

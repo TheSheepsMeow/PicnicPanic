@@ -35,8 +35,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>480</width>
-        <height>320</height>
+        <width>320</width>
+        <height>480</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -48,7 +48,7 @@
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Nothing (not recommended)</prop>
-        <prop name="Orientations">Landscape</prop>
+        <prop name="Orientations">Portrait</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preview browser">Chrome</prop>

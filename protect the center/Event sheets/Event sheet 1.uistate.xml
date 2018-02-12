@@ -11,23 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <nest>198</nest>
         <nest>210</nest>
         <nest>105</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>22</nest>
-        <nest>16</nest>
+        <nest>24</nest>
     </condition-namecolumns>
     <events>
         <event collapsed="1" sid="786426562052735" />

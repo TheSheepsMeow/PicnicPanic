@@ -117,7 +117,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment></comment>
+                <comment>tap to go back to title</comment>
                 <event-block sid="577402212603533">
                     <conditions>
                         <condition id="3" name="On touched object" sid="763541309218384" type="Touch">

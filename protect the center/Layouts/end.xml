@@ -49,7 +49,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EndAndStartSeen" uid="46">
+                <instance type="enemyEndStartScreen" uid="46">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -205,7 +205,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MainMenue" uid="23">
+                <instance type="MainMenu" uid="23">
                     <properties>
                         <text>main menue</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -232,7 +232,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="restert" uid="58">
+                <instance type="restart" uid="58">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -8,7 +8,7 @@
     <author-website>http://www.thesheepsmeow.com/html5</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
-    <saved-with-version>24400</saved-with-version>
+    <saved-with-version>25200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -81,11 +81,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="enamy" sid="824554002513101">
+        <object-type name="enemy" sid="824554002513101">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="targit" sid="302246728223209" type="number" />
-                <instance-variable name="ChoosFood" sid="209942227869131" type="number" />
+                <instance-variable name="target" sid="302246728223209" type="number" />
+                <instance-variable name="chooseFood" sid="209942227869131" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Turret" sid="282598190022563">
@@ -165,7 +165,7 @@
         <object-type name="pushstart" sid="733361331238072">
             <plugin id="Text" />
         </object-type>
-        <object-type name="timmer" sid="985734601596338">
+        <object-type name="timer" sid="985734601596338">
             <plugin id="Text" />
         </object-type>
         <object-type name="distroyer" sid="644463669206652">
@@ -412,13 +412,13 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="MainMenue" sid="409804805810642">
+        <object-type name="MainMenu" sid="409804805810642">
             <plugin id="Text" />
         </object-type>
         <object-type name="countdown" sid="777910147019228">
             <plugin id="Text" />
         </object-type>
-        <object-type name="EndAndStartSeen" sid="852204160865208">
+        <object-type name="enemyEndStartScreen" sid="852204160865208">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="targit" sid="348416821800232" type="number" />
@@ -488,7 +488,7 @@
         <object-type name="levelcounter" sid="621723183597423">
             <plugin id="Text" />
         </object-type>
-        <object-type name="shutupbutton" sid="957919688461423">
+        <object-type name="muteButton" sid="957919688461423">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="557299796149731" speed="0">
@@ -581,7 +581,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="restert" sid="766096974763993">
+        <object-type name="restart" sid="766096974763993">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="300868804708572" speed="0">
@@ -643,7 +643,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="resethi" sid="712598873931009">
+        <object-type name="resetThis" sid="712598873931009">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315116832588033" speed="5">

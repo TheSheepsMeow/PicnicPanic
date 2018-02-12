@@ -4,16 +4,16 @@
     <name>Event sheet 1</name>
     <events>
         <include>LocalStorage</include>
-        <variable constant="0" name="shutup" sid="972229057156212" static="0" type="number">0</variable>
+        <variable constant="0" name="muteAudio" sid="972229057156212" static="0" type="number">0</variable>
         <variable constant="0" name="Swiping" sid="569216829540219" static="0" type="number">0</variable>
-        <variable constant="0" name="pawusegap" sid="254053889507352" static="0" type="number">0</variable>
-        <variable constant="0" name="incressfont" sid="992179101512007" static="0" type="number">0.25</variable>
+        <variable constant="0" name="pause" sid="254053889507352" static="0" type="number">0</variable>
+        <variable constant="0" name="increaseFont" sid="992179101512007" static="0" type="number">0.25</variable>
         <variable constant="0" name="highScore" sid="926933365670741" static="0" type="number">0</variable>
-        <variable constant="0" name="enamyspeed" sid="155540389953627" static="0" type="number">0</variable>
+        <variable constant="0" name="enemySpeed" sid="155540389953627" static="0" type="number">0</variable>
         <variable constant="0" name="level" sid="637886827414851" static="0" type="number">1</variable>
         <variable constant="0" name="score" sid="174361890336722" static="0" type="number">0</variable>
-        <variable constant="0" name="timmer" sid="954401170521634" static="0" type="number">20</variable>
-        <variable constant="0" name="ho" sid="212554118969533" static="0" type="number">100</variable>
+        <variable constant="0" name="timer" sid="954401170521634" static="0" type="number">20</variable>
+        <variable constant="0" name="HP" sid="212554118969533" static="0" type="number">100</variable>
         <variable constant="0" name="pick" sid="883875842116353" static="0" type="number">0</variable>
         <event-block sid="589245662171807">
             <conditions>
@@ -26,7 +26,7 @@
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="983723280661736" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Value">100</param>
                 </action>
                 <action id="-9" name="Set value" sid="501132356877591" type="System">
@@ -38,11 +38,11 @@
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="866382658454524" type="System">
-                    <param id="0" name="Variable">timmer</param>
+                    <param id="0" name="Variable">timer</param>
                     <param id="1" name="Value">20</param>
                 </action>
                 <action id="4" name="Set maximum" sid="240740871075170" type="health">
-                    <param id="0" name="Maximum">timmer</param>
+                    <param id="0" name="Maximum">timer</param>
                 </action>
                 <action id="5" name="Set frame" sid="517186492060262" type="home">
                     <param id="0" name="Frame number">0</param>
@@ -51,8 +51,8 @@
         </event-block>
         <event-block sid="720117265113976">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="940271935044455" type="enamy">
-                    <param id="0" name="Instance variable">targit</param>
+                <condition id="-7" name="Compare instance variable" sid="940271935044455" type="enemy">
+                    <param id="0" name="Instance variable">target</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -64,13 +64,13 @@
                     <conditions>
                         <condition id="-15" name="Pick nearest/furthest" sid="413480101871935" type="food">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="X">enamy.X</param>
-                            <param id="2" name="Y">enamy.Y</param>
+                            <param id="1" name="X">enemy.X</param>
+                            <param id="2" name="Y">enemy.Y</param>
                         </condition>
                         <condition behavior="Pin2" id="0" inverted="1" name="Is pinned" sid="642803887346447" type="food" />
                     </conditions>
                     <actions>
-                        <action id="-22" name="Set angle toward position" sid="522760129202757" type="enamy">
+                        <action id="-22" name="Set angle toward position" sid="522760129202757" type="enemy">
                             <param id="0" name="X">food.X</param>
                             <param id="1" name="Y">food.Y</param>
                         </action>
@@ -80,23 +80,23 @@
         </event-block>
         <event-block sid="942523428098821">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="720328996775782" type="enamy">
-                    <param id="0" name="Instance variable">targit</param>
+                <condition id="-7" name="Compare instance variable" sid="720328996775782" type="enemy">
+                    <param id="0" name="Instance variable">target</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Turret" id="3" name="Unacquire target" sid="429451273258214" type="enamy" />
+                <action behavior="Turret" id="3" name="Unacquire target" sid="429451273258214" type="enemy" />
             </actions>
         </event-block>
         <event-block sid="453391394237276">
             <conditions>
                 <condition disabled="1" id="4" name="Is touching object" sid="432510554919039" type="Touch">
-                    <param id="0" name="Object">enamy</param>
+                    <param id="0" name="Object">enemy</param>
                 </condition>
                 <condition id="1" name="Is overlapping another object" sid="634163111651504" type="paddle">
-                    <param id="0" name="Object">enamy</param>
+                    <param id="0" name="Object">enemy</param>
                 </condition>
                 <condition id="7" name="Compare touch speed" sid="501946112456767" type="Touch">
                     <param id="0" name="Touch index">0</param>
@@ -108,18 +108,18 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="371881046605003" type="enamy">
-                    <param id="0" name="Instance variable">targit</param>
+                <condition id="-7" name="Compare instance variable" sid="371881046605003" type="enemy">
+                    <param id="0" name="Instance variable">target</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-19" name="Rotate counter-clockwise" sid="955440407459823" type="enamy">
+                <action id="-19" name="Rotate counter-clockwise" sid="955440407459823" type="enemy">
                     <param id="0" name="Degrees">180</param>
                 </action>
-                <action id="-10" name="Set value" sid="353554585108517" type="enamy">
-                    <param id="0" name="Instance variable">targit</param>
+                <action id="-10" name="Set value" sid="353554585108517" type="enemy">
+                    <param id="0" name="Instance variable">target</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-10" name="Add to" sid="360006380439268" type="System">
@@ -226,10 +226,10 @@
         <event-block disabled="1" sid="795274345361925">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="317628501194513" type="paddle">
-                    <param id="0" name="Object">enamy</param>
+                    <param id="0" name="Object">enemy</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="782163853109018" type="enamy">
-                    <param id="0" name="Instance variable">targit</param>
+                <condition id="-7" name="Compare instance variable" sid="782163853109018" type="enemy">
+                    <param id="0" name="Instance variable">target</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -237,8 +237,8 @@
                 <condition behavior="Solid" id="0" name="Is enabled" sid="828604826470730" type="paddle" />
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="242740418423514" type="enamy">
-                    <param id="0" name="Instance variable">targit</param>
+                <action id="-10" name="Set value" sid="242740418423514" type="enemy">
+                    <param id="0" name="Instance variable">target</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-10" name="Add to" sid="735172919256433" type="System">
@@ -253,13 +253,13 @@
             </conditions>
             <actions>
                 <action id="3" name="Set progress" sid="375097326497323" type="health">
-                    <param id="0" name="Value">ho</param>
+                    <param id="0" name="Value">HP</param>
                 </action>
-                <action disabled="1" id="0" name="Set text" sid="474971022306670" type="timmer">
-                    <param id="0" name="Text">timmer</param>
+                <action disabled="1" id="0" name="Set text" sid="474971022306670" type="timer">
+                    <param id="0" name="Text">timer</param>
                 </action>
                 <action id="0" name="Set text" sid="541177564129363" type="textTimer">
-                    <param id="0" name="Text">timmer</param>
+                    <param id="0" name="Text">timer</param>
                 </action>
                 <action disabled="1" id="0" name="Set text" sid="447036009870872" type="points">
                     <param id="0" name="Text">&quot;score: &quot;&amp;score</param>
@@ -274,7 +274,7 @@
                     <param id="0" name="Text">&quot;LEVEL &quot;&amp; level</param>
                 </action>
                 <action id="-9" name="Set value" sid="518505176132102" type="System">
-                    <param id="0" name="Variable">enamyspeed</param>
+                    <param id="0" name="Variable">enemySpeed</param>
                     <param id="1" name="Value">level/10</param>
                 </action>
                 <action disabled="1" id="0" name="Set text" sid="557521371359019" type="hischore">
@@ -284,19 +284,19 @@
                     <param id="0" name="Text">&quot;HIGH SCORE: &quot;&amp;highScore</param>
                 </action>
                 <action disabled="1" id="0" name="Set text" sid="487212304658660" type="countdown">
-                    <param id="0" name="Text">pawusegap</param>
+                    <param id="0" name="Text">pause</param>
                 </action>
                 <action id="0" name="Set text" sid="834377730327012" type="textCountdown">
-                    <param id="0" name="Text">pawusegap</param>
+                    <param id="0" name="Text">pause</param>
                 </action>
                 <action disabled="1" id="3" name="Set font size" sid="411376356899606" type="countdown">
-                    <param id="0" name="Size (pt)">incressfont</param>
+                    <param id="0" name="Size (pt)">increaseFont</param>
                 </action>
                 <action id="2" name="Set scale" sid="146283033039478" type="textCountdown">
-                    <param id="0" name="Scale">incressfont</param>
+                    <param id="0" name="Scale">increaseFont</param>
                 </action>
                 <action id="3" name="Set progress" sid="244719796504708" type="health">
-                    <param id="0" name="Value">timmer</param>
+                    <param id="0" name="Value">timer</param>
                 </action>
                 <action disabled="1" id="0" name="Set text" sid="481175872822979" type="levelcounter">
                     <param id="0" name="Text">&quot;level &quot;&amp;level</param>
@@ -304,8 +304,8 @@
                 <action id="0" name="Set text" sid="403725460167177" type="textLevelCounter">
                     <param id="0" name="Text">&quot;LEVEL &quot;&amp;level</param>
                 </action>
-                <action id="5" name="Set frame" sid="368465995764291" type="shutupbutton">
-                    <param id="0" name="Frame number">shutup</param>
+                <action id="5" name="Set frame" sid="368465995764291" type="muteButton">
+                    <param id="0" name="Frame number">muteAudio</param>
                 </action>
             </actions>
         </event-block>
@@ -328,7 +328,7 @@
         <event-block sid="624121364079338">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="580691539584140" type="System">
-                    <param id="0" name="Interval (seconds)">1-enamyspeed</param>
+                    <param id="0" name="Interval (seconds)">1-enemySpeed</param>
                 </condition>
                 <condition disabled="1" id="-9" inverted="1" name="Is visible" sid="409516623135164" type="level" />
                 <condition id="-9" inverted="1" name="Is visible" sid="826923230895258" type="textLevel" />
@@ -338,7 +338,7 @@
                     <param id="2" name="Second value">&quot;game&quot;</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="321190677552614" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -353,7 +353,7 @@
         <event-block sid="366044576303245">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="227203257803413" type="System">
-                    <param id="0" name="Interval (seconds)">1-enamyspeed</param>
+                    <param id="0" name="Interval (seconds)">1-enemySpeed</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="437032436138584" type="System">
                     <param id="0" name="First value">LayoutName</param>
@@ -379,7 +379,7 @@
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="197686147166370" type="System">
-                    <param id="0" name="Object to create">enamy</param>
+                    <param id="0" name="Object to create">enemy</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="X">-45.269</param>
                     <param id="3" name="Y">random(20.847,321.32)</param>
@@ -397,7 +397,7 @@
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="522222716943012" type="System">
-                    <param id="0" name="Object to create">enamy</param>
+                    <param id="0" name="Object to create">enemy</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="X">526.042</param>
                     <param id="3" name="Y">random(20.847,321.32)</param>
@@ -406,45 +406,45 @@
         </event-block>
         <event-block sid="755020032851413">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="848560830286487" type="enamy">
+                <condition id="0" name="On collision with another object" sid="848560830286487" type="enemy">
                     <param id="0" name="Object">food</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="436375308176021" type="enamy">
-                    <param id="0" name="Instance variable">targit</param>
+                <condition id="-7" name="Compare instance variable" sid="436375308176021" type="enemy">
+                    <param id="0" name="Instance variable">target</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
                 <condition behavior="Pin2" id="0" inverted="1" name="Is pinned" sid="543179752667306" type="food" />
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="388194878243266" type="enamy">
-                    <param id="0" name="Instance variable">targit</param>
+                <action id="-10" name="Set value" sid="388194878243266" type="enemy">
+                    <param id="0" name="Instance variable">target</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-3" name="Set position" sid="291236123334711" type="food">
-                    <param id="0" name="X">enamy.X</param>
-                    <param id="1" name="Y">enamy.Y</param>
+                    <param id="0" name="X">enemy.X</param>
+                    <param id="1" name="Y">enemy.Y</param>
                 </action>
                 <action behavior="Pin2" id="0" name="Pin to object" sid="134015284451014" type="food">
-                    <param id="0" name="Pin to">enamy</param>
+                    <param id="0" name="Pin to">enemy</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Bullet" id="4" name="Bounce off object" sid="289917619153956" type="enamy">
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="289917619153956" type="enemy">
                     <param id="0" name="Object">food</param>
                 </action>
                 <action disabled="1" id="-11" name="Subtract from" sid="875306465851738" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Value">10</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="265598674057281">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="400815139049386" type="enamy">
+                <condition id="0" name="On collision with another object" sid="400815139049386" type="enemy">
                     <param id="0" name="Object">food</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="911900243278928" type="System">
-                    <param id="0" name="Variable">shutup</param>
+                    <param id="0" name="Variable">muteAudio</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -497,7 +497,7 @@
                 <action disabled="1" id="-15" name="Set visible" sid="820726003883964" type="continue">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action disabled="1" id="-15" name="Set visible" sid="116169165445400" type="MainMenue">
+                <action disabled="1" id="-15" name="Set visible" sid="116169165445400" type="MainMenu">
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="843562711291568" type="textGeneral">
@@ -512,7 +512,7 @@
                 <action id="-15" name="Set visible" sid="993697080771954" type="home">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="473375396479541" type="restert">
+                <action id="-15" name="Set visible" sid="473375396479541" type="restart">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
@@ -561,7 +561,7 @@
                 <action disabled="1" id="-15" name="Set visible" sid="539513612703965" type="continue">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action disabled="1" id="-15" name="Set visible" sid="460997916884104" type="MainMenue">
+                <action disabled="1" id="-15" name="Set visible" sid="460997916884104" type="MainMenu">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="734161011272769" type="textGeneral">
@@ -576,11 +576,11 @@
                 <action id="-15" name="Set visible" sid="333385279549507" type="home">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="881368106148262" type="restert">
+                <action id="-15" name="Set visible" sid="881368106148262" type="restart">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="864600348251808" type="System">
-                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="0" name="Variable">pause</param>
                     <param id="1" name="Value">3</param>
                 </action>
             </actions>
@@ -632,32 +632,32 @@
                     <param id="2" name="Second value">&quot;game&quot;</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="916109719383971" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-11" name="Subtract from" sid="970918588387602" type="System">
-                    <param id="0" name="Variable">timmer</param>
+                    <param id="0" name="Variable">timer</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="252420958059695">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="632645731734067" type="enamy">
+                <condition id="0" name="On collision with another object" sid="632645731734067" type="enemy">
                     <param id="0" name="Object">distroyer</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="428838351752696" type="enamy" />
+                <action id="-9" name="Destroy" sid="428838351752696" type="enemy" />
             </actions>
         </event-block>
         <event-block disabled="1" sid="841217007623625">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="576612898451176" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -674,7 +674,7 @@
         <event-block sid="217201698714366">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="193568178729390" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -687,21 +687,21 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;march&quot;</param>
                 </action>
-                <action id="-10" name="Set value" sid="441491593334168" type="enamy">
-                    <param id="0" name="Instance variable">targit</param>
+                <action id="-10" name="Set value" sid="441491593334168" type="enemy">
+                    <param id="0" name="Instance variable">target</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="714395254532888" type="System">
                     <param id="0" name="Seconds">2</param>
                 </action>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="996121177577600" type="EndAndStartSeen">
+                <action behavior="Bullet" id="5" name="Set enabled" sid="996121177577600" type="enemyEndStartScreen">
                     <param id="0" name="State">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="371834996496801" type="System">
                     <param id="0" name="Seconds">2.8</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="710393584366723" type="center">
-                    <param id="0" name="Pin to">EndAndStartSeen</param>
+                    <param id="0" name="Pin to">enemyEndStartScreen</param>
                     <param id="1" name="Mode">0</param>
                 </action>
                 <action id="-16" name="Wait" sid="192339154209009" type="System">
@@ -750,7 +750,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="337603569312022" type="apple" />
                 <action id="-11" name="Subtract from" sid="927498839863434" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Value">10</param>
                 </action>
             </actions>
@@ -764,7 +764,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="608492156290814" type="grapes" />
                 <action id="-11" name="Subtract from" sid="401866795133271" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Value">10</param>
                 </action>
             </actions>
@@ -778,7 +778,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="434748813534528" type="greenApple" />
                 <action id="-11" name="Subtract from" sid="930817430059039" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Value">10</param>
                 </action>
             </actions>
@@ -792,7 +792,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="889627742112719" type="greenGrapes" />
                 <action id="-11" name="Subtract from" sid="396821242762534" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Value">10</param>
                 </action>
             </actions>
@@ -806,7 +806,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="544883003846902" type="hotdog" />
                 <action id="-11" name="Subtract from" sid="526804942593546" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Value">10</param>
                 </action>
             </actions>
@@ -820,7 +820,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="129984488340953" type="sandwich" />
                 <action id="-11" name="Subtract from" sid="450904420791820" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Value">10</param>
                 </action>
             </actions>
@@ -834,7 +834,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="699216351161550" type="watermelon" />
                 <action id="-11" name="Subtract from" sid="411450729459707" type="System">
-                    <param id="0" name="Variable">ho</param>
+                    <param id="0" name="Variable">HP</param>
                     <param id="1" name="Value">10</param>
                 </action>
             </actions>
@@ -843,7 +843,7 @@
         <event-block sid="477701436683805">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="253265184920395" type="System">
-                    <param id="0" name="Variable">timmer</param>
+                    <param id="0" name="Variable">timer</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -854,11 +854,11 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="720131674298851" type="System">
-                    <param id="0" name="Variable">timmer</param>
+                    <param id="0" name="Variable">timer</param>
                     <param id="1" name="Value">(level/2)*20</param>
                 </action>
                 <action id="4" name="Set maximum" sid="524119950214385" type="health">
-                    <param id="0" name="Maximum">timmer</param>
+                    <param id="0" name="Maximum">timer</param>
                 </action>
                 <action disabled="1" id="-15" name="Set visible" sid="342135885395458" type="level">
                     <param id="0" name="Visibility">1</param>
@@ -879,7 +879,7 @@
                 <event-block disabled="1" sid="256011297354467">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="974636092658269" type="System">
-                            <param id="0" name="Variable">ho</param>
+                            <param id="0" name="Variable">HP</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">100</param>
                         </condition>
@@ -889,14 +889,14 @@
                 <event-block disabled="1" sid="583845445305572">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="712303381907515" type="System">
-                            <param id="0" name="Variable">ho</param>
+                            <param id="0" name="Variable">HP</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Value">100</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="603410521174407" type="System">
-                            <param id="0" name="Variable">ho</param>
+                            <param id="0" name="Variable">HP</param>
                             <param id="1" name="Value">10</param>
                         </action>
                     </actions>
@@ -906,14 +906,14 @@
         <event-block sid="359548240635684">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="112475797895980" type="System">
-                    <param id="0" name="Variable">timmer</param>
+                    <param id="0" name="Variable">timer</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">60</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="228940307983535" type="System">
-                    <param id="0" name="Variable">timmer</param>
+                    <param id="0" name="Variable">timer</param>
                     <param id="1" name="Value">60</param>
                 </action>
             </actions>
@@ -921,14 +921,14 @@
         <event-block sid="307313406141887">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="992616424682820" type="System">
-                    <param id="0" name="Variable">enamyspeed</param>
+                    <param id="0" name="Variable">enemySpeed</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="387983437927124" type="System">
-                    <param id="0" name="Variable">enamyspeed</param>
+                    <param id="0" name="Variable">enemySpeed</param>
                     <param id="1" name="Value">0.80</param>
                 </action>
             </actions>
@@ -970,13 +970,13 @@
         <event-block sid="321270636437751">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="483698054072990" type="System">
-                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="0" name="Variable">pause</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="819169249751962" type="enamy">
+                <action behavior="Bullet" id="5" name="Set enabled" sid="819169249751962" type="enemy">
                     <param id="0" name="State">0</param>
                 </action>
                 <action disabled="1" id="-15" name="Set visible" sid="676213162242604" type="countdown">
@@ -990,13 +990,13 @@
         <event-block sid="710281616090159">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="601261400270685" type="System">
-                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="0" name="Variable">pause</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="697264316922446" type="enamy">
+                <action behavior="Bullet" id="5" name="Set enabled" sid="697264316922446" type="enemy">
                     <param id="0" name="State">1</param>
                 </action>
                 <action disabled="1" id="-15" name="Set visible" sid="520301024096341" type="countdown">
@@ -1013,14 +1013,14 @@
                     <param id="0" name="Interval (seconds)">1</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="177248201450999" type="System">
-                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="0" name="Variable">pause</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-11" name="Subtract from" sid="986497880855834" type="System">
-                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="0" name="Variable">pause</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
@@ -1031,14 +1031,14 @@
                     <param id="0" name="Interval (seconds)">1</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="100839252985869" type="System">
-                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="0" name="Variable">pause</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="436606797812307" type="System">
-                    <param id="0" name="Variable">incressfont</param>
+                    <param id="0" name="Variable">increaseFont</param>
                     <param id="1" name="Value">0.25</param>
                 </action>
             </actions>
@@ -1049,15 +1049,15 @@
                     <param id="0" name="Interval (seconds)">0.1</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="777791722711233" type="System">
-                    <param id="0" name="Variable">pawusegap</param>
+                    <param id="0" name="Variable">pause</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="757080236434662" type="System">
-                    <param id="0" name="Variable">incressfont</param>
-                    <param id="1" name="Value">incressfont+0.2</param>
+                    <param id="0" name="Variable">increaseFont</param>
+                    <param id="1" name="Value">increaseFont+0.2</param>
                 </action>
             </actions>
         </event-block>
@@ -1065,35 +1065,35 @@
         <event-block sid="485321471002545">
             <conditions>
                 <condition id="17" name="On tap object" sid="378293171997168" type="Touch">
-                    <param id="0" name="Object">shutupbutton</param>
+                    <param id="0" name="Object">muteButton</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="150299364913101">
                     <conditions>
-                        <condition id="3" name="Compare frame" sid="816454662318270" type="shutupbutton">
+                        <condition id="3" name="Compare frame" sid="816454662318270" type="muteButton">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Number">0</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="970398794460377" type="System">
-                            <param id="0" name="Variable">shutup</param>
+                            <param id="0" name="Variable">muteAudio</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="228727300112918">
                     <conditions>
-                        <condition id="3" name="Compare frame" sid="292292403795831" type="shutupbutton">
+                        <condition id="3" name="Compare frame" sid="292292403795831" type="muteButton">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Number">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="476059762330754" type="System">
-                            <param id="0" name="Variable">shutup</param>
+                            <param id="0" name="Variable">muteAudio</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -1107,7 +1107,7 @@
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="345183751802354" type="System" />
                 <condition id="-14" name="Compare variable" sid="956956437601253" type="System">
-                    <param id="0" name="Variable">shutup</param>
+                    <param id="0" name="Variable">muteAudio</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -1124,7 +1124,7 @@
         <event-block sid="457099588000611">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="455624678933979" type="System">
-                    <param id="0" name="Variable">shutup</param>
+                    <param id="0" name="Variable">muteAudio</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
@@ -1141,7 +1141,7 @@
         <event-block sid="986464574443880">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="226662969801818" type="System">
-                    <param id="0" name="Variable">shutup</param>
+                    <param id="0" name="Variable">muteAudio</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -1155,7 +1155,7 @@
         <event-block sid="390043080892488">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="318250170604624" type="System">
-                    <param id="0" name="Variable">shutup</param>
+                    <param id="0" name="Variable">muteAudio</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
@@ -1177,9 +1177,9 @@
         <event-block sid="473387438059501">
             <conditions>
                 <condition id="3" name="On touched object" sid="123915848817914" type="Touch">
-                    <param id="0" name="Object">resethi</param>
+                    <param id="0" name="Object">resetThis</param>
                 </condition>
-                <condition id="3" name="Compare frame" sid="299103132901375" type="resethi">
+                <condition id="3" name="Compare frame" sid="299103132901375" type="resetThis">
                     <param id="0" name="Comparison">0</param>
                     <param id="1" name="Number">0</param>
                 </condition>
@@ -1188,14 +1188,14 @@
                 <action id="-16" name="Wait" sid="317615536275648" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
-                <action id="4" name="Set animation" sid="968957072246671" type="resethi">
+                <action id="4" name="Set animation" sid="968957072246671" type="resetThis">
                     <param id="0" name="Animation">&quot;push1&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="826048363639675" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
-                <action id="4" name="Set animation" sid="242308506365016" type="resethi">
+                <action id="4" name="Set animation" sid="242308506365016" type="resetThis">
                     <param id="0" name="Animation">&quot;conferm&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -1204,9 +1204,9 @@
         <event-block sid="401378502515882">
             <conditions>
                 <condition id="3" name="On touched object" sid="499950082569302" type="Touch">
-                    <param id="0" name="Object">resethi</param>
+                    <param id="0" name="Object">resetThis</param>
                 </condition>
-                <condition id="2" name="Is playing" sid="180166064221102" type="resethi">
+                <condition id="2" name="Is playing" sid="180166064221102" type="resetThis">
                     <param id="0" name="Animation">&quot;conferm&quot;</param>
                 </condition>
             </conditions>
@@ -1214,7 +1214,7 @@
                 <action id="-16" name="Wait" sid="145522367270283" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
-                <action id="4" name="Set animation" sid="946811188145844" type="resethi">
+                <action id="4" name="Set animation" sid="946811188145844" type="resetThis">
                     <param id="0" name="Animation">&quot;resset&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -1225,7 +1225,7 @@
                 <action id="-16" name="Wait" sid="672263832591368" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
-                <action id="4" name="Set animation" sid="937566261828142" type="resethi">
+                <action id="4" name="Set animation" sid="937566261828142" type="resetThis">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -1235,12 +1235,12 @@
         <event-block sid="486807706647193">
             <conditions>
                 <condition id="3" name="On touched object" sid="777473801347165" type="Touch">
-                    <param id="0" name="Object">restert</param>
+                    <param id="0" name="Object">restart</param>
                 </condition>
-                <condition id="-9" name="Is visible" sid="748739027031483" type="restert" />
+                <condition id="-9" name="Is visible" sid="748739027031483" type="restart" />
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="558892499302675" type="restert">
+                <action id="5" name="Set frame" sid="558892499302675" type="restart">
                     <param id="0" name="Frame number">1</param>
                 </action>
                 <action id="-13" name="Set time scale" sid="930164423845173" type="System">

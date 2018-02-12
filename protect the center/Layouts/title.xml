@@ -95,7 +95,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EndAndStartSeen" uid="51">
+                <instance type="enemyEndStartScreen" uid="51">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -145,7 +145,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EndAndStartSeen" uid="52">
+                <instance type="enemyEndStartScreen" uid="52">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -195,7 +195,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EndAndStartSeen" uid="54">
+                <instance type="enemyEndStartScreen" uid="54">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -245,7 +245,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EndAndStartSeen" uid="55">
+                <instance type="enemyEndStartScreen" uid="55">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -295,7 +295,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="enamy" uid="53">
+                <instance type="enemy" uid="53">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -303,8 +303,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <targit>0</targit>
-                        <ChoosFood>0</ChoosFood>
+                        <target>0</target>
+                        <chooseFood>0</chooseFood>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Turret">
@@ -387,7 +387,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="resethi" uid="61">
+                <instance type="resetThis" uid="61">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -409,7 +409,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="shutupbutton" uid="56">
+                <instance type="muteButton" uid="56">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

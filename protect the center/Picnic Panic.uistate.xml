@@ -10,7 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">title</layout>
+        <layout order="0">title</layout>
+        <event-sheet active="1" order="1">Event sheet 1</event-sheet>
+        <event-sheet order="2">Event sheet 2</event-sheet>
+        <event-sheet order="3">loader</event-sheet>
+        <event-sheet order="4">LocalStorage</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,7 +34,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/center/" />
-        <folder expanded="1" path="animation-folder/enamy/" />
+        <folder expanded="1" path="animation-folder/enemy/" />
         <folder expanded="1" path="animation-folder/paddle/" />
         <folder expanded="1" path="animation-folder/distroyer/" />
         <folder expanded="1" path="animation-folder/fruit/" />
@@ -42,14 +46,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/watermelon/" />
         <folder expanded="1" path="animation-folder/sandwich/" />
         <folder expanded="1" path="animation-folder/greenApple/" />
-        <folder expanded="1" path="animation-folder/EndAndStartSeen/" />
+        <folder expanded="1" path="animation-folder/enemyEndStartScreen/" />
         <folder expanded="1" path="animation-folder/title/" />
-        <folder expanded="1" path="animation-folder/shutupbutton/" />
+        <folder expanded="1" path="animation-folder/muteButton/" />
         <folder expanded="1" path="animation-folder/start/" />
         <folder expanded="1" path="animation-folder/pausebutton/" />
-        <folder expanded="1" path="animation-folder/restert/" />
+        <folder expanded="1" path="animation-folder/restart/" />
         <folder expanded="1" path="animation-folder/home/" />
-        <folder expanded="1" path="animation-folder/resethi/" />
+        <folder expanded="1" path="animation-folder/resetThis/" />
         <folder expanded="1" path="animation-folder/moregamesbutton/" />
         <folder expanded="1" path="animation-folder/thesheepsmeow/" />
     </folders-expanded>

@@ -692,57 +692,59 @@
                 <texture />
             </object-type>
         </object-folder>
+        <object-folder name="text">
+            <object-type name="textContinue" sid="379161823223034">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="textMainMenu" sid="865357897881371">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="textCredits" sid="257857335971670">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="highScore" sid="429235587968022">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="textPause" sid="494043418187671">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="textScore" sid="373972096028638">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="textTimer" sid="993068138917531">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="textLevel" sid="431366247686774">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="494987441297244">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="textLevelCounter" sid="630381276225874">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="textTitle" sid="974615548305183">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+            <object-type name="textCountdown" sid="781780606746518">
+                <plugin id="Spritefont2" />
+                <texture />
+            </object-type>
+        </object-folder>
         <object-type name="picnicTimer" sid="112505241367440">
             <plugin id="progressbar" />
-        </object-type>
-        <object-type name="highScore" sid="429235587968022">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="textTitle" sid="974615548305183">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="textScore" sid="373972096028638">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="textLevelCounter" sid="630381276225874">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="textCountdown" sid="781780606746518">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="textPause" sid="494043418187671">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="textTimer" sid="993068138917531">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="textLevel" sid="431366247686774">
-            <plugin id="Spritefont2" />
-            <behaviors>
-                <behavior-type name="Fade" sid="494987441297244">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
-            <texture />
-        </object-type>
-        <object-type name="textMainMenu" sid="865357897881371">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="textContinue" sid="379161823223034">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="textCredits" sid="257857335971670">
-            <plugin id="Spritefont2" />
-            <texture />
         </object-type>
         <object-type name="enemyEndStartScreen" sid="852204160865208">
             <plugin id="Sprite" />

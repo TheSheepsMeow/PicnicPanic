@@ -471,8 +471,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>443</x>
-                        <y>280</y>
+                        <x>36.242652893</x>
+                        <y>36.242652893</y>
                         <z>0</z>
                         <width>68</width>
                         <height>68</height>
@@ -981,7 +981,7 @@
                         <text>score</text>
                         <scale>0.5</scale>
                         <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -991,7 +991,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>8.773834229</x>
+                        <x>346.571777344</x>
                         <y>5.829859257</y>
                         <z>0</z>
                         <width>127.378677368</width>
@@ -1011,7 +1011,7 @@
                         <text>level #</text>
                         <scale>0.5</scale>
                         <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -1021,7 +1021,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>8.773830414</x>
+                        <x>346.571777344</x>
                         <y>21.737533569</y>
                         <z>0</z>
                         <width>127.378677368</width>

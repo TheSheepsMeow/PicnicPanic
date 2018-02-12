@@ -820,7 +820,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="health" uid="40">
+                <instance type="picnicTimer" uid="40">
                     <properties>
                         <value>0</value>
                         <maximum>100</maximum>

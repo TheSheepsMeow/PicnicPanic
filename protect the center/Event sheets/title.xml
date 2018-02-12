@@ -35,7 +35,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment></comment>
+                <comment>The ants are marching away with your plate!</comment>
                 <event-block sid="255011204387965">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="856681135981295" type="System" />
@@ -77,7 +77,7 @@
                         <action behavior="Pin" id="1" name="Unpin" sid="138868697575177" type="title" />
                     </actions>
                 </event-block>
-                <comment></comment>
+                <comment>This starts the game. The button has a press state.</comment>
                 <event-block sid="608195049785551">
                     <conditions>
                         <condition id="3" name="On touched object" sid="152356880523710" type="Touch">

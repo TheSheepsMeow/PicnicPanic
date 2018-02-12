@@ -17,7 +17,7 @@
                     <conditions />
                     <actions />
                 </event-block>
-                <comment></comment>
+                <comment>Clean start to the game</comment>
                 <event-block sid="348811331082241">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="705654468983789" type="System" />

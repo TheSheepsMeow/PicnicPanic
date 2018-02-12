@@ -53,7 +53,7 @@
                             <param id="0" name="Variable">timer</param>
                             <param id="1" name="Value">20</param>
                         </action>
-                        <action id="4" name="Set maximum" sid="232055495150549" type="health">
+                        <action id="4" name="Set maximum" sid="232055495150549" type="picnicTimer">
                             <param id="0" name="Maximum">timer</param>
                         </action>
                         <action id="5" name="Set frame" sid="422334204234567" type="home">
@@ -300,10 +300,10 @@
                         <condition id="-1" name="Every tick" sid="942248834343087" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="4" name="Set maximum" sid="193505599989842" type="health">
+                        <action disabled="1" id="4" name="Set maximum" sid="193505599989842" type="picnicTimer">
                             <param id="0" name="Maximum">timer</param>
                         </action>
-                        <action id="3" name="Set progress" sid="842482079077489" type="health">
+                        <action id="3" name="Set progress" sid="842482079077489" type="picnicTimer">
                             <param id="0" name="Value">timer</param>
                         </action>
                     </actions>

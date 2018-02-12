@@ -692,7 +692,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-type name="health" sid="112505241367440">
+        <object-type name="picnicTimer" sid="112505241367440">
             <plugin id="progressbar" />
         </object-type>
         <object-type name="highScore" sid="429235587968022">

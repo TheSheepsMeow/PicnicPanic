@@ -430,6 +430,10 @@
                     <conditions />
                     <actions />
                 </event-block>
+                <event-block sid="670065454101453">
+                    <conditions />
+                    <actions />
+                </event-block>
                 <comment>ants carry food away</comment>
                 <event-block sid="404172809481671">
                     <conditions>
@@ -502,8 +506,16 @@
                     </actions>
                 </event-block>
                 <event-block sid="471933812280388">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="769992679943970" type="enemy">
+                            <param id="0" name="Object">enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="148847193782452" type="enemy">
+                            <param id="0" name="Angle">-self.Angle</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <comment>ants target a piece of food</comment>
                 <event-block sid="533578112478329">

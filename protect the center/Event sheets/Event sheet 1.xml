@@ -230,7 +230,8 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="187327672169742">
+                <comment>landscape spawning</comment>
+                <event-block disabled="1" sid="187327672169742">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="450702840901123" type="System">
                             <param id="0" name="Variable">pick</param>
@@ -248,7 +249,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="831491011072769">
+                <event-block disabled="1" sid="831491011072769">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="719950329485459" type="System">
                             <param id="0" name="Variable">pick</param>
@@ -263,6 +264,43 @@
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="X">526.042</param>
                             <param id="3" name="Y">random(20.847,321.32)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>portrait spawning</comment>
+                <event-block sid="239859807038069">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="188255710525265" type="System">
+                            <param id="0" name="Variable">pick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="172542298737240" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="302648694068800" type="System">
+                            <param id="0" name="Object to create">enemy</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(-45,365)</param>
+                            <param id="3" name="Y">-45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="998730293036736">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="239739284901174" type="System">
+                            <param id="0" name="Variable">pick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="486131526239982" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="179557943089153" type="System">
+                            <param id="0" name="Object to create">enemy</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(128,352)</param>
+                            <param id="3" name="Y">526</param>
                         </action>
                     </actions>
                 </event-block>

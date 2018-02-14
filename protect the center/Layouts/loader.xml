@@ -4,8 +4,8 @@
     <sid>345811487749823</sid>
     <event-sheet>loader</event-sheet>
     <size>
-        <width>480</width>
-        <height>320</height>
+        <width>320</width>
+        <height>480</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -37,11 +37,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-13</x>
-                        <y>-5</y>
+                        <x>-32</x>
+                        <y>-32</y>
                         <z>0</z>
                         <width>638</width>
-                        <height>446</height>
+                        <height>544</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -103,8 +103,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>119</x>
-                        <y>263</y>
+                        <x>40</x>
+                        <y>372</y>
                         <z>0</z>
                         <width>25</width>
                         <height>25</height>
@@ -124,8 +124,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>240</x>
-                        <y>121</y>
+                        <x>160</x>
+                        <y>192</y>
                         <z>0</z>
                         <width>191.989578247</width>
                         <height>191.989578247</height>
@@ -154,8 +154,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>244</x>
-                        <y>277</y>
+                        <x>160</x>
+                        <y>384</y>
                         <z>0</z>
                         <width>200</width>
                         <height>43</height>

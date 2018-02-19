@@ -328,7 +328,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="867507444549480">
+                <event-block disabled="1" sid="867507444549480">
                     <conditions>
                         <condition id="3" name="On touched object" sid="173441383241958" type="Touch">
                             <param id="0" name="Object">start</param>

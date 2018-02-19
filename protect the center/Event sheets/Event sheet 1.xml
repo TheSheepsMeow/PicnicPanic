@@ -90,9 +90,13 @@
                         <action id="5" name="Set frame" sid="214152163086269" type="muteButton">
                             <param id="0" name="Frame number">muteAudio</param>
                         </action>
+                        <action id="-3" name="Set position" sid="647372811098241" type="followMe2">
+                            <param id="0" name="X">lerp(followMe2.X, center.X, 0.015)</param>
+                            <param id="1" name="Y">followMe2.Y</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block sid="438540605829383">
+                <event-block sid="829089243163462">
                     <conditions />
                     <actions />
                 </event-block>

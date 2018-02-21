@@ -853,6 +853,7 @@
                         <action id="11" name="Set collisions enabled" sid="963792201920539" type="paddle">
                             <param id="0" name="Collisions">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="864064649437142" type="Particles" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -1035,6 +1036,9 @@
                     <actions>
                         <action behavior="Solid" id="0" name="Set enabled" sid="560316429588781" type="paddle">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="827214640207689" type="Particles">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>

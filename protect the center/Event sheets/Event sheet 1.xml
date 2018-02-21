@@ -378,6 +378,113 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="872975739973614">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="734489168691545" type="System">
+                            <param id="0" name="Interval (seconds)">2.5</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="702144226088932" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;game&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="311758408883314" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="367624668212008">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="889378155380390" type="System">
+                                    <param id="0" name="Variable">timer</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="969370394415472" type="System">
+                                    <param id="0" name="Variable">timer</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="981363415507710" type="redPepper">
+                                    <param id="0" name="Instance variable">frameNum</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="780973084452517" type="redPepper">
+                                    <param id="0" name="Frame number">redPepper.frameNum</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="461896528252458">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="671275145733862" type="System">
+                                    <param id="0" name="Variable">timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">14</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="888130367779472" type="System">
+                                    <param id="0" name="Variable">timer</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="334864219093724" type="pineapple2">
+                                    <param id="0" name="Instance variable">frameNum</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="108110049098174" type="pineapple2">
+                                    <param id="0" name="Frame number">pineapple2.frameNum</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="918228583470289">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="782237363709653" type="System">
+                                    <param id="0" name="Variable">timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="624849330305801" type="System">
+                                    <param id="0" name="Variable">timer</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="499011598753385" type="greenPepper">
+                                    <param id="0" name="Instance variable">frameNum</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="785354381777712" type="greenPepper">
+                                    <param id="0" name="Frame number">greenPepper.frameNum</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="588533515981478">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="457300697139632" type="System">
+                                    <param id="0" name="Variable">timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="386007306346344" type="pineapple">
+                                    <param id="0" name="Instance variable">frameNum</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="696285346455388" type="pineapple">
+                                    <param id="0" name="Frame number">pineapple.frameNum</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <comment>timer ui</comment>
                 <event-block sid="963716164039310">
                     <conditions>

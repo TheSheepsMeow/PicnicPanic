@@ -655,8 +655,11 @@
             </object-type>
             <object-type name="pineapple" sid="871999991068859">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="frameNum" sid="438517816922476" type="number" />
+                </instance-variables>
                 <animation-folder>
-                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499625880984729" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499625880984729" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple.png">
                             <collision-poly>
                                 <point x="0" y="0.00704225" />
@@ -686,8 +689,11 @@
             </object-type>
             <object-type name="greenPepper" sid="384980320763401">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="frameNum" sid="198956894560491" type="number" />
+                </instance-variables>
                 <animation-folder>
-                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490128889299130" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490128889299130" speed="0">
                         <frame duration="1" hotspotX="0.495868" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Green-Pepper.png">
                             <collision-poly>
                                 <point x="0.983471" y="0.422794" />
@@ -710,8 +716,11 @@
             </object-type>
             <object-type name="pineapple2" sid="954013614224417">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="frameNum" sid="618201228388087" type="number" />
+                </instance-variables>
                 <animation-folder>
-                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="322542901243565" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="322542901243565" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple.png">
                             <collision-poly>
                                 <point x="0" y="0.00704225" />
@@ -741,8 +750,11 @@
             </object-type>
             <object-type name="redPepper" sid="279817418167593">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="frameNum" sid="367114821170591" type="number" />
+                </instance-variables>
                 <animation-folder>
-                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="423232580591570" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="423232580591570" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pepper.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Red-Pepper-Eaten.png">
                             <collision-poly>

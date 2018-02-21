@@ -12,10 +12,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">loader</layout>
         <layout order="1">title</layout>
-        <layout order="2">game</layout>
+        <layout active="1" order="2">game</layout>
         <layout order="3">end</layout>
-        <event-sheet active="1" order="4">Event sheet 1</event-sheet>
-        <event-sheet order="5">menu buttons</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -27,14 +25,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="food" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/system/" />
         <folder expanded="0" path="object-folder/menus/" />
-        <folder expanded="0" path="object-folder/gameFood/" />
+        <folder expanded="1" path="object-folder/gameFood/" />
         <folder expanded="0" path="object-folder/game/" />
         <folder expanded="0" path="object-folder/text/" />
-        <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -49,6 +47,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/title/" />
         <folder expanded="1" path="animation-folder/moregamesbutton/" />
         <folder expanded="1" path="animation-folder/resetThis/" />
+        <folder expanded="1" path="animation-folder/gameOver/" />
         <folder expanded="1" path="animation-folder/apple/" />
         <folder expanded="1" path="animation-folder/fruit/" />
         <folder expanded="1" path="animation-folder/grapes/" />
@@ -57,6 +56,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/hotdog/" />
         <folder expanded="1" path="animation-folder/watermelon/" />
         <folder expanded="1" path="animation-folder/sandwich/" />
+        <folder expanded="1" path="animation-folder/kebab/" />
+        <folder expanded="1" path="animation-folder/pineapple/" />
+        <folder expanded="1" path="animation-folder/greenPepper/" />
+        <folder expanded="1" path="animation-folder/pineapple2/" />
+        <folder expanded="1" path="animation-folder/redPepper/" />
         <folder expanded="1" path="animation-folder/destroyer/" />
         <folder expanded="1" path="animation-folder/fruitEater/" />
         <folder expanded="1" path="animation-folder/enemy/" />

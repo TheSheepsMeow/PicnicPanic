@@ -6,6 +6,7 @@
         <include>menu buttons</include>
         <include>LocalStorage</include>
         <comment></comment>
+        <variable constant="0" name="randAntSfx" sid="885845652860466" static="0" type="number">0</variable>
         <variable constant="0" name="muteAudio" sid="972229057156212" static="0" type="number">0</variable>
         <variable constant="0" name="pause" sid="254053889507352" static="0" type="number">0</variable>
         <variable constant="0" name="increaseFont" sid="992179101512007" static="0" type="number">0.25</variable>
@@ -271,7 +272,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>portrait spawning</comment>
+                <comment>portrait spawning (pause in bottom left)</comment>
                 <event-block sid="239859807038069">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="188255710525265" type="System">
@@ -309,6 +310,47 @@
                     </actions>
                 </event-block>
                 <event-block sid="243406533254335">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>portrait spawning (pause in upper left)</comment>
+                <event-block sid="770450016252973">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="137798501239716" type="System">
+                            <param id="0" name="Variable">pick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="842448548684455" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="195950398666754" type="System">
+                            <param id="0" name="Object to create">enemy</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(128,365)</param>
+                            <param id="3" name="Y">-45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="404645703182483">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="604253832212713" type="System">
+                            <param id="0" name="Variable">pick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="854753481771037" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="512332467811524" type="System">
+                            <param id="0" name="Object to create">enemy</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(-45,352)</param>
+                            <param id="3" name="Y">526</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="119876354060301">
                     <conditions />
                     <actions />
                 </event-block>
@@ -364,6 +406,10 @@
                             <param id="0" name="Variable">level</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-10" name="Add to" sid="717515690139753" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-9" name="Set value" sid="718246240897754" type="System">
                             <param id="0" name="Variable">timer</param>
                             <param id="1" name="Value">(level/2)*20</param>
@@ -375,7 +421,7 @@
                         <action id="0" name="Play" sid="590219398424630" type="Audio">
                             <param id="0" name="Audio file">next level sound</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
@@ -485,19 +531,70 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Play" sid="667485562675713" type="Audio">
-                            <param id="0" name="Audio file">antWithFood0</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        <action id="-9" name="Set value" sid="148080385489013" type="System">
+                            <param id="0" name="Variable">randAntSfx</param>
+                            <param id="1" name="Value">random(0, 3)</param>
                         </action>
                         <action id="0" name="Play" sid="229924646783866" type="Audio">
                             <param id="0" name="Audio file">Ant&apos;s taking fruit</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="373118979157294">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="437779051473437" type="System">
+                                    <param id="0" name="Variable">randAntSfx</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="667485562675713" type="Audio">
+                                    <param id="0" name="Audio file">antWithFood0</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="853606312863419">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="304068000138981" type="System">
+                                    <param id="0" name="Variable">randAntSfx</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="386469213988234" type="Audio">
+                                    <param id="0" name="Audio file">antWithFood1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="506484193195183">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="120711641122410" type="System">
+                                    <param id="0" name="Variable">randAntSfx</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="675507343870238" type="Audio">
+                                    <param id="0" name="Audio file">antWithFood2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="630294279543998">
                     <conditions>
@@ -597,7 +694,7 @@
                             <param id="0" name="Instance variable">target</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Add to" sid="929455311329066" type="System">
+                        <action disabled="1" id="-10" name="Add to" sid="929455311329066" type="System">
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -883,7 +980,7 @@
                         <action id="0" name="Play" sid="489469464712847" type="Audio">
                             <param id="0" name="Audio file">Game over ant march 2 (Best)</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;march&quot;</param>
                         </action>
                         <action id="-10" name="Set value" sid="254564960225312" type="enemy">

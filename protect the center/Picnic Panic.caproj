@@ -873,6 +873,10 @@
         <file name="next level sound.ogg" />
         <file name="Swipe.m4a" />
         <file name="Swipe.ogg" />
+        <file name="antWithFood1.m4a" />
+        <file name="antWithFood1.ogg" />
+        <file name="antWithFood2.m4a" />
+        <file name="antWithFood2.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

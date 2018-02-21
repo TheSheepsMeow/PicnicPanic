@@ -190,7 +190,7 @@
                         <action id="0" name="Play" sid="327857165443664" type="Audio">
                             <param id="0" name="Audio file">Protect the Center song</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
                         </action>
                     </actions>
@@ -242,7 +242,7 @@
                         <action id="0" name="Play" sid="939896228389559" type="Audio">
                             <param id="0" name="Audio file">Protect the Center song</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
                         </action>
                     </actions>

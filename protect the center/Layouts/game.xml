@@ -500,28 +500,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pausebutton" uid="57">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>44</x>
-                        <y>44</y>
-                        <z>0</z>
-                        <width>68</width>
-                        <height>68</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -832,7 +810,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>107.799171448</x>
-                        <y>13.50692749</y>
+                        <y>-28.432746887</y>
                         <z>0</z>
                         <width>132.797912598</width>
                         <height>12.717811584</height>
@@ -992,7 +970,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>184</x>
-                        <y>8</y>
+                        <y>49.23910141</y>
                         <z>0</z>
                         <width>127.378677368</width>
                         <height>19.876506805</height>
@@ -1022,7 +1000,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>184</x>
-                        <y>24</y>
+                        <y>65.239105225</y>
                         <z>0</z>
                         <width>127.378677368</width>
                         <height>19.876506805</height>
@@ -1213,7 +1191,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>173.799163818</x>
-                        <y>-1.49307251</y>
+                        <y>-43.432746887</y>
                         <z>0</z>
                         <width>96.567169189</width>
                         <height>20.975700378</height>
@@ -1263,8 +1241,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>192</x>
-                        <y>64</y>
+                        <x>215.044815063</x>
+                        <y>29.007110596</y>
                         <z>0</z>
                         <width>192</width>
                         <height>26.962053299</height>
@@ -1285,8 +1263,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>224</x>
-                        <y>64</y>
+                        <x>247.044815063</x>
+                        <y>29.007110596</y>
                         <z>0</z>
                         <width>33.874191284</width>
                         <height>30.443897247</height>
@@ -1307,8 +1285,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>192</x>
-                        <y>64</y>
+                        <x>215.044815063</x>
+                        <y>29.007110596</y>
                         <z>0</z>
                         <width>21.343133926</width>
                         <height>47.977954865</height>
@@ -1329,8 +1307,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>64</y>
+                        <x>183.044815063</x>
+                        <y>29.007110596</y>
                         <z>0</z>
                         <width>33.754707336</width>
                         <height>30.336509705</height>
@@ -1351,11 +1329,33 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>64</y>
+                        <x>151.044815063</x>
+                        <y>29.007110596</y>
                         <z>0</z>
                         <width>28.902738571</width>
                         <height>35.429164886</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pausebutton" uid="57">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>44</x>
+                        <y>44</y>
+                        <z>0</z>
+                        <width>68</width>
+                        <height>68</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

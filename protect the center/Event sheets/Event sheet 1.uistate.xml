@@ -4,49 +4,26 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <show-addaction-links>1</show-addaction-links>
-<<<<<<< HEAD
-    <scroll-pos>3919</scroll-pos>
-=======
-    <scroll-pos>4782</scroll-pos>
->>>>>>> parent of ae07506... Kebab Timer UI implemented
-    <conditions-column>458</conditions-column>
-    <actions-namecolumn>131</actions-namecolumn>
+    <scroll-pos>475</scroll-pos>
+    <conditions-column>459</conditions-column>
+    <actions-namecolumn>138</actions-namecolumn>
     <condition-namecolumns>
-        <nest>198</nest>
-        <nest>210</nest>
-        <nest>105</nest>
+        <nest>80</nest>
+        <nest>157</nest>
+        <nest>102</nest>
+        <nest>80</nest>
+        <nest>68</nest>
+        <nest>50</nest>
+        <nest>32</nest>
         <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-        <nest>26</nest>
-<<<<<<< HEAD
-        <nest>21</nest>
-=======
-        <nest>26</nest>
-        <nest>19</nest>
->>>>>>> parent of ae07506... Kebab Timer UI implemented
     </condition-namecolumns>
     <events>
         <event collapsed="1" sid="786426562052735" />
         <event collapsed="1" sid="143582261050047" />
-<<<<<<< HEAD
-=======
-        <event collapsed="1" sid="533578112478329" />
->>>>>>> parent of ae07506... Kebab Timer UI implemented
-        <event collapsed="1" sid="940031283800152" />
+        <event collapsed="1" sid="203562634286704" />
+        <event collapsed="1" sid="250800566494251" />
+        <event collapsed="1" sid="389131642624682" />
         <event collapsed="1" sid="357559100321709" />
+        <event collapsed="1" sid="906048047028263" />
     </events>
 </c2uistate>

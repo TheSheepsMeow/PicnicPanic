@@ -98,8 +98,17 @@
                     </actions>
                 </event-block>
                 <event-block sid="829089243163462">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="318198134889919" type="followMe2">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">center.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="811368667442163" type="followMe2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

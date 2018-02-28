@@ -98,21 +98,8 @@
                     </actions>
                 </event-block>
                 <event-block sid="829089243163462">
-                    <conditions>
-                        <condition id="-1" name="Compare X" sid="318198134889919" type="followMe2">
-                            <param id="0" name="Comparison">3</param>
-                            <param id="1" name="X co-ordinate">center.X + 0.5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="811368667442163" type="followMe2">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-12" name="Set group active" sid="561968687741990" type="System">
-                            <param id="0" name="Group name">&quot;Levels &amp; Ant Spawning&quot;</param>
-                            <param id="1" name="State">1</param>
-                        </action>
-                    </actions>
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -187,7 +174,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" inactive="1" sid="203562634286704" title="Levels &amp; Ant Spawning">
+        <event-group description="" sid="203562634286704" title="Levels &amp; Ant Spawning">
             <sub-events>
                 <event-block sid="118352335784562">
                     <conditions />
@@ -286,7 +273,7 @@
                     </actions>
                 </event-block>
                 <comment>portrait spawning (pause in bottom left)</comment>
-                <event-block disabled="1" sid="239859807038069">
+                <event-block sid="239859807038069">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="188255710525265" type="System">
                             <param id="0" name="Variable">pick</param>
@@ -304,7 +291,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="998730293036736">
+                <event-block sid="998730293036736">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="239739284901174" type="System">
                             <param id="0" name="Variable">pick</param>
@@ -405,103 +392,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="250800566494251">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="786633302662497" type="System">
-                            <param id="0" name="Interval (seconds)">2.5</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="509728696354511">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="431981309644139" type="System">
-                                    <param id="0" name="Variable">timer</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">20</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="177616323920476" type="System">
-                                    <param id="0" name="Variable">timer</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">15</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="520373525203011" type="redPepper">
-                                    <param id="0" name="Instance variable">frameNum</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="656035938921713" type="redPepper">
-                                    <param id="0" name="Frame number">redPepper.frameNum</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="756457764304969">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="457058525849818" type="System">
-                                    <param id="0" name="Variable">timer</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">15</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="605572582675349" type="System">
-                                    <param id="0" name="Variable">timer</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">10</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="335587543995080" type="pineapple2">
-                                    <param id="0" name="Instance variable">frameNum</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="622045845439866" type="pineapple2">
-                                    <param id="0" name="Frame number">pineapple2.frameNum</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="306702662467989">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="855592854180240" type="System">
-                                    <param id="0" name="Variable">timer</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">10</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="672600234475454" type="System">
-                                    <param id="0" name="Variable">timer</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">5</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="659133341849297" type="greenPepper">
-                                    <param id="0" name="Instance variable">frameNum</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="598003889187274" type="greenPepper">
-                                    <param id="0" name="Frame number">greenPepper.frameNum</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="621120111414617">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="672683279363334" type="System">
-                                    <param id="0" name="Variable">timer</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">5</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="958465873726023" type="pineapple">
-                                    <param id="0" name="Instance variable">frameNum</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="655923890771860" type="pineapple">
-                                    <param id="0" name="Frame number">pineapple.frameNum</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <comment>next level</comment>
                 <event-block sid="884884082311646">
                     <conditions>
@@ -533,34 +423,6 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="903325006570900" type="greenPepper">
-                            <param id="0" name="Instance variable">frameNum</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="524355558968533" type="greenPepper">
-                            <param id="0" name="Frame number">greenPepper.frameNum</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="900216354663080" type="pineapple">
-                            <param id="0" name="Instance variable">frameNum</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="824577163955692" type="pineapple">
-                            <param id="0" name="Frame number">pineapple.frameNum</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="419262216477159" type="pineapple2">
-                            <param id="0" name="Instance variable">frameNum</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="229067163962282" type="pineapple2">
-                            <param id="0" name="Frame number">pineapple2.frameNum</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="549656892300611" type="redPepper">
-                            <param id="0" name="Instance variable">frameNum</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="707937000640385" type="redPepper">
-                            <param id="0" name="Frame number">redPepper.frameNum</param>
                         </action>
                     </actions>
                 </event-block>
@@ -744,16 +606,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Ants bounce off eachother</comment>
                 <event-block sid="471933812280388">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="769992679943970" type="enemy">
                             <param id="0" name="Object">enemy</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="305404707247826" type="enemy">
-                            <param id="0" name="Instance variable">target</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1287,6 +1143,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" inactive="1" sid="299857172842519" title="Old Spawning Systems" />
     </events>
 </c2eventsheet>

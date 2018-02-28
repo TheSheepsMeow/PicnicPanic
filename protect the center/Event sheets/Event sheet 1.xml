@@ -71,13 +71,13 @@
                             <param id="0" name="Text">timer</param>
                         </action>
                         <action id="0" name="Set text" sid="671150660997322" type="textScore">
-                            <param id="0" name="Text">&quot;SCORE: &quot; &amp; score</param>
+                            <param id="0" name="Text">&quot;Swarms Survived: &quot; &amp;score</param>
                         </action>
                         <action id="0" name="Set text" sid="742448017173190" type="textLevel">
-                            <param id="0" name="Text">&quot;LEVEL &quot;&amp; level</param>
+                            <param id="0" name="Text">&quot;Swarm &quot;&amp;level</param>
                         </action>
                         <action id="0" name="Set text" sid="177261211024335" type="highScore">
-                            <param id="0" name="Text">&quot;HIGH SCORE: &quot;&amp;highScore</param>
+                            <param id="0" name="Text">&quot;Most Swarms Survived: &quot;&amp;highScore</param>
                         </action>
                         <action id="0" name="Set text" sid="675559548265981" type="textCountdown">
                             <param id="0" name="Text">pause</param>
@@ -86,7 +86,7 @@
                             <param id="0" name="Scale">increaseFont</param>
                         </action>
                         <action id="0" name="Set text" sid="498509870088421" type="textLevelCounter">
-                            <param id="0" name="Text">&quot;LEVEL &quot;&amp;level</param>
+                            <param id="0" name="Text">&quot;Swarm &quot;&amp;level</param>
                         </action>
                         <action id="5" name="Set frame" sid="214152163086269" type="muteButton">
                             <param id="0" name="Frame number">muteAudio</param>
@@ -98,8 +98,18 @@
                     </actions>
                 </event-block>
                 <event-block sid="829089243163462">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="459842192281463" type="followMe2">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">center.X + 21.4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="154826825684431" type="System">
+                            <param id="0" name="Group name">&quot;Levels &amp; Ant Spawning&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -174,7 +184,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="203562634286704" title="Levels &amp; Ant Spawning">
+        <event-group description="" inactive="1" sid="203562634286704" title="Levels &amp; Ant Spawning">
             <sub-events>
                 <event-block sid="118352335784562">
                     <conditions />
@@ -520,6 +530,34 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="507790028993415" type="redPepper">
+                            <param id="0" name="Instance variable">frameNum</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="712141455814444" type="redPepper">
+                            <param id="0" name="Frame number">redPepper.frameNum</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="230400938565879" type="pineapple2">
+                            <param id="0" name="Instance variable">frameNum</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="422044811185101" type="pineapple2">
+                            <param id="0" name="Frame number">pineapple2.frameNum</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="631916740728710" type="greenPepper">
+                            <param id="0" name="Instance variable">frameNum</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="720222529699168" type="greenPepper">
+                            <param id="0" name="Frame number">greenPepper.frameNum</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="904980717769628" type="pineapple">
+                            <param id="0" name="Instance variable">frameNum</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="672187307863589" type="pineapple">
+                            <param id="0" name="Frame number">pineapple.frameNum</param>
                         </action>
                     </actions>
                 </event-block>

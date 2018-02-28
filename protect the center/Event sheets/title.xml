@@ -165,7 +165,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="851648975811429" type="highScore">
-                            <param id="0" name="Text">&quot;high score: &quot; &amp; highScore</param>
+                            <param id="0" name="Text">&quot;Most Swarms Survived: &quot; &amp; highScore</param>
                         </action>
                     </actions>
                 </event-block>

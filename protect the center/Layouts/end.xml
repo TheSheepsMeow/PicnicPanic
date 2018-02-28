@@ -173,8 +173,8 @@
                         <character-width>33</character-width>
                         <character-height>57</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>score</text>
-                        <scale>0.5</scale>
+                        <text>Swarms survived</text>
+                        <scale>0.4</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -189,7 +189,7 @@
                         <x>160</x>
                         <y>96</y>
                         <z>0</z>
-                        <width>192</width>
+                        <width>256</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -203,7 +203,7 @@
                         <character-width>33</character-width>
                         <character-height>57</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>level #</text>
+                        <text>Swarm #</text>
                         <scale>0.5</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -233,8 +233,8 @@
                         <character-width>33</character-width>
                         <character-height>57</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>high score: 99</text>
-                        <scale>0.5</scale>
+                        <text>Most Swarms Survived: 99</text>
+                        <scale>0.35</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -249,7 +249,7 @@
                         <x>160</x>
                         <y>128</y>
                         <z>0</z>
-                        <width>256</width>
+                        <width>288</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

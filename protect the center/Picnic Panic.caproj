@@ -312,7 +312,7 @@
             <object-type name="resetThis" sid="712598873931009">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315116832588033" speed="5">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315116832588033" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.507692">
                             <collision-poly>
                                 <point x="0.12766" y="0.184615" />
@@ -352,7 +352,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="1" name="conferm" pingpong="0" repeatcount="1" repeatto="0" sid="704749957826208" speed="5">
+                    <animation framecount="2" loop="0" name="conferm" pingpong="0" repeatcount="1" repeatto="0" sid="704749957826208" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.507692" original-source="C:\Users\heros\Desktop\protect_the_center-art\Title\Confirm_02.png">
                             <collision-poly>
                                 <point x="0.138298" y="0.2" />
@@ -655,8 +655,11 @@
             </object-type>
             <object-type name="pineapple" sid="871999991068859">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="frameNum" sid="384428473285981" type="number" />
+                </instance-variables>
                 <animation-folder>
-                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499625880984729" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499625880984729" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple.png">
                             <collision-poly>
                                 <point x="0" y="0.00704225" />
@@ -686,8 +689,11 @@
             </object-type>
             <object-type name="greenPepper" sid="384980320763401">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="frameNum" sid="557617690551502" type="number" />
+                </instance-variables>
                 <animation-folder>
-                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490128889299130" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490128889299130" speed="0">
                         <frame duration="1" hotspotX="0.495868" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Green-Pepper.png">
                             <collision-poly>
                                 <point x="0.983471" y="0.422794" />
@@ -710,8 +716,11 @@
             </object-type>
             <object-type name="pineapple2" sid="954013614224417">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="frameNum" sid="794297042897358" type="number" />
+                </instance-variables>
                 <animation-folder>
-                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="322542901243565" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="322542901243565" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple.png">
                             <collision-poly>
                                 <point x="0" y="0.00704225" />
@@ -741,8 +750,11 @@
             </object-type>
             <object-type name="redPepper" sid="279817418167593">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="frameNum" sid="135972228666082" type="number" />
+                </instance-variables>
                 <animation-folder>
-                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="423232580591570" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="423232580591570" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pepper.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Red-Pepper-Eaten.png">
                             <collision-poly>
@@ -860,6 +872,14 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849073796921811" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pauseBG" sid="430383526273452">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="783736526315200" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>

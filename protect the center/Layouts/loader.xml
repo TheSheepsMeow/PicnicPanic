@@ -103,8 +103,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>40</x>
-                        <y>372</y>
+                        <x>41.188098907</x>
+                        <y>370.811889648</y>
                         <z>0</z>
                         <width>25</width>
                         <height>25</height>
@@ -138,8 +138,8 @@
                 </instance>
                 <instance type="textTitle" uid="72">
                     <properties>
-                        <character-width>33</character-width>
-                        <character-height>57</character-height>
+                        <character-width>16</character-width>
+                        <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>The Sheep&apos;s Meow</text>
                         <scale>0.66</scale>
@@ -154,11 +154,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>384</y>
+                        <x>160.375823975</x>
+                        <y>383.624450684</y>
                         <z>0</z>
-                        <width>200</width>
-                        <height>43</height>
+                        <width>230.751647949</width>
+                        <height>42.248931885</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

@@ -887,6 +887,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="woodenBoard" sid="884792151913015">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523120961497848" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\owner\Downloads\moreGames_wood.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="text">
             <object-type name="textContinue" sid="379161823223034">
@@ -932,9 +940,13 @@
             </object-type>
             <object-type name="textTitle" sid="974615548305183">
                 <plugin id="Spritefont2" />
-                <texture original-source="C:\Users\Oksana\Documents\oxy.png" />
+                <texture original-source="C:\Users\owner\Downloads\16x16defaultSpringFont.png" />
             </object-type>
             <object-type name="textCountdown" sid="781780606746518">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Oksana\Documents\oxy.png" />
+            </object-type>
+            <object-type name="textTagline" sid="606719017875771">
                 <plugin id="Spritefont2" />
                 <texture original-source="C:\Users\Oksana\Documents\oxy.png" />
             </object-type>

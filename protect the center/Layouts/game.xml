@@ -798,6 +798,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="woodenBoard" uid="38">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>238.731445313</x>
+                        <y>74.090118408</y>
+                        <z>0</z>
+                        <width>162.537246704</width>
+                        <height>40.184165955</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504854381</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="picnicTimer" uid="40">
                     <properties>
                         <value>0</value>
@@ -917,7 +939,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>109</x>
+                        <x>96</x>
                         <y>352</y>
                         <z>0</z>
                         <width>76.807998657</width>
@@ -939,8 +961,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>201</x>
-                        <y>351</y>
+                        <x>224</x>
+                        <y>352</y>
                         <z>0</z>
                         <width>76.808204651</width>
                         <height>57.884441376</height>
@@ -1029,8 +1051,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>170</x>
-                        <y>283</y>
+                        <x>160</x>
+                        <y>224</y>
                         <z>0</z>
                         <width>192</width>
                         <height>37.56463623</height>
@@ -1363,7 +1385,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
+                        <x>-128</x>
                         <y>256</y>
                         <z>0</z>
                         <width>320</width>

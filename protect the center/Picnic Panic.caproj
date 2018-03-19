@@ -26,6 +26,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -892,6 +893,55 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523120961497848" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\owner\Downloads\moreGames_wood.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="enemyCreditsCarrier" sid="917716654009116">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="target" sid="270030764272370" type="number" />
+                    <instance-variable name="chooseFood" sid="586703285238873" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Turret" sid="218238602278905">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="318719826967703">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Rotate" sid="310860604185349">
+                        <behavior id="Rotate" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="441920820577576">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754542489852546" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="-1.47541" original-source="C:\Users\Pitchfork\Desktop\ant1.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="-1.45161" original-source="C:\Users\Pitchfork\Desktop\ant2.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="orbitMe" sid="679518584188606">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573774777699577" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>

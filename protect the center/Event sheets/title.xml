@@ -67,6 +67,10 @@
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="888625788507758" type="enemyCreditsCarrier">
+                            <param id="0" name="Pin to">orbitMe</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="482840274786050" type="title">
                             <param id="0" name="Pin to">enemyEndStartScreen</param>
                             <param id="1" name="Mode">0</param>

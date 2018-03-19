@@ -10,11 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">loader</layout>
-        <layout order="1">title</layout>
+        <layout order="0">loader</layout>
+        <layout active="1" order="1">title</layout>
         <layout order="2">game</layout>
         <layout order="3">end</layout>
         <event-sheet order="4">Event sheet 1</event-sheet>
+        <event-sheet order="5">title</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -26,14 +27,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="food" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="object-folder/system/" />
         <folder expanded="0" path="object-folder/menus/" />
         <folder expanded="0" path="object-folder/gameFood/" />
-        <folder expanded="1" path="object-folder/game/" />
+        <folder expanded="0" path="object-folder/game/" />
         <folder expanded="0" path="object-folder/text/" />
         <folder expanded="0" path="layout-folder/" />
-        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -71,6 +72,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/followMe2/" />
         <folder expanded="1" path="animation-folder/pauseBG/" />
         <folder expanded="1" path="animation-folder/woodenBoard/" />
+        <folder expanded="1" path="animation-folder/enemyCreditsCarrier/" />
+        <folder expanded="1" path="animation-folder/orbitMe/" />
         <folder expanded="1" path="animation-folder/enemyEndStartScreen/" />
     </folders-expanded>
 </c2uistate>

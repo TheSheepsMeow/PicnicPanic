@@ -71,6 +71,10 @@
                             <param id="0" name="Pin to">orbitMe</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="862343540097465" type="textCredits">
+                            <param id="0" name="Pin to">enemyCreditsCarrier</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="482840274786050" type="title">
                             <param id="0" name="Pin to">enemyEndStartScreen</param>
                             <param id="1" name="Mode">0</param>

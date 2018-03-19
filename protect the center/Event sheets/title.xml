@@ -13,10 +13,6 @@
                     <conditions />
                     <actions />
                 </event-block>
-                <event-block sid="678574951027346">
-                    <conditions />
-                    <actions />
-                </event-block>
                 <comment>Clean start to the game</comment>
                 <event-block sid="348811331082241">
                     <conditions>
@@ -38,7 +34,7 @@
                 <comment>The ants are marching away with your plate!</comment>
                 <event-block sid="255011204387965">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="856681135981295" type="System" />
+                        <condition disabled="1" id="-2" name="On start of layout" sid="856681135981295" type="System" />
                         <condition id="-8" name="Compare two values" sid="964102192074535" type="System">
                             <param id="0" name="First value">LayoutName</param>
                             <param id="1" name="Comparison">0</param>
@@ -46,11 +42,56 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="570293366605123" type="center">
+                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="570293366605123" type="center">
                             <param id="0" name="Pin to">enemyEndStartScreen</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action id="-16" name="Wait" sid="981238717683879" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <comment>Begin zoom out, then switch to end screen</comment>
+                        <event-block sid="965228525045348">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="630954048446337" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Set layer scale" sid="781554269378663" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Scale">lerp(LayerScale(0), 0.5, 0.0125)</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="266355344215156" type="cloud">
+                                    <param id="0" name="Opacity">cloud.Opacity + 0.75</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="949479387440934">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="586510122771228" type="System">
+                                    <param id="0" name="First value">cloud.Opacity</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">95</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="240141471220792" type="System">
+                                    <param id="0" name="Layout">cutscene</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="678574951027346">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="407771125079622" type="System" />
+                        <condition id="-8" name="Compare two values" sid="214385883177928" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;cutscene&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
                 <comment></comment>
                 <event-block sid="312416364986469">

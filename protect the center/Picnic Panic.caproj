@@ -979,6 +979,36 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="followMe3" sid="258262626838820">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="211429257385712">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="998157521647307" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="antFarm" sid="214902726133022">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574035936041862" speed="5">
+                        <frame duration="1" hotspotX="0.49784" hotspotY="0.439306" original-source="C:\Users\owner\Downloads\ant-farm.png">
+                            <collision-poly>
+                                <point x="0.170626" y="0.00144509" />
+                                <point x="0.825054" y="0.00144509" />
+                                <point x="0.99892" y="0.439306" />
+                                <point x="0.915767" y="0.998555" />
+                                <point x="0.0799136" y="0.998555" />
+                                <point x="0.00107991" y="0.439306" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="text">
             <object-type name="textContinue" sid="379161823223034">

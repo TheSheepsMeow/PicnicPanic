@@ -52,7 +52,7 @@
                     </actions>
                     <sub-events>
                         <comment>Begin zoom out, then switch to end screen</comment>
-                        <event-block sid="965228525045348">
+                        <event-block disabled="1" sid="965228525045348">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="630954048446337" type="System" />
                             </conditions>
@@ -66,7 +66,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="949479387440934">
+                        <event-block disabled="1" sid="949479387440934">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="586510122771228" type="System">
                                     <param id="0" name="First value">cloud.Opacity</param>
@@ -84,7 +84,6 @@
                 </event-block>
                 <event-block sid="678574951027346">
                     <conditions>
-                        <condition disabled="1" id="-2" name="On start of layout" sid="407771125079622" type="System" />
                         <condition id="-8" name="Compare two values" sid="214385883177928" type="System">
                             <param id="0" name="First value">LayoutName</param>
                             <param id="1" name="Comparison">0</param>
@@ -244,7 +243,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="851648975811429" type="highScore">
-                            <param id="0" name="Text">&quot;Most Swarms Survived: &quot; &amp; highScore</param>
+                            <param id="0" name="Text">&quot;Most Food Saved: &quot; &amp; highScore &amp; &quot;/10&quot;</param>
                         </action>
                     </actions>
                 </event-block>

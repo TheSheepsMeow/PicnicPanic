@@ -11,11 +11,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">loader</layout>
-        <layout active="1" order="1">title</layout>
+        <layout order="1">title</layout>
         <layout order="2">game</layout>
         <layout order="3">end</layout>
         <layout order="4">cutscene</layout>
         <event-sheet order="5">title</event-sheet>
+        <event-sheet active="1" order="6">Event sheet 1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -33,7 +34,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/gameFood/" />
         <folder expanded="1" path="object-folder/game/" />
         <folder expanded="0" path="object-folder/text/" />
-        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />

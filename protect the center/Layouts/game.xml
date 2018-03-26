@@ -488,8 +488,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>278</x>
-                        <y>-173</y>
+                        <x>192</x>
+                        <y>-256</y>
                         <z>0</z>
                         <width>40</width>
                         <height>35</height>
@@ -973,36 +973,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="textScore" uid="73">
-                    <properties>
-                        <character-width>33</character-width>
-                        <character-height>57</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>score</text>
-                        <scale>0.25</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>124.120658875</x>
-                        <y>70.769996643</y>
-                        <z>0</z>
-                        <width>186</width>
-                        <height>19.876506805</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="textPause" uid="76">
                     <properties>
                         <character-width>33</character-width>
@@ -1392,6 +1362,108 @@
                         <z>0</z>
                         <width>68</width>
                         <height>68</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="textLevelCounter" uid="73">
+                    <properties>
+                        <character-width>33</character-width>
+                        <character-height>57</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>Swarm #</text>
+                        <scale>0.3</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>236.297851563</x>
+                        <y>81.466445923</y>
+                        <z>0</z>
+                        <width>160</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Fireworks" uid="74">
+                    <properties>
+                        <rate>300</rate>
+                        <spray-cone>360</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>200</speed>
+                        <size>16</size>
+                        <opacity>100</opacity>
+                        <grow-rate>5</grow-rate>
+                        <x-randomiser>5</x-randomiser>
+                        <y-randomiser>5</y-randomiser>
+                        <speed-randomiser->5</speed-randomiser->
+                        <size-randomiser>5</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-150</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>800</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>1</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-96</x>
+                        <y>-256</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="cloud" uid="88">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>5</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>256</y>
+                        <z>0</z>
+                        <width>1024</width>
+                        <height>1024</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

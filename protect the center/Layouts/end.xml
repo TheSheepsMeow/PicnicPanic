@@ -178,44 +178,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>161.268615723</x>
-                        <y>96</y>
-                        <z>0</z>
-                        <width>288</width>
-                        <height>96</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504854381</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="textScore" uid="88">
-                    <properties>
-                        <character-width>33</character-width>
-                        <character-height>57</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Swarms survived</text>
-                        <scale>0.4</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
                         <x>160</x>
                         <y>96</y>
                         <z>0</z>
-                        <width>256</width>
-                        <height>32</height>
+                        <width>288</width>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.504854381</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -239,7 +209,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>64</y>
+                        <y>81.509971619</y>
                         <z>0</z>
                         <width>160</width>
                         <height>32</height>
@@ -269,7 +239,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>128</y>
+                        <y>113.247848511</y>
                         <z>0</z>
                         <width>288</width>
                         <height>30</height>
@@ -309,10 +279,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
+                        <x>-928</x>
                         <y>256</y>
                         <z>0</z>
                         <width>1024</width>

@@ -808,11 +808,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>238.731445313</x>
-                        <y>74.090118408</y>
+                        <x>236.238571167</x>
+                        <y>81.227867126</y>
                         <z>0</z>
-                        <width>162.537246704</width>
-                        <height>40.184165955</height>
+                        <width>163</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.504854381</hotspotY>
@@ -991,40 +991,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>125</x>
-                        <y>54</y>
+                        <x>124.120658875</x>
+                        <y>70.769996643</y>
                         <z>0</z>
                         <width>186</width>
-                        <height>19.876506805</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="textLevelCounter" uid="74">
-                    <properties>
-                        <character-width>33</character-width>
-                        <character-height>57</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>level #</text>
-                        <scale>0.25</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>184</x>
-                        <y>74</y>
-                        <z>0</z>
-                        <width>127.378677368</width>
                         <height>19.876506805</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -1395,7 +1365,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-128</x>
+                        <x>160</x>
                         <y>256</y>
                         <z>0</z>
                         <width>320</width>

@@ -1411,7 +1411,7 @@
                         <grow-rate>5</grow-rate>
                         <x-randomiser>5</x-randomiser>
                         <y-randomiser>5</y-randomiser>
-                        <speed-randomiser->5</speed-randomiser->
+                        <speed-randomiser->0</speed-randomiser->
                         <size-randomiser>5</size-randomiser>
                         <grow-rate-randomiser>0</grow-rate-randomiser>
                         <particle-lifetime-properties></particle-lifetime-properties>

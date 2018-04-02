@@ -607,6 +607,11 @@
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="534052512272172" type="enemy">
                             <param id="0" name="Angle">-self.Angle</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="208063595462298" type="enemy" />
+                        <action id="-12" name="Set group active" sid="269490100154864" type="System">
+                            <param id="0" name="Group name">&quot;Ants&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
                         <action id="-9" name="Set value" sid="996745668836590" type="System">
                             <param id="0" name="Variable">canAntsSpawn</param>
                             <param id="1" name="Value">1</param>
@@ -669,7 +674,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="877005177663670">
+                <event-block disabled="1" sid="877005177663670">
                     <conditions>
                         <condition id="15" name="On double-tap" sid="548948860745576" type="Touch" />
                     </conditions>
@@ -682,6 +687,11 @@
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="498335061525828" type="enemy">
                             <param id="0" name="Angle">-self.Angle</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="621789869461316" type="enemy" />
+                        <action id="-12" name="Set group active" sid="741660383351147" type="System">
+                            <param id="0" name="Group name">&quot;Ants&quot;</param>
+                            <param id="1" name="State">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="140512025589843" type="System">
                             <param id="0" name="Variable">canAntsSpawn</param>

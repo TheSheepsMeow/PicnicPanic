@@ -1038,7 +1038,7 @@
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
-                <texture original-source="C:\Users\Oksana\Documents\oxy.png" />
+                <texture original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Oxygen-Mono-White.png" />
             </object-type>
             <object-type name="highScore" sid="429235587968022">
                 <plugin id="Spritefont2" />

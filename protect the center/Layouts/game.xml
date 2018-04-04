@@ -1401,7 +1401,7 @@
                 </instance>
                 <instance type="Fireworks" uid="74">
                     <properties>
-                        <rate>300</rate>
+                        <rate>250</rate>
                         <spray-cone>360</spray-cone>
                         <type>One-shot</type>
                         <initial-particle-properties></initial-particle-properties>
@@ -1438,6 +1438,25 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="cloud" sid="917829358646956">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
                 <instance type="cloud" uid="88">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -1459,8 +1478,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>256</y>
+                        <x>224</x>
+                        <y>224</y>
                         <z>0</z>
                         <width>1024</width>
                         <height>1024</height>

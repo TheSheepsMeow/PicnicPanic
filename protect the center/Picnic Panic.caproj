@@ -893,6 +893,11 @@
             </object-type>
             <object-type name="woodenBoard" sid="884792151913015">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="597544759483025">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523120961497848" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\owner\Downloads\moreGames_wood.png" />
@@ -1067,6 +1072,11 @@
             </object-type>
             <object-type name="textLevelCounter" sid="630381276225874">
                 <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="911129928035012">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
                 <texture original-source="C:\Users\Oksana\Documents\oxy.png" />
             </object-type>
             <object-type name="textTitle" sid="974615548305183">

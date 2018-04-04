@@ -121,7 +121,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="389194673830130">
+                <event-block sid="857522620768795">
                     <conditions />
                     <actions />
                 </event-block>
@@ -602,6 +602,11 @@
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">timeForLevel * 0.75</param>
                                 </condition>
+                                <condition id="-8" name="Compare two values" sid="736960187754433" type="System">
+                                    <param id="0" name="First value">timeForLevel - timer</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">timeForLevel</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-11" name="Add to" sid="832269299079025" type="pineapple">
@@ -609,6 +614,24 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="5" name="Set frame" sid="725656055370518" type="pineapple">
+                                    <param id="0" name="Frame number">pineapple.frameNum</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="425716100861614">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="872884663835753" type="System">
+                                    <param id="0" name="First value">timeForLevel - timer</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">timeForLevel</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="471753039957753" type="pineapple">
+                                    <param id="0" name="Instance variable">frameNum</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="335156187884734" type="pineapple">
                                     <param id="0" name="Frame number">pineapple.frameNum</param>
                                 </action>
                             </actions>
@@ -623,7 +646,7 @@
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="247650752376499" type="System">
+                        <condition disabled="1" id="-14" name="Compare variable" sid="247650752376499" type="System">
                             <param id="0" name="Variable">level</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">5</param>
@@ -685,125 +708,126 @@
                             <param id="0" name="Frame number">pineapple.frameNum</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="776234261250864">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="687456074831684" type="System">
-                            <param id="0" name="Variable">timer</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="450280226767346" type="System">
-                            <param id="0" name="Variable">level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="244380684758087" type="Audio">
-                            <param id="0" name="Audio file">next level sound</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="534052512272172" type="enemy">
-                            <param id="0" name="Angle">-self.Angle</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="208063595462298" type="enemy" />
-                        <action id="-12" name="Set group active" sid="269490100154864" type="System">
-                            <param id="0" name="Group name">&quot;Ants&quot;</param>
-                            <param id="1" name="State">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="996745668836590" type="System">
-                            <param id="0" name="Variable">canAntsSpawn</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="329580474070143" type="System">
-                            <param id="0" name="Object to create">Fireworks</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(0, 321)</param>
-                            <param id="3" name="Y">random(0, 481)</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="858056850965520" type="cloud">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="644442260077768" type="cloud" />
-                        <action id="-16" name="Wait" sid="586302825244290" type="System">
-                            <param id="0" name="Seconds">5.5</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="928699791850625" type="System">
-                            <param id="0" name="Variable">score</param>
-                            <param id="1" name="Value">HP / 10</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="889534320223379" type="System">
-                            <param id="0" name="Layout">cutscene</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="615009200318093">
-                    <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="789967547657279" type="System" />
-                        <condition id="-14" name="Compare variable" sid="852455197024189" type="System">
-                            <param id="0" name="Variable">timer</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="729705390243995" type="System">
-                            <param id="0" name="Variable">level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="331438204665092" type="System">
-                            <param id="0" name="Object to create">Fireworks</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(0, 321)</param>
-                            <param id="3" name="Y">random(0, 481)</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="296830946821185">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="754356957730002" type="System">
+                                    <param id="0" name="Variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="175928619465548" type="textLevel">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="859156784163023" type="enemy">
+                                    <param id="0" name="Angle">-self.Angle</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="987004433319458" type="enemy" />
+                                <action id="-12" name="Set group active" sid="129718327534773" type="System">
+                                    <param id="0" name="Group name">&quot;Ants&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="121161597055393" type="System">
+                                    <param id="0" name="Variable">canAntsSpawn</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="448777741786685" type="System">
+                                    <param id="0" name="Object to create">Fireworks</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">random(0, 321)</param>
+                                    <param id="3" name="Y">random(0, 481)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="780271800836751" type="System">
+                                    <param id="0" name="Seconds">random(0,2)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="459937932174512" type="System">
+                                    <param id="0" name="Object to create">Fireworks</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">random(0, 321)</param>
+                                    <param id="3" name="Y">random(0, 481)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="392613661559491" type="System">
+                                    <param id="0" name="Seconds">random(0,2)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="861989914256159" type="System">
+                                    <param id="0" name="Object to create">Fireworks</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">random(0, 321)</param>
+                                    <param id="3" name="Y">random(0, 481)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="734450145138133" type="cloud">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="676502620895713" type="cloud" />
+                                <action id="-16" name="Wait" sid="920226892982202" type="System">
+                                    <param id="0" name="Seconds">5.5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="639619904246661" type="System">
+                                    <param id="0" name="Variable">score</param>
+                                    <param id="1" name="Value">HP / 10</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="542007200949916" type="System">
+                                    <param id="0" name="Layout">cutscene</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block disabled="1" sid="868435797276095">
                     <conditions>
                         <condition id="15" name="On double-tap" sid="230762562533102" type="Touch" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="902118772187437" type="Audio">
-                            <param id="0" name="Audio file">next level sound</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="698117120785691" type="enemy">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="227874709668349" type="enemy">
                             <param id="0" name="Angle">-self.Angle</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="471079152854455" type="enemy" />
-                        <action id="-12" name="Set group active" sid="489730685676371" type="System">
+                        <action id="-9" name="Destroy" sid="406409805772757" type="enemy" />
+                        <action id="-12" name="Set group active" sid="460009056836820" type="System">
                             <param id="0" name="Group name">&quot;Ants&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="517863496331718" type="System">
+                        <action id="-9" name="Set value" sid="269133788403087" type="System">
                             <param id="0" name="Variable">canAntsSpawn</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-3" name="Create object" sid="555496538620526" type="System">
+                        <action id="-3" name="Create object" sid="167896937836423" type="System">
                             <param id="0" name="Object to create">Fireworks</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="X">random(0, 321)</param>
                             <param id="3" name="Y">random(0, 481)</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="927399699028149" type="cloud">
+                        <action id="-16" name="Wait" sid="990413044219691" type="System">
+                            <param id="0" name="Seconds">random(0,2)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="146501751617107" type="System">
+                            <param id="0" name="Object to create">Fireworks</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(0, 321)</param>
+                            <param id="3" name="Y">random(0, 481)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="677113169210424" type="System">
+                            <param id="0" name="Seconds">random(0,2)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="232300557932379" type="System">
+                            <param id="0" name="Object to create">Fireworks</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(0, 321)</param>
+                            <param id="3" name="Y">random(0, 481)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="367259355455822" type="cloud">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="765177801513059" type="cloud" />
-                        <action id="-16" name="Wait" sid="849062631893322" type="System">
+                        <action behavior="Fade" id="1" name="Start fade" sid="971152436124878" type="cloud" />
+                        <action id="-16" name="Wait" sid="528978891582833" type="System">
                             <param id="0" name="Seconds">5.5</param>
                         </action>
-                        <action id="-9" name="Set value" sid="933540856738164" type="System">
+                        <action id="-9" name="Set value" sid="839280408740218" type="System">
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">HP / 10</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="212450242799135" type="System">
+                        <action id="-2" name="Go to layout" sid="784202620451294" type="System">
                             <param id="0" name="Layout">cutscene</param>
                         </action>
                     </actions>
@@ -850,7 +874,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="946420542239066">
+                <event-block sid="631404066644716">
                     <conditions />
                     <actions />
                 </event-block>

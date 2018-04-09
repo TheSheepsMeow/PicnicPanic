@@ -96,7 +96,7 @@
                             <param id="0" name="Scale">increaseFont</param>
                         </action>
                         <action id="0" name="Set text" sid="498509870088421" type="textLevelCounter">
-                            <param id="0" name="Text">&quot;Swarm &quot;&amp;level</param>
+                            <param id="0" name="Text">&quot;Swarm &quot;&amp; level &amp; &quot; of 5&quot;</param>
                         </action>
                         <action id="5" name="Set frame" sid="214152163086269" type="muteButton">
                             <param id="0" name="Frame number">muteAudio</param>

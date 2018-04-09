@@ -980,7 +980,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="586289632548383" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5025" hotspotY="0.51" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1009,14 +1009,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574035936041862" speed="5">
-                        <frame duration="1" hotspotX="0.49784" hotspotY="0.439306" original-source="C:\Users\owner\Downloads\ant-farm.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Downloads\ant-farm.png">
                             <collision-poly>
-                                <point x="0.170626" y="0.00144509" />
-                                <point x="0.825054" y="0.00144509" />
-                                <point x="0.99892" y="0.439306" />
-                                <point x="0.915767" y="0.998555" />
-                                <point x="0.0799136" y="0.998555" />
-                                <point x="0.00107991" y="0.439306" />
+                                <point x="0.142145" y="0" />
+                                <point x="0.84887" y="0" />
+                                <point x="1" y="0.351598" />
+                                <point x="0.946833" y="1" />
+                                <point x="0.0441832" y="1" />
+                                <point x="0" y="0.351598" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1025,6 +1025,14 @@
             <object-type name="Fireworks" sid="459365809718180">
                 <plugin id="Particles" />
                 <texture />
+            </object-type>
+            <object-type name="grass" sid="370524724007771">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="437021494739147" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="text">

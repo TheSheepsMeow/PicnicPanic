@@ -97,7 +97,7 @@
                         </action>
                         <action id="-7" name="Scroll to position" sid="785922226123281" type="System">
                             <param id="0" name="X">92</param>
-                            <param id="1" name="Y">288</param>
+                            <param id="1" name="Y">320</param>
                         </action>
                         <action id="-17" name="Set layer scale" sid="933201989045236" type="System">
                             <param id="0" name="Layer">0</param>

@@ -1020,6 +1020,11 @@
                         <condition id="0" name="On collision with another object" sid="769992679943970" type="enemy">
                             <param id="0" name="Object">enemy</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="905000169676919" type="enemy">
+                            <param id="0" name="Instance variable">target</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="148847193782452" type="enemy">

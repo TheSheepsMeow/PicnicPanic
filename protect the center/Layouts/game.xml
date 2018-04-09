@@ -1191,13 +1191,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>214.974533081</x>
-                        <y>32.515506744</y>
+                        <x>224</x>
+                        <y>32</y>
                         <z>0</z>
-                        <width>192</width>
-                        <height>26.962053299</height>
+                        <width>193.41003418</width>
+                        <height>28.356641769</height>
                         <depth>0</depth>
-                        <hotspotX>0.50061202</hotspotX>
+                        <hotspotX>0.50060755</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -1219,36 +1219,11 @@
                         <x>256.124511719</x>
                         <y>32.515506744</y>
                         <z>0</z>
-                        <width>33.874191284</width>
-                        <height>30.443897247</height>
+                        <width>35.160552979</width>
+                        <height>31.515865326</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.507042229</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="greenPepper" uid="18">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <frameNum>0</frameNum>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>219.884780884</x>
-                        <y>32.515506744</y>
-                        <z>0</z>
-                        <width>21.343133926</width>
-                        <height>47.977954865</height>
-                        <depth>0</depth>
-                        <hotspotX>0.495867759</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.503401339</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1269,11 +1244,11 @@
                         <x>186.349121094</x>
                         <y>32.515506744</y>
                         <z>0</z>
-                        <width>33.754707336</width>
-                        <height>30.336509705</height>
+                        <width>35.036533356</width>
+                        <height>31.404697418</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.507042229</hotspotY>
+                        <hotspotY>0.503401339</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1294,8 +1269,8 @@
                         <x>150.974533081</x>
                         <y>32.515506744</y>
                         <z>0</z>
-                        <width>28.902738571</width>
-                        <height>35.429164886</height>
+                        <width>29.835084915</width>
+                        <height>36.36151123</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1313,7 +1288,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
+                        <x>-160</x>
                         <y>256</y>
                         <z>0</z>
                         <width>320</width>
@@ -1381,6 +1356,31 @@
                         <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="greenPepper" uid="18">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <frameNum>0</frameNum>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>219.884780884</x>
+                        <y>32.515506744</y>
+                        <z>0</z>
+                        <width>22.401472092</width>
+                        <height>49.03629303</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503937006</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

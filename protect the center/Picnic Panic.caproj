@@ -643,12 +643,12 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="377399990736143" speed="5">
-                        <frame duration="1" hotspotX="0.500612" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Kebab-skewer-final.png">
+                        <frame duration="1" hotspotX="0.500608" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Kebab-skewer-final-(redone).png">
                             <collision-poly>
-                                <point x="0.30355" y="0.482759" />
-                                <point x="0.673195" y="0.482759" />
-                                <point x="0.313341" y="0.551724" />
-                                <point x="0.663403" y="0.551724" />
+                                <point x="0.249757" y="1" />
+                                <point x="0.6989" y="1" />
+                                <point x="0.261654" y="1" />
+                                <point x="0.687002" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -661,23 +661,9 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499625880984729" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple.png">
-                            <collision-poly>
-                                <point x="0" y="0.00704225" />
-                                <point x="1" y="0.00704225" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.506329" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple-Eaten.png">
-                            <collision-poly>
-                                <point x="0.056962" y="0.00704225" />
-                                <point x="0.949367" y="0.00704225" />
-                                <point x="0.949367" y="1" />
-                                <point x="0.056962" y="1" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.506329" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple-(redone).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple-Eaten-(redone).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401">
                             <collision-poly>
                                 <point x="0.056962" y="0" />
                                 <point x="0.949367" y="0" />
@@ -695,23 +681,16 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490128889299130" speed="0">
-                        <frame duration="1" hotspotX="0.495868" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Green-Pepper.png">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Green-Pepper-(redone).png">
                             <collision-poly>
-                                <point x="0.983471" y="0.422794" />
-                                <point x="0.487603" y="0.900735" />
-                                <point x="0.206612" y="0.768382" />
-                                <point x="0.115702" y="0.900735" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.495868" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Green-Pepper-Eaten.png">
-                            <collision-poly>
-                                <point x="0" y="0.00367647" />
-                                <point x="1" y="0.00367647" />
                                 <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.504132" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Green-Pepper-Eaten-(redone).png" />
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -722,23 +701,9 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="322542901243565" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple.png">
-                            <collision-poly>
-                                <point x="0" y="0.00704225" />
-                                <point x="1" y="0.00704225" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.506329" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple-Eaten.png">
-                            <collision-poly>
-                                <point x="0.056962" y="0.00704225" />
-                                <point x="0.949367" y="0.00704225" />
-                                <point x="0.949367" y="1" />
-                                <point x="0.056962" y="1" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.506329" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple-(redone).png" />
+                        <frame duration="1" hotspotX="0.506098" hotspotY="0.503401" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pineapple-Eaten-(redone).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503401">
                             <collision-poly>
                                 <point x="0.056962" y="0" />
                                 <point x="0.949367" y="0" />
@@ -756,15 +721,8 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="423232580591570" speed="0">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pepper.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Red-Pepper-Eaten.png">
-                            <collision-poly>
-                                <point x="0.0322581" y="0" />
-                                <point x="0.973118" y="0" />
-                                <point x="0.973118" y="1" />
-                                <point x="0.0322581" y="1" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pepper-(redone).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Red-Pepper-Eaten-(redone).png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>

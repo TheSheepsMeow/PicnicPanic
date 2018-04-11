@@ -940,70 +940,20 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="148080385489013" type="System">
-                            <param id="0" name="Variable">randAntSfx</param>
-                            <param id="1" name="Value">random(0, 3)</param>
-                        </action>
                         <action id="0" name="Play" sid="229924646783866" type="Audio">
                             <param id="0" name="Audio file">Ant&apos;s taking fruit</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
+                        <action id="7" name="Play (by name)" sid="291166013380675" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">choose(&quot;antWithFood0&quot;, &quot;antWithFood1&quot;, &quot;antWithFood2&quot;)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="373118979157294">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="437779051473437" type="System">
-                                    <param id="0" name="Variable">randAntSfx</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="667485562675713" type="Audio">
-                                    <param id="0" name="Audio file">antWithFood0</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="853606312863419">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="304068000138981" type="System">
-                                    <param id="0" name="Variable">randAntSfx</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="386469213988234" type="Audio">
-                                    <param id="0" name="Audio file">antWithFood1</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="506484193195183">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="120711641122410" type="System">
-                                    <param id="0" name="Variable">randAntSfx</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="675507343870238" type="Audio">
-                                    <param id="0" name="Audio file">antWithFood2</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="630294279543998">
                     <conditions>

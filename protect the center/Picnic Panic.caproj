@@ -967,7 +967,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574035936041862" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Downloads\ant-farm.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\ant-farm-(v2).png">
                             <collision-poly>
                                 <point x="0.142145" y="0" />
                                 <point x="0.84887" y="0" />

@@ -361,8 +361,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>384</x>
-                        <y>-32</y>
+                        <x>352</x>
+                        <y>0</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -1334,8 +1334,8 @@
                         <grow-rate>5</grow-rate>
                         <x-randomiser>5</x-randomiser>
                         <y-randomiser>5</y-randomiser>
-                        <speed-randomiser->0</speed-randomiser->
-                        <size-randomiser>5</size-randomiser>
+                        <speed-randomiser->100</speed-randomiser->
+                        <size-randomiser>16</size-randomiser>
                         <grow-rate-randomiser>0</grow-rate-randomiser>
                         <particle-lifetime-properties></particle-lifetime-properties>
                         <acceleration>-150</acceleration>

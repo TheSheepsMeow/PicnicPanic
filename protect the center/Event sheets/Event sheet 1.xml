@@ -724,9 +724,6 @@
                                 <action id="-15" name="Set visible" sid="175928619465548" type="textLevel">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="859156784163023" type="enemy">
-                                    <param id="0" name="Angle">-self.Angle</param>
-                                </action>
                                 <action id="-9" name="Destroy" sid="987004433319458" type="enemy" />
                                 <action id="-12" name="Set group active" sid="129718327534773" type="System">
                                     <param id="0" name="Group name">&quot;Ants&quot;</param>
@@ -736,6 +733,10 @@
                                     <param id="0" name="Variable">canAntsSpawn</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="734450145138133" type="cloud">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="676502620895713" type="cloud" />
                                 <action id="-3" name="Create object" sid="448777741786685" type="System">
                                     <param id="0" name="Object to create">Fireworks</param>
                                     <param id="1" name="Layer">1</param>
@@ -743,7 +744,7 @@
                                     <param id="3" name="Y">random(0, 481)</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="780271800836751" type="System">
-                                    <param id="0" name="Seconds">random(0,2)</param>
+                                    <param id="0" name="Seconds">0.5</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="459937932174512" type="System">
                                     <param id="0" name="Object to create">Fireworks</param>
@@ -752,7 +753,7 @@
                                     <param id="3" name="Y">random(0, 481)</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="392613661559491" type="System">
-                                    <param id="0" name="Seconds">random(0,2)</param>
+                                    <param id="0" name="Seconds">0.75</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="861989914256159" type="System">
                                     <param id="0" name="Object to create">Fireworks</param>
@@ -760,12 +761,8 @@
                                     <param id="2" name="X">random(0, 321)</param>
                                     <param id="3" name="Y">random(0, 481)</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="734450145138133" type="cloud">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="676502620895713" type="cloud" />
                                 <action id="-16" name="Wait" sid="920226892982202" type="System">
-                                    <param id="0" name="Seconds">5.5</param>
+                                    <param id="0" name="Seconds">4.0</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="639619904246661" type="System">
                                     <param id="0" name="Variable">score</param>
@@ -783,9 +780,6 @@
                         <condition id="15" name="On double-tap" sid="230762562533102" type="Touch" />
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="227874709668349" type="enemy">
-                            <param id="0" name="Angle">-self.Angle</param>
-                        </action>
                         <action id="-9" name="Destroy" sid="406409805772757" type="enemy" />
                         <action id="-12" name="Set group active" sid="460009056836820" type="System">
                             <param id="0" name="Group name">&quot;Ants&quot;</param>
@@ -795,36 +789,36 @@
                             <param id="0" name="Variable">canAntsSpawn</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-3" name="Create object" sid="167896937836423" type="System">
-                            <param id="0" name="Object to create">Fireworks</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(0, 321)</param>
-                            <param id="3" name="Y">random(0, 481)</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="990413044219691" type="System">
-                            <param id="0" name="Seconds">random(0,2)</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="146501751617107" type="System">
-                            <param id="0" name="Object to create">Fireworks</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(0, 321)</param>
-                            <param id="3" name="Y">random(0, 481)</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="677113169210424" type="System">
-                            <param id="0" name="Seconds">random(0,2)</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="232300557932379" type="System">
-                            <param id="0" name="Object to create">Fireworks</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(0, 321)</param>
-                            <param id="3" name="Y">random(0, 481)</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="367259355455822" type="cloud">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="971152436124878" type="cloud" />
+                        <action id="-3" name="Create object" sid="167896937836423" type="System">
+                            <param id="0" name="Object to create">Fireworks</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">256</param>
+                            <param id="3" name="Y">64</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="990413044219691" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="146501751617107" type="System">
+                            <param id="0" name="Object to create">Fireworks</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">64</param>
+                            <param id="3" name="Y">256</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="677113169210424" type="System">
+                            <param id="0" name="Seconds">0.75</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="232300557932379" type="System">
+                            <param id="0" name="Object to create">Fireworks</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">192</param>
+                            <param id="3" name="Y">384</param>
+                        </action>
                         <action id="-16" name="Wait" sid="528978891582833" type="System">
-                            <param id="0" name="Seconds">5.5</param>
+                            <param id="0" name="Seconds">4.0</param>
                         </action>
                         <action id="-9" name="Set value" sid="839280408740218" type="System">
                             <param id="0" name="Variable">score</param>

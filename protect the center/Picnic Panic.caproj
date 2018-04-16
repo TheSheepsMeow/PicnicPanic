@@ -1038,6 +1038,37 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="tappingGesture" sid="770406883041309">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454163862054027" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\TapGesture01.png">
+                            <collision-poly>
+                                <point x="0.35" y="0.42" />
+                                <point x="0.5" y="0.39" />
+                                <point x="0.641667" y="0.43" />
+                                <point x="0.725" y="0.5" />
+                                <point x="0.733333" y="0.68" />
+                                <point x="0.5" y="0.98" />
+                                <point x="0.283333" y="0.66" />
+                                <point x="0.35" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\TapGesture02.png">
+                            <collision-poly>
+                                <point x="0.35" y="0.42" />
+                                <point x="0.5" y="0.11" />
+                                <point x="0.65" y="0.42" />
+                                <point x="0.733333" y="0.5" />
+                                <point x="0.733333" y="0.68" />
+                                <point x="0.5" y="0.94" />
+                                <point x="0.283333" y="0.66" />
+                                <point x="0.35" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="text">
             <object-type name="textContinue" sid="379161823223034">

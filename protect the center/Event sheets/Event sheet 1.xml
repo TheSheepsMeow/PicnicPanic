@@ -56,6 +56,10 @@
                             <param id="0" name="Variable">timer</param>
                             <param id="1" name="Value">20</param>
                         </action>
+                        <action id="-9" name="Set value" sid="393476728483023" type="System">
+                            <param id="0" name="Variable">timeForLevel</param>
+                            <param id="1" name="Value">timer</param>
+                        </action>
                         <action id="-9" name="Set value" sid="793958817349747" type="System">
                             <param id="0" name="Variable">canAntsSpawn</param>
                             <param id="1" name="Value">0</param>
@@ -68,6 +72,10 @@
                         </action>
                         <action id="-1" name="Set X" sid="457247425940905" type="pauseBG">
                             <param id="0" name="X">160</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="876279072949479" type="System">
+                            <param id="0" name="Group name">&quot;Ants&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                         <action id="-12" name="Set group active" sid="282062124895812" type="System">
                             <param id="0" name="Group name">&quot;Levels &amp; Ant Spawning&quot;</param>
@@ -124,7 +132,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="857522620768795">
+                <event-block sid="681156991388054">
                     <conditions />
                     <actions />
                 </event-block>
@@ -829,7 +837,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="781868966320640">
+                <event-block disabled="1" sid="781868966320640">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="685624990194193" type="System">
                             <param id="0" name="Variable">timer</param>

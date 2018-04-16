@@ -1040,8 +1040,16 @@
             </object-type>
             <object-type name="tappingGesture" sid="770406883041309">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="847176176259000">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="174532507959411">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454163862054027" speed="5">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454163862054027" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\TapGesture01.png">
                             <collision-poly>
                                 <point x="0.35" y="0.42" />

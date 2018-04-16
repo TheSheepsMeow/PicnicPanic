@@ -130,6 +130,19 @@
                             <param id="0" name="Group name">&quot;Levels &amp; Ant Spawning&quot;</param>
                             <param id="1" name="State">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="921828841498347" type="tappingGesture">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="532826952657916" type="tappingGesture" />
+                        <action id="5" name="Set frame" sid="870427949120515" type="tappingGesture">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="899967343272167" type="tappingGesture">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="1" name="Set acceleration" sid="636820914792993" type="tappingGesture">
+                            <param id="0" name="Acceleration">-30</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="681156991388054">

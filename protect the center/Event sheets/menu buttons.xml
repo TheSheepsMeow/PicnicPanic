@@ -9,17 +9,13 @@
                     <conditions />
                     <actions />
                 </event-block>
-                <event-block sid="419235794802538">
-                    <conditions />
-                    <actions />
-                </event-block>
                 <comment></comment>
                 <event-block sid="103115203545999">
                     <conditions>
                         <condition id="3" name="On touched object" sid="702232268653582" type="Touch">
                             <param id="0" name="Object">pausebutton</param>
                         </condition>
-                        <condition id="-9" inverted="1" name="Is visible" sid="818066442924621" type="textPause" />
+                        <condition id="-9" inverted="1" name="Is visible" sid="818066442924621" type="pauseBoard" />
                         <condition id="3" name="Compare frame" sid="153761529259942" type="pausebutton">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Number">0</param>
@@ -29,7 +25,10 @@
                         <action id="-13" name="Set time scale" sid="799860662102295" type="System">
                             <param id="0" name="Time scale">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="243504675908706" type="textPause">
+                        <action disabled="1" id="-15" name="Set visible" sid="243504675908706" type="textPause">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="610208889553886" type="pauseBoard">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="367253067559634" type="textMainMenu">
@@ -51,21 +50,29 @@
                 </event-block>
                 <event-block sid="494982833196363">
                     <conditions>
-                        <condition id="-9" inverted="1" name="Is visible" sid="825503300883312" type="textPause" />
+                        <condition id="-9" inverted="1" name="Is visible" sid="825503300883312" type="pauseBoard" />
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="933810566905474" type="pausebutton">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action id="-14" name="Set object time scale" sid="669517793508621" type="System">
+                            <param id="0" name="Object">pauseBoard</param>
+                            <param id="1" name="Time scale">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="327057108464585">
                     <conditions>
-                        <condition id="-9" name="Is visible" sid="782964405471777" type="textPause" />
+                        <condition id="-9" name="Is visible" sid="782964405471777" type="pauseBoard" />
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="826376470238362" type="pausebutton">
                             <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-14" name="Set object time scale" sid="331914477673929" type="System">
+                            <param id="0" name="Object">pauseBoard</param>
+                            <param id="1" name="Time scale">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -74,7 +81,7 @@
                         <condition id="3" name="On touched object" sid="269021774600696" type="Touch">
                             <param id="0" name="Object">pausebutton</param>
                         </condition>
-                        <condition id="-9" name="Is visible" sid="442668434715830" type="textPause" />
+                        <condition id="-9" name="Is visible" sid="442668434715830" type="pauseBoard" />
                         <condition id="3" name="Compare frame" sid="392581573646680" type="pausebutton">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Number">1</param>
@@ -84,7 +91,10 @@
                         <action id="-13" name="Set time scale" sid="794888814962234" type="System">
                             <param id="0" name="Time scale">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="786430660803771" type="textPause">
+                        <action disabled="1" id="-15" name="Set visible" sid="786430660803771" type="textPause">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="298976678125976" type="pauseBoard">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="259934840442273" type="textMainMenu">

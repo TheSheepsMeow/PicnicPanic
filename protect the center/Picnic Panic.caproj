@@ -904,7 +904,16 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523120961497848" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\owner\Downloads\moreGames_wood.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Blank-Plank.png">
+                            <collision-poly>
+                                <point x="0.0109375" y="0.0679612" />
+                                <point x="0.5" y="0" />
+                                <point x="0.99375" y="0.038835" />
+                                <point x="0.992188" y="0.951456" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1013,7 +1022,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574035936041862" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\ant farm\ant-farm-(fixed).png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\ant farm\ant-farm-new.png">
                             <collision-poly>
                                 <point x="0" y="0" />
                                 <point x="1" y="0" />
@@ -1051,6 +1060,7 @@
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454163862054027" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\TapGesture01.png">
+                            <image-point name="Finger" x="0.408333" y="0.18" />
                             <collision-poly>
                                 <point x="0.35" y="0.42" />
                                 <point x="0.5" y="0.39" />
@@ -1072,6 +1082,28 @@
                                 <point x="0.5" y="0.94" />
                                 <point x="0.283333" y="0.66" />
                                 <point x="0.35" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pauseBoard" sid="528999912170661">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="578386675738477">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="778681603106051" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\Pause-Plank-1.png">
+                            <collision-poly>
+                                <point x="0.0109375" y="0.0679612" />
+                                <point x="0.5" y="0" />
+                                <point x="0.99375" y="0.038835" />
+                                <point x="0.992188" y="0.951456" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1102,7 +1134,7 @@
             </object-type>
             <object-type name="textPause" sid="494043418187671">
                 <plugin id="Spritefont2" />
-                <texture original-source="C:\Users\Oksana\Documents\oxy.png" />
+                <texture original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\SpriteFont_Black.png" />
             </object-type>
             <object-type name="textScore" sid="373972096028638">
                 <plugin id="Spritefont2" />
@@ -1141,6 +1173,14 @@
             <object-type name="textTagline" sid="606719017875771">
                 <plugin id="Spritefont2" />
                 <texture original-source="C:\Users\Oksana\Documents\oxy.png" />
+            </object-type>
+            <object-type name="textPause2" sid="993573985849760">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\SpriteFont_VarelaRound-Aqua.png" />
+            </object-type>
+            <object-type name="textPause3" sid="707582504353527">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\owner\Desktop\SheepsMeow\Assets\Picnic\SpriteFont_VarelaRound-White-(spec).png" />
             </object-type>
         </object-folder>
         <object-type name="picnicTimer" sid="112505241367440">

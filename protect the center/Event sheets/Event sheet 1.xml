@@ -145,7 +145,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="681156991388054">
+                <event-block sid="405511899326206">
                     <conditions />
                     <actions />
                 </event-block>
@@ -1415,7 +1415,7 @@
                 <comment>when paused, the paddle shouldn&apos;t work on anything (?)</comment>
                 <event-block sid="717046783134858">
                     <conditions>
-                        <condition id="-9" name="Is visible" sid="428065526715222" type="textPause" />
+                        <condition id="-9" name="Is visible" sid="428065526715222" type="pauseBoard" />
                     </conditions>
                     <actions>
                         <action behavior="Solid" id="0" name="Set enabled" sid="560316429588781" type="paddle">

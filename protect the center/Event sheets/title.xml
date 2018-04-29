@@ -148,7 +148,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="851648975811429" type="highScore">
-                            <param id="0" name="Text">&quot;Most Food Saved: &quot; &amp; highScore / 10 &amp; &quot;/10&quot;</param>
+                            <param id="0" name="Text">&quot;Most Food Saved: &quot; &amp; highScore &amp; &quot;/10&quot;</param>
                         </action>
                     </actions>
                 </event-block>

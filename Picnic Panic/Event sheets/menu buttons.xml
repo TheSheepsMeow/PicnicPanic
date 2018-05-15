@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>menu buttons</name>
+    <events>
+        <event-group description="" sid="356434185652119" title="Menu buttons">
+            <sub-events>
+                <event-block sid="770941669132054">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment></comment>
+                <event-block sid="103115203545999">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="702232268653582" type="Touch">
+                            <param id="0" name="Object">pausebutton</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="818066442924621" type="pauseBoard" />
+                        <condition id="3" name="Compare frame" sid="153761529259942" type="pausebutton">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="799860662102295" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="243504675908706" type="textPause">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="610208889553886" type="pauseBoard">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="367253067559634" type="textMainMenu">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="497477586293425" type="textContinue">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="942471829587797" type="home">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="316747503543437" type="restart">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="546310682853049" type="pauseBG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="494982833196363">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Is visible" sid="825503300883312" type="pauseBoard" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="933810566905474" type="pausebutton">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-14" name="Set object time scale" sid="669517793508621" type="System">
+                            <param id="0" name="Object">pauseBoard</param>
+                            <param id="1" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="327057108464585">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="782964405471777" type="pauseBoard" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="826376470238362" type="pausebutton">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-14" name="Set object time scale" sid="331914477673929" type="System">
+                            <param id="0" name="Object">pauseBoard</param>
+                            <param id="1" name="Time scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121101446834423">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="269021774600696" type="Touch">
+                            <param id="0" name="Object">pausebutton</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="442668434715830" type="pauseBoard" />
+                        <condition id="3" name="Compare frame" sid="392581573646680" type="pausebutton">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="794888814962234" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action disabled="1" id="-15" name="Set visible" sid="786430660803771" type="textPause">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="298976678125976" type="pauseBoard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="259934840442273" type="textMainMenu">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="428123186820463" type="textContinue">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="988689754772014" type="home">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="879713224653045" type="restart">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="734572823494814" type="pauseBG">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="594349569871473" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="751871421173979">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="747613826186457" type="Touch">
+                            <param id="0" name="Object">home</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="276057002825931" type="home" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="145588649179089" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="336949368728911" type="textPause">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="169998174943475" type="textContinue">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="735004845210951" type="home">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="585897706059268" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="638967412023401" type="System">
+                            <param id="0" name="Layout">title</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="136535355966496">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment></comment>
+                <event-block sid="646221027593835">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="871038350190916" type="Touch">
+                            <param id="0" name="Object">muteButton</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="741761604857727">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="408290841773844" type="muteButton">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="495980023427641" type="System">
+                                    <param id="0" name="Variable">muteAudio</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="879580700160465">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="398206361407526" type="muteButton">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="418880573089129" type="System">
+                                    <param id="0" name="Variable">muteAudio</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="912248761787794">
+                    <conditions>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="325916646715442" type="Audio">
+                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="944822203493103" type="System" />
+                        <condition id="-14" name="Compare variable" sid="993632194685267" type="System">
+                            <param id="0" name="Variable">muteAudio</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="327857165443664" type="Audio">
+                            <param id="0" name="Audio file">Protect the Center song</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="377078743459461">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="500763317984993" type="System">
+                            <param id="0" name="Variable">muteAudio</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="848222415622952" type="Audio">
+                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                        </action>
+                        <action id="8" name="Set silent" sid="565073888064815" type="Audio">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="752666563516372">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="624215748397957" type="System">
+                            <param id="0" name="Variable">muteAudio</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="153540327152265" type="Audio">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="308430937884124">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="676863344051299" type="Touch">
+                            <param id="0" name="Object">resetThis</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="105344469759888" type="resetThis">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="448512614080212" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="191550234002036" type="resetThis">
+                            <param id="0" name="Animation">&quot;push1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="304075844008732" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="661334937630727" type="resetThis">
+                            <param id="0" name="Animation">&quot;conferm&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="550472954462910">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="584297548123486" type="Touch">
+                            <param id="0" name="Object">resetThis</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="925151914245205" type="resetThis">
+                            <param id="0" name="Animation">&quot;conferm&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="481517336404277" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="136626395144489" type="resetThis">
+                            <param id="0" name="Animation">&quot;resset&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="240997525666299" type="System">
+                            <param id="0" name="Variable">highScore</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="137014897764356" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="720357143456028" type="resetThis">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="924822142633085">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="692718173242032" type="Touch">
+                            <param id="0" name="Object">restart</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="822456198441703" type="restart" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="723895074661036" type="restart">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="292457281449831" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="770474661066974" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="702333979989482" type="System">
+                            <param id="0" name="Layout">game</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="867507444549480">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="173441383241958" type="Touch">
+                            <param id="0" name="Object">start</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="252417126258670" type="start">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="10" name="Request fullscreen" sid="749005991204670" type="Browser">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="592384227569239" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="242546967528531" type="System">
+                            <param id="0" name="Layout">game</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="225466728794228">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

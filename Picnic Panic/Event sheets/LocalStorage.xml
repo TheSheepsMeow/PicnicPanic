@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LocalStorage</name>
+    <events>
+        <event-group description="" sid="273959366765520" title="LocalStorage">
+            <sub-events>
+                <event-block sid="600205632115656">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="536401937706771" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="721952698125369" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key_picnicpanic&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="694373818608566">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="667800458409893" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key_picnicpanic&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="748397957546567" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key_picnicpanic&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="128571771417767">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="868108905897826" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key_picnicpanic&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="104275283292644" type="System">
+                            <param id="0" name="Variable">highScore</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="507688986726958">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="354532114721121" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key_picnicpanic&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="935418219460823" type="System">
+                            <param id="0" name="Variable">highScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="226794554145450">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="150039830789983" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">highScore</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="260389373124488" type="Function">
+                            <param id="0" name="Name">&quot;setHighScore&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="510410009834143">
+                    <conditions>
+                        <condition id="0" name="On function" sid="988523422616065" type="Function">
+                            <param id="0" name="Name">&quot;setHighScore&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="788565589402749" type="System">
+                            <param id="0" name="Variable">highScore</param>
+                            <param id="1" name="Value">score</param>
+                        </action>
+                        <action id="0" name="Set item" sid="839431035348685" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key_picnicpanic&quot;</param>
+                            <param id="1" name="Value">highScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

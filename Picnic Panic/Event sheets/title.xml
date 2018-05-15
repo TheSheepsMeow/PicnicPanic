@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>title</name>
+    <events>
+        <include>menu buttons</include>
+        <include>LocalStorage</include>
+        <include>Event sheet 1</include>
+        <comment></comment>
+        <event-group description="" sid="826142652105307" title="Title">
+            <sub-events>
+                <event-block sid="493919053625849">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>Clean start to the game</comment>
+                <event-block sid="348811331082241">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="705654468983789" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="311776057921527" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="814712965941235" type="start">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="474101162701124" type="restart">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="312416364986469">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="916663187287691" type="System" />
+                        <condition id="-8" name="Compare two values" sid="111277538108522" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;title&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="650737386434958" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="888625788507758" type="enemyCreditsCarrier">
+                            <param id="0" name="Pin to">orbitMe</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="862343540097465" type="textCredits">
+                            <param id="0" name="Pin to">enemyCreditsCarrier</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="482840274786050" type="title">
+                            <param id="0" name="Pin to">enemyEndStartScreen</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="584462494955087" type="System">
+                            <param id="0" name="Seconds">3.25</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="138868697575177" type="title" />
+                    </actions>
+                </event-block>
+                <comment>This starts the game. The button has a press state.</comment>
+                <event-block sid="608195049785551">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="152356880523710" type="Touch">
+                            <param id="0" name="Object">start</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="810095610342002" type="start">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="226226436416486" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="382213231749630" type="start">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-42" name="Signal" sid="189502039934456" type="System">
+                            <param id="0" name="Tag">&quot;start scroll&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="485535105258347" type="followMe">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="440186945925415" type="System">
+                            <param id="0" name="Seconds">2.3</param>
+                        </action>
+                        <action id="10" name="Request fullscreen" sid="241381045509768" type="Browser">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="117651054409118" type="System">
+                            <param id="0" name="Layout">game</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566079269180833">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="561441175468726" type="Touch">
+                            <param id="0" name="Object">restart</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="742675432112693" type="restart">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="644817998042858" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="646355588770187" type="System">
+                            <param id="0" name="Layout">game</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>tap to go back to title</comment>
+                <event-block sid="577402212603533">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="763541309218384" type="Touch">
+                            <param id="0" name="Object">textMainMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="805418589464173" type="System">
+                            <param id="0" name="Layout">title</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="591282011331408">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="728597628623658" type="Touch">
+                            <param id="0" name="Object">moregamesbutton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="822127384130777" type="Browser">
+                            <param id="0" name="URL">&quot;https://www.thesheepsmeow.com/html5/games&quot;</param>
+                            <param id="1" name="Target">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="874986785128486">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="854377885952130" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="851648975811429" type="highScore">
+                            <param id="0" name="Text">&quot;Most Food Saved: &quot; &amp; highScore &amp; &quot;/10&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="858655456910435">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>scroll off title</comment>
+                <event-block disabled="1" sid="849319070936518">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="107422025467120" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-41" name="Wait for signal" sid="473121825013894" type="System">
+                            <param id="0" name="Tag">&quot;start scroll&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="663240115625829">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="846320039497285" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="717817084850719" type="followMe">
+                                    <param id="0" name="X">lerp(followMe.X, comeHere.X, 0.015)</param>
+                                    <param id="1" name="Y">followMe.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="434269063449563">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="926158468421034" title="End">
+            <sub-events>
+                <event-block sid="914687591004639">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>The ants are marching away with your plate!</comment>
+                <event-block sid="255011204387965">
+                    <conditions>
+                        <condition disabled="1" id="-2" name="On start of layout" sid="856681135981295" type="System" />
+                        <condition id="-8" name="Compare two values" sid="964102192074535" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;end&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="570293366605123" type="center">
+                            <param id="0" name="Pin to">enemyEndStartScreen</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="981238717683879" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Begin zoom out, then switch to end screen</comment>
+                        <event-block disabled="1" sid="965228525045348">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="630954048446337" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Set layer scale" sid="781554269378663" type="System">
+                                    <param id="0" name="Layer">0</param>
+                                    <param id="1" name="Scale">lerp(LayerScale(0), 0.5, 0.0125)</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="266355344215156" type="cloud">
+                                    <param id="0" name="Opacity">cloud.Opacity + 0.75</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="949479387440934">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="586510122771228" type="System">
+                                    <param id="0" name="First value">cloud.Opacity</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">98</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="240141471220792" type="System">
+                                    <param id="0" name="Layout">cutscene</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="255280063164070">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="472997898421713" type="System" />
+                        <condition id="-8" name="Compare two values" sid="237241150907026" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;end&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="157807888176391" type="enemy" />
+                    </actions>
+                </event-block>
+                <event-block sid="885021300294388">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="160382211663381" title="Cutscene">
+            <sub-events>
+                <event-block sid="462137774074127">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="678574951027346">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="436089803734493" type="System" />
+                        <condition id="-8" name="Compare two values" sid="214385883177928" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;cutscene&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="133126524902540" type="enemy" />
+                        <action id="-15" name="Set visible" sid="612304273215942" type="cloud">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="924491574264437" type="cloud" />
+                        <action id="-7" name="Scroll to position" sid="785922226123281" type="System">
+                            <param id="0" name="X">92</param>
+                            <param id="1" name="Y">310</param>
+                        </action>
+                        <action id="-17" name="Set layer scale" sid="933201989045236" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">18.0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="915612683013436" type="home">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="895358025503821">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="644703585485858" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;cutscene&quot;</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="367201985637323" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Set layer scale" sid="591974980895019" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Scale">lerp(LayerScale(0), 1.0, 0.0075)</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="490694934130376" type="home">
+                            <param id="0" name="Opacity">home.Opacity + 0.15</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="425805367260955">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
